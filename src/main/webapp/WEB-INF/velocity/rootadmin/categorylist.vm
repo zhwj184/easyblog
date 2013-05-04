@@ -1,0 +1,27 @@
+#set($layout="rootadmin/common/layout.vm")
+#set($page_title="分类管理")
+    <table>
+		<tr >
+			<td>分类id</td>
+			<td>分类名称</td>
+			<td>父类目id</td>
+			<td>创建时间</td>
+			<td>修改时间</td>
+			<td>操作</td>
+        </tr>
+		#foreach($item in $categorylist)
+			<tr >
+                <td>$item.id</td>
+    			<td>$item.name</td>
+    			<td>$item.parentId</td>
+				<td>$dateUtil.format($item.gmtCreate,"yyyy-MM-dd HH:mm:ss")</td>
+				<td>$dateUtil.format($item.gmtModified,"yyyy-MM-dd HH:mm:ss")</td>
+				<td>
+					 <a href="/jiagoushi/rootadmin/deleteCategory.htm?id=$item.id">删除</a>
+					 <a href="/jiagoushi/rootadmin/updateCategory.htm?id=$item.id">修改</a>
+					 #if($item.parentId>0)<a href="/jiagoushi/rootadmin/postlist.htm?categoryId=$item.id">查看文章列表</a>#end
+				</td>
+            </tr>
+		#end
+	</table>
+    <div class="indexlink"><a href="/jiagoushi/rootadmin/category.htm">添加分类</a></div>

@@ -1,0 +1,11 @@
+#set($layout="rootadmin/common/layout.vm")
+#set($page_title="¹ÜÀíÔ±µÇÂ¼")
+
+<div class="indexlink">
+   <form action="/jiagoushi/rootadmin/login.htm" method="post">
+     username:<input type="text" name="username"/></br>
+	 password:<input type="password" name="password"/></br>
+     </br>
+     <input type="submit" value="submit"/>
+   </form>
+</div>

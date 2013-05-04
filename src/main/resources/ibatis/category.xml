@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd" >
+<sqlMap namespace="jiagoushi">
+    <!-- typeAlias -->
+    <typeAlias alias="category" type="org.springweb.bean.Category" />
+    <!-- resultMap -->
+    <resultMap id="TA-category" class="category">
+        <result column="id"             property="id"           jdbcType="INT"      javaType="long"/>
+        <result column="gmt_create"     property="gmtCreate"    jdbcType="DATETIME"    javaType="date"/>
+        <result column="gmt_modified"   property="gmtModified"  jdbcType="DATETIME"    javaType="date"/>
+        <result column="name"      property="name"     jdbcType="VARCHAR"     javaType="string"/>
+        <result column="parent_id"       property="parentId"     jdbcType="INT"         javaType="long"/>
+    </resultMap>
+    
+    <sql id="selectAll_category">
+		<![CDATA[
+			select id, gmt_create, gmt_modified, name,parent_id
+		]]>
+	</sql>
+
+    <insert id="CATEGORY-INSERT" parameterClass="category">
+        <![CDATA[
+            insert into category (gmt_create, gmt_modified, name, parent_id)
+            values (now(), now(), #name#, #parentId#)
+        ]]>
+        <selectKey resultClass="java.lang.Long" keyProperty="id">
+	       SELECT LAST_INSERT_ID() AS ID
+	    </selectKey>
+    </insert>
+
+
+    <select id="SELECT-CATEGORY-ALL" resultMap="TA-category" parameterClass="java.util.Map">
+        <include refid="selectAll_category" />
+        from category
+        <dynamic prepend="where">
+             <isNotNull prepend="and" property="id">
+                id = #id#
+            </isNotNull>
+            <isNotNull prepend="and" property="parentId">
+                parent_id = #parentId#
+            </isNotNull>
+        </dynamic>
+        order by parent_id,id 
+    </select>
+    
+   <update id="UPDATE-CATEGORY" parameterClass="java.util.Map">
+        update category set gmt_modified = now()
+        <dynamic>
+            <isNotNull prepend="," property="name">
+                name = #name:VARCHAR#
+            </isNotNull>
+            <isNotNull prepend="," property="parentId">
+               parent_id = #parentId#
+            </isNotNull>
+        </dynamic>
+        where id = #id# 
+    </update>
+    
+    <delete id="DELETE-CATEGORY" parameterClass="long">
+    		delete from category where id=#value#
+    </delete>
+    
+</sqlMap>

@@ -1,0 +1,18 @@
+#set($layout="rootadmin/common/layout.vm")
+#set($page_title="添加文章")
+
+<div class="addpost">
+	#if($isSuccess && $isSuccess>=1) <h5>添加成功。</h5>#end
+   <form action="/jiagoushi/rootadmin/addpost.htm" method="post">
+	<input type="hidden" name="categoryId" value="$category.id"/></br>
+<input type="hidden" name="parentCategoryId" value="$category.parentId"/></br>
+     <span>title:</span><input type="text" name="title" class="common"/></br>
+	 <span>url :</span><input type="text" name="url" class="common"/></br>
+	 <span>author:</span><input type="text" name="author" class="common" value="admin"/></br>
+	 <span>content:</span>
+	 <textarea name="content" class="content" cols="30" rows="5">
+     </textarea>
+     </br>
+     <input type="submit" value="submit"/>
+   </form>
+</div>

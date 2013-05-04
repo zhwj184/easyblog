@@ -1,0 +1,6 @@
+<ul>
+	<li><a href="/jiagoushi/index.htm">Ê×Ò³</a></li>
+	#foreach($item in $rootCatList)
+		<li><a href="/jiagoushi/index.htm?parentId=${item.id}">$item.name</a></li>
+	#end
+</ul>

@@ -1,0 +1,45 @@
+#set($layout="rootadmin/common/layout.vm")
+#set($page_title="文章管理")
+
+<div class="indexlink">
+    <table>
+		<tr >
+			<td>id</td>
+			<td>标题</td>
+			<td>分类id</td>
+			<td>url</td>
+			<td>访问次数</td>
+			<td>评论次数</td>
+			<td>作者</td>
+			<td>创建时间</td>
+			<td>修改时间</td>
+			<td>操作</td>
+        </tr>
+		#foreach($item in $postlist)
+			<tr >
+                <td>$item.id</td>
+    			<td>$item.title</td>
+    			<td>$item.categoryId</td>
+				<td>$item.url</td>
+				<td>$item.view</td>
+				<td>$item.comment</td>
+				<td>$item.author</td>
+				<td>$dateUtil.format($item.gmtCreate,"yyyy-MM-dd HH:mm:ss")</td>
+				<td>$dateUtil.format($item.gmtModified,"yyyy-MM-dd HH:mm:ss")</td>
+				<td>
+					 <a href="/jiagoushi/rootadmin/deletePost.htm?id=$item.id&categoryId=$item.categoryId">删除</a>
+					 <a href="/jiagoushi/rootadmin/updatePost.htm?id=$item.id">修改</a>
+					 <a href="/jiagoushi/rootadmin/postdetail.htm?id=$item.id">查看详情</a>
+					 <a href="/jiagoushi/rootadmin/commentlist.htm?postId=$item.id">查看评论</a>
+				</td>
+            </tr>
+		#end
+	</table>
+    #set($last=$index - 1 )
+    #if($totalPage > 1 && $index >1) <a href="/jiagoushi/rootadmin/postlist.htm?categoryId=$category.id&index=$last">上一页</a> #end
+   当前$index 页
+   #set($next=$index+1)
+   #if($totalPage > 1 && $totalPage > $index) <a href="/jiagoushi/rootadmin/postlist.htm?categoryId=$category.id&index=$next">下一页</a> #end
+  总共$totalPage 页
+    <a href="/jiagoushi/rootadmin/post.htm?categoryId=$category.id">添加文章</a>
+</div>

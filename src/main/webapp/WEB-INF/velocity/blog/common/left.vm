@@ -1,0 +1,24 @@
+
+#foreach($item in $catTree.entrySet())
+<div class="category">
+	<div>$!catMap.get($item.key).name</div>
+    <ul>
+		#foreach($catItem in $item.value)
+				<li #if($id==$catItem.id) class="selected" #end><a href="/jiagoushi/index.htm?id=$catItem.id">$!{catItem.name} 
+						#if($!catCntMap.containsKey($catItem.id)) ($!catCntMap.get($catItem.id)) #end
+					</a>
+				</li>
+		#end
+    </ul>
+</div>     
+#end 
+
+
+<div class="category">
+	<div>ххцендуб</div>
+    <ul>
+		#foreach($item in $hotPostlist)
+			<li><a href="/jiagoushi/${item.id}.htm">${item.title} ($item.view)</a></li>
+		#end
+    </ul>
+</div>

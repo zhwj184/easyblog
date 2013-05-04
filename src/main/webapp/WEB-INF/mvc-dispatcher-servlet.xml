@@ -1,0 +1,53 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans     
+        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	<context:component-scan base-package="org.springweb.controller" />
+
+	<!-- velocity -->
+	<import resource="classpath*:*.xml" />
+	<bean id="velocityConfigurer"
+		class="org.springframework.web.servlet.view.velocity.VelocityConfigurer">
+		<property name="resourceLoaderPath">
+			<value>WEB-INF/velocity/</value>
+		</property>
+		<property name="velocityProperties">
+			<props>
+				<prop key="directive.foreach.counter.name">loopCounter</prop>
+				<prop key="directive.foreach.counter.initial.value">1</prop>
+				<prop key="input.encoding">GBK</prop>
+				<prop key="output.encoding">GBK</prop>
+				<prop key="file.resource.loader.cache">false</prop>
+				<prop key="file.resource.loader.modificationCheckInterval">1</prop>
+				<prop key="velocimacro.library.autoreload">true</prop>
+				<prop key="velocimacro.library">macro.vm</prop>
+			</props>
+		</property>
+	</bean>
+	<!--org.springframework.web.servlet.view.velocity.VelocityViewResolver 
+	
+		<property name="layoutUrl" value="layout.vm"/> -->
+	<bean id="viewResolver"
+		class="org.springframework.web.servlet.view.velocity.VelocityLayoutViewResolver ">
+		<property name="suffix">
+			<value>.vm</value>
+		</property>
+		<property name="contentType" value="text/html;charset=GBK" />
+		<!-- 使用springMacro、使用servlet的对象 -->
+		<property name="exposeSpringMacroHelpers" value="true" />
+		<property name="exposeRequestAttributes" value="true" />
+		<property name="exposeSessionAttributes" value="true" />
+		<!-- spring的日期格式化 -->
+		<property name="dateToolAttribute" value="dateTool" />
+
+		<property name="layoutUrl" value="blog/common/layout.vm"/>
+		<!-- velocity toolbox -->
+		<property name="toolboxConfigLocation" value="/WEB-INF/vm/toolbox.xml" />
+	</bean>
+
+</beans>

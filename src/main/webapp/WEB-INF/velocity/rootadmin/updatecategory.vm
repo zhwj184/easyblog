@@ -1,0 +1,18 @@
+#set($layout="rootadmin/common/layout.vm")
+#set($page_title="更新分类")
+<div class="addcategory">
+	#if($isSuccess && $isSuccess>=1) <h5>修改成功。</h5>#end
+   <form action="/jiagoushi/rootadmin/updateCategoryAction.htm" method="post">
+	<input type="hidden" name="id" value="$!category.id"/></br>
+     <span>name:</span><input type="text" name="name" value="$!category.name"/></br>
+    <span> parentId:</span>
+        <select id="parentId" name="parentId">
+			<option value ="0">一级分类</option>
+			#foreach($item in $allcategory)
+				<option value ="$item.id" #if($item.id==$category.parentId) selected #end>$item.name</option>
+		    #end
+        </select>
+     </br>
+     <input type="submit" value="submit"/>
+   </form>
+</div>

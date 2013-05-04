@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd" >
+<sqlMap namespace="jiagoushi">
+    <!-- typeAlias -->
+    <typeAlias alias="post" type="org.springweb.bean.Post" />
+    <!-- resultMap -->
+    <resultMap id="TA-post" class="post">
+        <result column="id"             property="id"           jdbcType="INT"      javaType="long"/>
+        <result column="gmt_create"     property="gmtCreate"    jdbcType="DATETIME"    javaType="date"/>
+        <result column="gmt_modified"   property="gmtModified"  jdbcType="DATETIME"    javaType="date"/>
+        <result column="title"      property="title"     jdbcType="VARCHAR"     javaType="string"/>
+        <result column="category_id"       property="categoryId"     jdbcType="INT"         javaType="long"/>
+       <result column="parent_category_id"       property="parentCategoryId"     jdbcType="INT"         javaType="long"/>
+        <result column="content"      property="content"     jdbcType="VARCHAR"     javaType="string"/>
+        <result column="url"      property="url"     jdbcType="VARCHAR"     javaType="string"/>
+        <result column="author"      property="author"     jdbcType="VARCHAR"     javaType="string"/>
+        <result column="view"       property="view"     jdbcType="INT"         javaType="long"/>
+        <result column="comment"       property="comment"     jdbcType="INT"         javaType="long"/>
+    </resultMap>
+    
+    <sql id="selectAll-POST">
+		<![CDATA[
+			select id, gmt_create, gmt_modified, title,category_id,parent_category_id,content,url,author,view,comment
+		]]>
+	</sql>
+
+    <insert id="POST-INSERT" parameterClass="post">
+        <![CDATA[
+            insert into post (gmt_create, gmt_modified, title,category_id,parent_category_id,content,url,author,view,comment)
+            values (now(), now(), #title#, #categoryId#,#parentCategoryId#,#content#,#url#,#author#,#view#,#comment#)
+        ]]>
+        <selectKey resultClass="java.lang.Long" keyProperty="id">
+	       SELECT LAST_INSERT_ID() AS ID
+	    </selectKey>
+    </insert>
+
+    <select id="SELECT-POST-COUNT"  resultClass="long"  parameterClass="java.util.Map">
+        select count(*)
+        from post
+        <dynamic prepend="where">
+            <isNotNull prepend="and" property="categoryId">
+                category_id = #categoryId#
+            </isNotNull>
+               <isNotNull prepend="and" property="parentCategoryId">
+                parent_category_id = #parentCategoryId#
+            </isNotNull>
+        </dynamic>
+    </select>
+
+	  <select id="SELECT-POST-BYID" resultMap="TA-post" parameterClass="long">
+        <include refid="selectAll-POST" />
+        from post where id=#id#
+      </select>
+
+    <select id="SELECT-POST" resultMap="TA-post" parameterClass="java.util.Map">
+        <include refid="selectAll-POST" />
+        from post
+        <dynamic prepend="where">
+            <isNotNull prepend="and" property="categoryId">
+                category_id = #categoryId#
+            </isNotNull>
+             <isNotNull prepend="and" property="parentCategoryId">
+                parent_category_id = #parentCategoryId#
+            </isNotNull>
+        </dynamic>
+         <isNotNull prepend=" " property="type">
+         	<isEqual property="type" compareValue="1">
+                order by gmt_modified desc
+                </isEqual>
+                <isEqual property="type" compareValue="2">
+                order by view desc
+                </isEqual>
+                <isEqual property="type" compareValue="3">
+                order by comment desc
+                </isEqual>
+          </isNotNull>
+          <isNull  prepend=" " property="type">order by gmt_modified desc</isNull>
+         limit #pagesize#  offset #offset# 
+    </select>
+    
+      <select id="SELECT-POST-GROUP"  resultClass="hashmap">
+      		select count(*)  cnt, category_id
+        from post group by category_id
+    </select>
+    
+   <update id="UPDATE-POST" parameterClass="java.util.Map">
+        update post set gmt_modified = now(), view = view + 1
+        where id = #id# 
+    </update>
+    
+     <update id="UPDATE-ADD-COMMENT" parameterClass="java.util.Map">
+        update post set gmt_modified = now(), comment = comment + 1
+        where id = #id# 
+    </update>
+    
+    <delete id="DELETE-POST" parameterClass="long">
+    		delete from post  where id=#value#
+    </delete>
+    
+</sqlMap>

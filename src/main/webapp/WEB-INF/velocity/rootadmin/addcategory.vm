@@ -1,0 +1,18 @@
+#set($layout="rootadmin/common/layout.vm")
+#set($page_title="添加分类")
+
+<div class="addcategory">
+	#if($isSuccess && $isSuccess>=1) <h5>添加成功。</h5>#end
+   <form action="/jiagoushi/rootadmin/addCategory.htm" method="post">
+     <span>name:</span><input type="text" name="name"/></br>
+     <span>parentId:</span>
+        <select id="parentId" name="parentId">
+			<option value ="0">一级分类</option>
+			#foreach($item in $category)
+				<option value ="$item.id">$item.name</option>
+		    #end
+        </select>
+     </br>
+     <input type="submit" value="submit"/>
+   </form>
+</div>

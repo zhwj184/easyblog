@@ -1,0 +1,52 @@
+#foreach($item in $postlist)
+	<div class="post">
+    	<div class="title clearfix">
+			##if($item.url && $item.url !="")
+			##	<a href="${item.url}" target="_blank">$!{item.title}</a>
+			##else
+				<a href="/jiagoushi/${item.id}.htm">$!{item.title}</a>
+			###end
+		</div>
+		
+		#if($!item.getFilterContent() && $!item.getFilterContent()!="")
+    	<div class="text">
+        		$!item.getFilterContent()
+    	</div>
+		#end
+    	<div class="pagetip clearfix">
+    		<div class="fr">
+    				<span>$!{item.author}</span>
+    				<span>$dateUtil.format($!{item.gmtCreate},"yyyy-MM-dd HH:mm:ss")发表</span>
+    				<span>$!{item.view}次浏览</span>
+    				<span>$!{item.comment}评论 #set($title=$!{item.title})#parse("blog/common/weiboshare.vm")</span>
+    		</div>
+    	</div>
+    </div>
+#end
+<div>
+	#if($count>0)
+	<div class="pagination">
+		#set($last = $index - 1 )
+		#set($next = $index + 1 )
+    	#if($index <= 1)
+			<span class="previous_page disabled">上一页</span>
+		#else
+			<a href="/jiagoushi/index.htm?index=$last&id=$!{id}&parentId=$!{parentId}">上一页</a>
+			<a href="/jiagoushi/index.htm?index=$last&id=$!{id}&parentId=$!{parentId}">$last</a>
+		#end
+		<em>$index</em>
+    	#if($index == $totalPage || $totalPage < 2)
+			<span class="next_page disabled ">下一页</span>
+		#else
+			<a href="/jiagoushi/index.htm?index=$next&id=$!{id}&parentId=$!{parentId}">$next</a>
+			<a href="/jiagoushi/index.htm?index=$next&id=$!{id}&parentId=$!{parentId}">下一页</a>
+		#end
+		总共$!count 篇文章
+	</div>
+	#else
+	#end
+</div>
+    
+   
+  
+

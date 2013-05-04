@@ -1,0 +1,15 @@
+#set($layout="rootadmin/common/layout.vm")
+#set($page_title="文章管理")
+
+	<ul>
+                <li>id:$post.id</li>
+    			<li>标题：$post.title</li>
+    			<li>分类id：$post.categoryId</li>
+				<li>文章链接：$post.url</li>
+				<li>访问次数：$post.view</li>
+				<li>评论次数：$post.comment</li>
+				<li>作者：$post.author</li>
+				<li>创建时间：$dateUtil.format($post.gmtCreate,"yyyy-MM-dd HH:mm:ss")</li>
+				<li>修改时间：$dateUtil.format($post.gmtModified,"yyyy-MM-dd HH:mm:ss")</li>
+				<li>正文：$post.content</li>
+    </ul>

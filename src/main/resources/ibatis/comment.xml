@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd" >
+<sqlMap namespace="jiagoushi">
+    <!-- typeAlias -->
+    <typeAlias alias="comment" type="org.springweb.bean.Comment" />
+    <!-- resultMap -->
+    <resultMap id="TA-comment" class="comment">
+        <result column="id"             property="id"           jdbcType="INT"      javaType="long"/>
+        <result column="gmt_create"     property="gmtCreate"    jdbcType="DATETIME"    javaType="date"/>
+        <result column="gmt_modified"   property="gmtModified"  jdbcType="DATETIME"    javaType="date"/>
+        <result column="post_id"       property="postId"     jdbcType="INT"         javaType="long"/>
+        <result column="content"      property="content"     jdbcType="VARCHAR"     javaType="string"/>
+        <result column="author"      property="author"     jdbcType="VARCHAR"     javaType="string"/>
+         <result column="status"       property="status"     jdbcType="INT"         javaType="integer"/>
+    </resultMap>
+    
+    <sql id="selectAll-Comment">
+		<![CDATA[
+			select id, gmt_create, gmt_modified, post_id,content,author,status
+		]]>
+	</sql>
+
+    <insert id="COMMENT-INSERT" parameterClass="comment">
+        <![CDATA[
+            insert into comments (gmt_create, gmt_modified, post_id,content,author,status)
+            values (now(), now(), #postId#,#content#,#author#,#status#)
+        ]]>
+        <selectKey resultClass="java.lang.Long" keyProperty="id">
+	       SELECT LAST_INSERT_ID() AS ID
+	    </selectKey>
+    </insert>
+
+    <select id="SELECT-COMMENT-COUNT"  resultClass="long"  parameterClass="java.util.Map">
+        select count(*)
+        from comments
+        <dynamic prepend="where">
+            <isNotNull prepend="and" property="postId">
+                post_id = #postId#
+            </isNotNull>
+        </dynamic>
+    </select>
+
+    <select id="SELECT-COMMENT" resultMap="TA-comment" parameterClass="java.util.Map">
+        <include refid="selectAll-Comment" />
+        from comments
+        <dynamic prepend="where">
+            <isNotNull prepend="and" property="postId">
+                post_id = #postId#
+            </isNotNull>
+             <isNotNull prepend="and" property="status">
+                status = #status#
+            </isNotNull>
+        </dynamic>
+         order by gmt_modified desc
+         limit #pagesize#  offset #index#
+    </select>
+    
+    <update id="UPDATE-Comment" parameterClass="java.util.Map">
+        update comments set gmt_modified = now(), status=#status#
+        where id = #id# 
+    </update>
+    
+    <delete id="DELETE-COMMENT" parameterClass="long">
+    		delete from comments  where id=#value#
+    </delete>
+    
+</sqlMap>

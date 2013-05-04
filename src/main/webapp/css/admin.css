@@ -1,0 +1,41 @@
+body {
+	background-color: #F0F0F0;
+}
+
+table {
+	border: 1px solid #B1CDE3;
+	padding: 0;
+	margin: 0 auto;
+	border-collapse: collapse;
+}
+
+td {
+	border: 1px solid #B1CDE3;
+	background: #fff;
+	font-size: 12px;
+	padding: 3px 3px 3px 8px;
+	color: #4f6b72;
+}
+
+.indexlink, .addcategory{
+	text-align: center;	
+}
+
+.addpost span ,.addcategory span{
+	width: 80px;
+	text-align: right;
+	display: inline-block;
+	padding-right: 0px;
+}
+.addcategory input, .addcategory select{
+	width: 200px;
+}
+
+.addpost .common {
+	width: 600px;
+}
+
+.addpost .content {
+	width: 600px;
+	height: 400px;
+}
