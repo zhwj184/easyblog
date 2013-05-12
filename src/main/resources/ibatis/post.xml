@@ -84,12 +84,17 @@
     </select>
     
    <update id="UPDATE-POST" parameterClass="java.util.Map">
-        update post set gmt_modified = now(), view = view + 1
+        update post set view = view + 1
         where id = #id# 
     </update>
     
      <update id="UPDATE-ADD-COMMENT" parameterClass="java.util.Map">
-        update post set gmt_modified = now(), comment = comment + 1
+        update post set comment = comment + 1
+        where id = #id# 
+    </update>
+    
+     <update id="UPDATE-POST-INFO" parameterClass="post">
+        update post set gmt_modified = now(), url=#url#,title=#title#,content=#content#,author=#author#
         where id = #id# 
     </update>
     

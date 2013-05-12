@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"  xmlns:wb="http://open.weibo.com/wb">
+     <head>
+      <TITLE>架构师之路-$!page_title</TITLE>
+      <meta http-equiv="Content-Type" content="text/html; charset=GBK"/>
+      <meta http-equiv="Content-Language" content="zh-CN"/>
+      <META NAME="Author" CONTENT="">
+      <META NAME="Keywords" CONTENT="">
+      <META NAME="Description" CONTENT="">
+      <link rel="stylesheet" type="text/css" href="/jiagoushi/css/jiagoushi.css">
+	 <link rel="stylesheet" type="text/css" href="/jiagoushi/css/github.css">
+	<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="GBK"></script>
+	<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=2325134357" type="text/javascript" charset="utf-8"></script>
+     </head>
+     <body>
+			<div class="header">#parse("blog/common/header.vm")</div>
+			<div class="nav">#parse("blog/common/nav.vm")</div>
+			<div class="content clearfix">
+					$screen_content
+			</div>
+			<div class="footer">#parse("blog/common/footer.vm")</div>
+     </body>
+</html>

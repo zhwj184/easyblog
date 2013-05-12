@@ -42,4 +42,6 @@
    #if($totalPage > 1 && $totalPage > $index) <a href="/jiagoushi/rootadmin/postlist.htm?categoryId=$category.id&index=$next">下一页</a> #end
   总共$totalPage 页
     <a href="/jiagoushi/rootadmin/post.htm?categoryId=$category.id">添加文章</a>
+	 <a href="/jiagoushi/rootadmin/booklist.htm?categoryId=$category.id&id=1">添加电子书</a>
+	 <a href="/jiagoushi/rootadmin/shipinlist.htm?categoryId=$category.id&id=1">添加视频</a>
 </div>

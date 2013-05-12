@@ -28,7 +28,7 @@ a:focus { outline: none; }
 .more { float: right; }
 .more a { font-weight: normal; font-size: 12px; }
 .fl, .fr { display: inline; float: left; }
-.fr { float: right; }
+.fr { float: right;padding-right: 10px; }
 input{ border:1px #ccc solid; height:28px;  border-radius: 5px;-webkit-border-radius: 5px;-moz-border-radius: 5px;-khtml-border-radius: 5px;}
 .relative{ position:relative;}
 .relative .box{ position:relative;}
@@ -99,32 +99,44 @@ body{
 	-moz-border-radius: 5 5 5px 5px;
 	-khtml-border-radius: 5 5 5px 5px;
 	box-shadow: 0px 1px 2px #999;
+	border-top: thin solid #C5BFBF;
+}
+.category div{
+	font-weight: bold;
 }
 .category li{
 	padding: 0px 15px;
 	font-size: 14px;
 }
+.category li a{
+	color: #000;
+}
 .category li.selected a{
 	font-weight: bold;
 	color: #E41422;
 }
+.hotpost li a,.hotcategory li a{
+	font-family: Helvetica, Tahoma, Arial, sans-serif;
+	font-size: 12px;
+	color: #108AC6;
+}
 .main {
 	width: 770px;
-	margin-left: 20px;
 	float: right;
 	padding-top: 20px;
 }
-.main .post{
+.main .post,.content .categorynav{
 	 background: none repeat scroll 0 0 #FFFFFF;
     border-radius: 5px 5px 5px 5px;
     box-shadow: 0 1px 2px #999999;
-    margin-bottom: 40px;	
+    margin-bottom: 10px;	
+    border-top: thin solid #C5BFBF;
 }
 .main .post .title{
 	border-bottom: 1px solid #EEEEEE;
-    font-size: 22px;
+    font-size: 18px;
     font-weight: bold;
-    padding: 20px 20px 15px;
+    padding: 5px 15px;
 }
 .main .post .text{
 	padding: 15px;
@@ -171,7 +183,7 @@ body{
 
 .main .pagination {
     margin-bottom: 30px;
-    margin-top: -15px;
+    margin-top: 5px;
     text-align: center;
 }
 
@@ -211,4 +223,28 @@ body{
 }
 .footer  a{
 	color: #FF6600;
+}
+
+
+/*µ¼º½Ò³Ãæ*/
+.categorynav .daohangitem{
+	padding-left: 10px;
+	height: 32px;
+	background-color:  #fffaee;
+	color: #2E1FF0;
+}
+
+.categorynav .linkcontent li{
+	padding-left: 10px;
+	display: inline;
+	font-size: 14px;
+	float: left;
+	width: 100px;
+	overflow: hidden;
+}
+
+
+.nav li a:active, .nav li a:hover, .category li a:active,.category li a:hover{
+    color: #FF6600;
+    text-decoration: underline;
 }

@@ -32,7 +32,7 @@ public class SecurityFilter implements Filter{
 			return;
 		}
 		HttpServletResponse httpResponse = (HttpServletResponse)response;
-		httpResponse.sendRedirect("/jiagoushi/rootadmin/mustlogin.htm");
+		httpResponse.sendRedirect("mustlogin.htm");
 	}
 
 	@Override

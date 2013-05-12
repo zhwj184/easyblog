@@ -1,3 +1,4 @@
+#set($page_title="$!{post.title}")
 <div class="post">
 	<div class="title clearfix">
 			#if($post.url && $post.url !="")

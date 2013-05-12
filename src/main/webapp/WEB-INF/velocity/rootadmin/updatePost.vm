@@ -1,0 +1,17 @@
+#set($layout="rootadmin/common/layout.vm")
+#set($page_title="пч╦дндуб")
+
+<div class="addpost">
+   <form action="/jiagoushi/rootadmin/updatePostAction.htm" method="post">
+	<input type="hidden" name="id" value="$post.id"/></br>
+	<input type="hidden" name="categoryId" value="$post.categoryId"/></br>
+     <span>title:</span><input type="text" name="title" class="common" value="$post.title"/></br>
+	 <span>url :</span><input type="text" name="url" class="common"  value="$post.url"/></br>
+	 <span>author:</span><input type="text" name="author" class="common" value="admin"  value="$post.author"/></br>
+	 <span>content:</span>
+	 <textarea name="content" class="content" cols="30" rows="5" value="$post.content">
+     </textarea>
+     </br>
+     <input type="submit" value="submit"/>
+   </form>
+</div>

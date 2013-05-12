@@ -3,9 +3,9 @@
 
 <div class="addpost">
 	#if($isSuccess && $isSuccess>=1) <h5>Ìí¼Ó³É¹¦¡£</h5>#end
-   <form action="/jiagoushi/rootadmin/addpost.htm" method="post">
+   <form action="/jiagoushi/rootadmin/addpost.htm" method="post" enctype="multipart/form-data">
 	<input type="hidden" name="categoryId" value="$category.id"/></br>
-<input type="hidden" name="parentCategoryId" value="$category.parentId"/></br>
+    <input type="hidden" name="parentCategoryId" value="$category.parentId"/></br>
      <span>title:</span><input type="text" name="title" class="common"/></br>
 	 <span>url :</span><input type="text" name="url" class="common"/></br>
 	 <span>author:</span><input type="text" name="author" class="common" value="admin"/></br>
@@ -13,6 +13,6 @@
 	 <textarea name="content" class="content" cols="30" rows="5">
      </textarea>
      </br>
-     <input type="submit" value="submit"/>
+     <input type="file" name="file"/>  <input type="submit" value="submit"/>
    </form>
 </div>

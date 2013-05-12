@@ -1,24 +1,36 @@
-
 #foreach($item in $catTree.entrySet())
-<div class="category">
-	<div>$!catMap.get($item.key).name</div>
-    <ul>
-		#foreach($catItem in $item.value)
-				<li #if($id==$catItem.id) class="selected" #end><a href="/jiagoushi/index.htm?id=$catItem.id">$!{catItem.name} 
-						#if($!catCntMap.containsKey($catItem.id)) ($!catCntMap.get($catItem.id)) #end
-					</a>
-				</li>
-		#end
-    </ul>
-</div>     
+	#if($velocityCount==1)
+        <div class="category">
+        	<div>$!catMap.get($item.key).name</div>
+            <ul>
+        		#foreach($catItem in $item.value)
+        				<li #if($id==$catItem.id) class="selected" #end><a href="/jiagoushi/index.htm?id=$catItem.id">$!{catItem.name} 
+        						#if($!catCntMap.containsKey($catItem.id)) ($!catCntMap.get($catItem.id)) #end
+        					</a>
+        				</li>
+        		#end
+            </ul>
+        </div>     
+    #end
 #end 
 
 
-<div class="category">
+<div class="category hotpost">
 	<div>热门文章</div>
     <ul>
 		#foreach($item in $hotPostlist)
-			<li><a href="/jiagoushi/${item.id}.htm">${item.title} ($item.view)</a></li>
+			<li><a href="/jiagoushi/${item.id}.htm">$stringUtil.getOutputString(${item.title},15) ($item.view)</a></li>
 		#end
     </ul>
 </div>
+
+#if($hotCommentList && $hotCommentList.size()>0)
+    <div class="category hotcategory">
+    	<div>最新评论</div>
+        <ul>
+    		#foreach($item in $hotCommentList)
+    			<li><a href="/jiagoushi/${item.postId}.htm">$stringUtil.getOutputString($!{item.content},22)</a></li>
+    		#end
+        </ul>
+    </div>
+#end

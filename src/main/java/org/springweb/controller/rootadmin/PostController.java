@@ -1,5 +1,8 @@
 package org.springweb.controller.rootadmin;
 
+import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -7,6 +10,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 import org.springweb.bean.Post;
 import org.springweb.config.PageConstant;
 import org.springweb.dao.CategoryDao;
@@ -45,8 +49,10 @@ public class PostController {
 	}
 	
 	@RequestMapping(value="/addpost", method = RequestMethod.POST)
-	public String addPost(@ModelAttribute Post post,  ModelMap model) {
- 
+	public String addPost(@ModelAttribute Post post, @RequestParam("file") MultipartFile file, ModelMap model) throws Exception, IOException {
+		if(!file.isEmpty()){
+			post.setContent(new String(file.getBytes(),"GBK"));
+		}
 		model.addAttribute("isSuccess",postDao.insert(post));
 		model.addAttribute("categoryId", post.getCategoryId());
 		return "rootadmin/addpost";
@@ -56,6 +62,18 @@ public class PostController {
 	public String delete(@RequestParam Long id, @RequestParam Long categoryId, ModelMap model) {
 		postDao.delete(id);
 		return "redirect:postlist.htm?categoryId=" + categoryId;  
+	}
+	
+	@RequestMapping(value="/updatePost", method = RequestMethod.GET)
+	public String updatePost(@RequestParam Long id, ModelMap model) {
+		model.addAttribute("post", postDao.queryById(id));
+		return "rootadmin/updatePost";
+	}
+	
+	@RequestMapping(value="/updatePostAction", method = RequestMethod.POST)
+	public String updatePostAction(@ModelAttribute Post post, ModelMap model) {
+		model.addAttribute("isSuccess",postDao.update(post));
+		return "redirect:postlist.htm?categoryId="+post.getCategoryId();
 	}
  
 }

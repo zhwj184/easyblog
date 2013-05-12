@@ -71,4 +71,9 @@ public class PostDao extends SqlMapClientDaoSupport{
 		return cnt;
 	}
 
+	public int update(Post post) {
+		int cnt = this.getSqlMapClientTemplate().update("jiagoushi.UPDATE-POST-INFO", post);
+		return cnt;
+	}
+
 }

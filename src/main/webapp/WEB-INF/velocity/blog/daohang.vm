@@ -1,0 +1,110 @@
+#set($layout="blog/common/daohanglayout.vm")
+<div class="categorynav">
+    	<div class="daohangitem clearfix">
+				编程语言
+		</div>
+    	<div class="linkcontent clearfix">
+            <ul>
+				<li><a href="http://www.haskellcn.com/haskellbook/" target="_blank">Haskell</a></li>
+				<li><a href="http://schemers.org/" target="_blank">schemers</a></li>
+				<li><a href="http://docs.oracle.com/javase/" target="_blank">javase</a></li>
+				<li><a href="http://wiki.ubuntu.org.cn/%E8%B7%9F%E6%88%91%E4%B8%80%E8%B5%B7%E5%86%99Makefile" target="_blank">Makefile</a></li>
+				<li><a href="http://developer.apple.com/library/ios/#referencelibrary/GettingStarted/RoadMapiOSCh/chapters/Introduction.html" target="_blank">IOS开发</a></li>
+				<li><a href="http://docs.oracle.com/javase/7/docs/api/" target="_blank">java7 API doc</a></li>
+				<li><a href="http://acl.readthedocs.org/en/latest/" target="_blank">Common Lisp</a></li>
+				<li><a href="http://wiki.apache.org/tomcat/Specifications" target="_blank">web规范</a></li>
+				<li><a href="http://ifeve.com/disruptor/" target="_blank">并发编程网</a></li>
+				<li><a href="http://go-tour-zh.appsp0t.com/#1" target="_blank">go指南</a></li>
+				<li><a href="http://guides.ruby-china.org/" target="_blank" title="Ruby on Rails Guides 中文">ROR</a></li>
+				<li><a href="http://developer.android.com/index.html#" target="_blank">android</a></li>
+				<li><a href="http://nodejs.org/" target="_blank">node.js</a></li>
+				<li><a href="http://www.erlang-cn.org/p/news/" target="_blank">erlang</a></li>
+				<li><a href="" target="_blank"></a></li>
+				<li><a href="" target="_blank"></a></li>
+				<li><a href="" target="_blank"></a></li>
+			</ul>
+    	</div>
+		<div class="daohangitem clearfix">
+				数据结构与算法
+		</div>
+    	<div class="linkcontent clearfix">
+            <ul>
+				<li><a href="http://en.wikipedia.org/wiki/Timsort" target="_blank">排序</a></li>
+				<li><a href="http://algs4.cs.princeton.edu/code/" target="_blank">java算法集</a></li>
+				<li><a href="http://www.mlsurveys.com/" target="_blank">机器学习论文</a></li>
+				<li><a href="http://bigocheatsheet.com/" target="_blank">算法复杂度</a></li>
+				<li><a href="http://deeplearning.stanford.edu/wiki/index.php/UFLDL%E6%95%99%E7%A8%8B" target="_blank">机器学习教程</a></li>
+				<li><a href="http://www.csie.ntnu.edu.tw/~u91029/index.html" target="_blank">演算法笔记</a></li>
+				<li><a href="" target="_blank"></a></li>
+			</ul>
+    	</div>
+		<div class="daohangitem clearfix">
+				数据库
+		</div>
+    	<div class="linkcontent clearfix">
+            <ul>
+				<li><a href="http://dev.mysql.com/" target="_blank">mysql</a></li>
+				<li><a href="http://en.oreilly.com/mysql2011/public/schedule/proceedings" target="_blank">mysql博客</a></li>
+				<li><a href="http://blog.jcole.us/" target="_blank">innode博客</a></li>
+				<li><a href="http://hsqldb.org/doc/2.0/guide/index.html" target="_blank">hsqldb</a></li>
+				<li><a href="http://www.woqutech.com/?p=749" target="_blank">INNODB手册</a></li>
+				<li><a href="https://fosdem.org/2013/schedule/track/mysql_and_friends/" target="_blank">mysql讨论区</a></li>
+				<li><a href="http://www.mysqlperformanceblog.com/" target="_blank">mysql优化</a></li>
+				<li><a href="http://www.h2database.com/html/mvstore.html" target="_blank">MVStore</a></li>
+			</ul>
+    	</div>
+		<div class="daohangitem clearfix">
+				NOSQL
+		</div>
+    	<div class="linkcontent clearfix">
+            <ul>
+				<li><a href="http://redis.io/" target="_blank">redis</a></li>
+				<li><a href="http://www.yankay.com/wp-content/hbase/book.html" target="_blank">Hbase</a></li>
+				<li><a href="http://memcached.org/" target="_blank">memcache</a></li>
+				<li><a href="http://www.mongodb.org/" target="_blank">mongodb</a></li>
+				<li><a href="http://www.redisbook.com/en/latest/" target="_blank">redis设计实现</a></li>
+				<li><a href="" target="_blank"></a></li>
+				<li><a href="" target="_blank"></a></li>
+			</ul>
+    	</div>
+		<div class="daohangitem clearfix">
+				服务器
+		</div>
+    	<div class="linkcontent clearfix">
+            <ul>
+				<li><a href="http://httpd.apache.org/docs/2.4/" target="_blank">apache</a></li>
+				<li><a href="http://nginx.org/cn/" target="_blank">nginx</a></li>
+				<li><a href="http://tengine.taobao.org/book/" target="_blank">nginx中文文档</a></li>
+				<li><a href="http://home.arcor.de/pangj/squid/chap01.html" target="_blank">squid</a></li>
+				<li><a href="https://www.varnish-software.com/static/book/" target="_blank">varnish</a></li>
+				<li><a href="http://www.eclipse.org/jetty/" target="_blank">jetty</a></li>
+				<li><a href="http://tomcat.apache.org/" target="_blank">tomcat</a></li>
+				<li><a href="http://gomix.fedora-ve.org/projects/ruby/wiki/Unicorn" target="_blank">ruby unicorn</a></li>
+			</ul>
+    	</div>
+		<div class="daohangitem clearfix">
+				web
+		</div>
+    	<div class="linkcontent clearfix">
+            <ul>
+				<li><a href="http://www.w3school.com.cn/" target="_blank">w3c</a></li>
+				<li><a href="http://jquery.com/" target="_blank">jquery</a></li>
+				<li><a href="http://getfirebug.com/" target="_blank">firebug</a></li>
+				<li><a href="https://addons.mozilla.org/zh-cn/firefox/addon/httpfox/" target="_blank">Httpfox</a></li>
+				<li><a href="http://jslint.com/" target="_blank">JSlint</a></li>
+				<li><a href="http://runjs.cn/" target="_blank">runjs</a></li>
+				<li><a href="http://open.chrome.360.cn/extension_dev/overview.html" target="_blank">chrome插件</a></li>
+				<li><a href="http://www.dzone.com/links/index.html" target="_blank"></a>dzone</li>
+				<li><a href="" target="_blank"></a></li>
+			</ul>
+    	</div>
+		<div class="daohangitem clearfix">
+				资源下载
+		</div>
+    	<div class="linkcontent clearfix">
+            <ul>
+				<li><a href="https://speakerdeck.com/" target="_blank">speakerdeck</a></li>
+				<li><a href="http://www.slideshare.net/" target="_blank">slideshare</a></li>
+			</ul>
+    	</div>
+</div>

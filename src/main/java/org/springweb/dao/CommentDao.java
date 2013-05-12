@@ -10,7 +10,7 @@ import org.springweb.bean.Comment;
 
 public class CommentDao extends SqlMapClientDaoSupport{
 
-	public List<Comment> query(long postId, int pagesize, long index){
+	public List<Comment> query(Long postId, int pagesize, long index){
 		Map<String,Object> param = new HashMap<String,Object>();
 		param.put("postId", postId);
 		param.put("pagesize", pagesize);

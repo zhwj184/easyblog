@@ -1,0 +1,2 @@
+#set($layout="blog/common/daohanglayout.vm")
+<wb:comments url="auto" border="y" brandline="y" width="auto" appkey="2325134357" ></wb:comments>

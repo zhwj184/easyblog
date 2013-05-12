@@ -3,4 +3,6 @@
 	#foreach($item in $rootCatList)
 		<li><a href="/jiagoushi/index.htm?parentId=${item.id}">$item.name</a></li>
 	#end
+	<li><a href="/jiagoushi/daohang.htm">µº∫Ω</a></li>
+	<!--<li><a href="/jiagoushi/liuyan.htm">¡Ù—‘</a></li>-->
 </ul>

@@ -18,7 +18,7 @@
 		</property>
 		<property name="velocityProperties">
 			<props>
-				<prop key="directive.foreach.counter.name">loopCounter</prop>
+				<prop key="directive.foreach.counter.name">velocityCount</prop>
 				<prop key="directive.foreach.counter.initial.value">1</prop>
 				<prop key="input.encoding">GBK</prop>
 				<prop key="output.encoding">GBK</prop>
@@ -48,6 +48,13 @@
 		<property name="layoutUrl" value="blog/common/layout.vm"/>
 		<!-- velocity toolbox -->
 		<property name="toolboxConfigLocation" value="/WEB-INF/vm/toolbox.xml" />
+	</bean>
+	
+	<!-- 上传拦截，如最大上传值及最小上传值 -->
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<!-- one of the properties available; the maximum file size in bytes -->
+		<property name="maxUploadSize" value="100000" />
 	</bean>
 
 </beans>

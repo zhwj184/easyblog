@@ -35,6 +35,9 @@ public class Post implements Serializable{
 	private String author;
 	
 	public String getFilterContent(){
+		if(this.content != null && !this.content.isEmpty() && this.content.length() < 500){
+			return this.getContent();
+		}
 		return HtmlUtil.splitAndFilterString(this.getContent(), 500);
 	}
 

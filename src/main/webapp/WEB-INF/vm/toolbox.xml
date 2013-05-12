@@ -5,4 +5,9 @@
 		<scope>application</scope>
 		<class>org.springweb.util.DateUtil</class>
 	</tool>
+	<tool>
+		<key>stringUtil</key>
+		<scope>application</scope>
+		<class>org.springweb.util.StringUtil</class>
+	</tool>
 </toolbox>

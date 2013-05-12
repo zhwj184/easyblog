@@ -36,9 +36,13 @@ public class IndexController {
 		
 		long count = postDao.queryCount(parentId,id);
 		model.addAttribute("count", count);
-		model.addAttribute("totalPage", count % PageConstant.PAGE_SIZE == 0 ? count / PageConstant.PAGE_SIZE : count / PageConstant.PAGE_SIZE + 1);
+		long totalPage = count % PageConstant.PAGE_SIZE == 0 ? count / PageConstant.PAGE_SIZE : count / PageConstant.PAGE_SIZE + 1;
+		if(index <=1  || totalPage < index){
+			index = 1;
+		}
+		model.addAttribute("totalPage", totalPage);
 		model.addAttribute("index", index);
-		model.addAttribute("postlist",postDao.query(parentId, id, null, PageConstant.PAGE_SIZE, (index-1) * PageConstant.PAGE_SIZE));
+		model.addAttribute("postlist",postDao.query(parentId, id, 1, PageConstant.PAGE_SIZE, (index-1) * PageConstant.PAGE_SIZE));
 		
 		return "blog/index";
 	}
@@ -56,6 +60,8 @@ public class IndexController {
 		model.put("catCntMap", postDao.queryGroupByCatId());
 		
 		model.addAttribute("hotPostlist", postDao.query(null, null, 2, 5, 0));
+		
+		model.addAttribute("hotCommentList", commentDao.query(null, 5, 0));
 	}
 	
 	@RequestMapping(value="/{id}.htm", method = RequestMethod.GET)
