@@ -2,7 +2,7 @@
 #set($page_title="пч╦дндуб")
 
 <div class="addpost">
-   <form action="/jiagoushi/rootadmin/updatePostAction.htm" method="post">
+   <form action="http://www.javaarch.net/jiagoushi/rootadmin/updatePostAction.htm" method="post">
 	<input type="hidden" name="id" value="$post.id"/></br>
 	<input type="hidden" name="categoryId" value="$post.categoryId"/></br>
      <span>title:</span><input type="text" name="title" class="common" value="$post.title"/></br>

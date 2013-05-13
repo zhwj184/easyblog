@@ -27,21 +27,21 @@
 				<td>$dateUtil.format($item.gmtCreate,"yyyy-MM-dd HH:mm:ss")</td>
 				<td>$dateUtil.format($item.gmtModified,"yyyy-MM-dd HH:mm:ss")</td>
 				<td>
-					 <a href="/jiagoushi/rootadmin/deletePost.htm?id=$item.id&categoryId=$item.categoryId">删除</a>
-					 <a href="/jiagoushi/rootadmin/updatePost.htm?id=$item.id">修改</a>
-					 <a href="/jiagoushi/rootadmin/postdetail.htm?id=$item.id">查看详情</a>
-					 <a href="/jiagoushi/rootadmin/commentlist.htm?postId=$item.id">查看评论</a>
+					 <a href="http://www.javaarch.net/jiagoushi/rootadmin/deletePost.htm?id=$item.id&categoryId=$item.categoryId">删除</a>
+					 <a href="http://www.javaarch.net/jiagoushi/rootadmin/updatePost.htm?id=$item.id">修改</a>
+					 <a href="http://www.javaarch.net/jiagoushi/rootadmin/postdetail.htm?id=$item.id">查看详情</a>
+					 <a href="http://www.javaarch.net/jiagoushi/rootadmin/commentlist.htm?postId=$item.id">查看评论</a>
 				</td>
             </tr>
 		#end
 	</table>
     #set($last=$index - 1 )
-    #if($totalPage > 1 && $index >1) <a href="/jiagoushi/rootadmin/postlist.htm?categoryId=$category.id&index=$last">上一页</a> #end
+    #if($totalPage > 1 && $index >1) <a href="http://www.javaarch.net/jiagoushi/rootadmin/postlist.htm?categoryId=$category.id&index=$last">上一页</a> #end
    当前$index 页
    #set($next=$index+1)
-   #if($totalPage > 1 && $totalPage > $index) <a href="/jiagoushi/rootadmin/postlist.htm?categoryId=$category.id&index=$next">下一页</a> #end
+   #if($totalPage > 1 && $totalPage > $index) <a href="http://www.javaarch.net/jiagoushi/rootadmin/postlist.htm?categoryId=$category.id&index=$next">下一页</a> #end
   总共$totalPage 页
-    <a href="/jiagoushi/rootadmin/post.htm?categoryId=$category.id">添加文章</a>
-	 <a href="/jiagoushi/rootadmin/booklist.htm?categoryId=$category.id&id=1">添加电子书</a>
-	 <a href="/jiagoushi/rootadmin/shipinlist.htm?categoryId=$category.id&id=1">添加视频</a>
+    <a href="http://www.javaarch.net/jiagoushi/rootadmin/post.htm?categoryId=$category.id">添加文章</a>
+	 <a href="http://www.javaarch.net/jiagoushi/rootadmin/booklist.htm?categoryId=$category.id&id=1">添加电子书</a>
+	 <a href="http://www.javaarch.net/jiagoushi/rootadmin/shipinlist.htm?categoryId=$category.id&id=1">添加视频</a>
 </div>

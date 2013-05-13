@@ -3,7 +3,7 @@
 
 <div class="addpost">
 	#if($isSuccess && $isSuccess>=1) <h5>Ìí¼Ó³É¹¦¡£</h5>#end
-   <form action="/jiagoushi/rootadmin/addpost.htm" method="post" enctype="multipart/form-data">
+   <form action="http://www.javaarch.net/jiagoushi/rootadmin/addpost.htm" method="post" enctype="multipart/form-data">
 	<input type="hidden" name="categoryId" value="$category.id"/></br>
     <input type="hidden" name="parentCategoryId" value="$category.parentId"/></br>
      <span>title:</span><input type="text" name="title" class="common"/></br>

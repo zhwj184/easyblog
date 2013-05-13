@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd 
+http://www.springframework.org/schema/context 
+http://www.springframework.org/schema/context/spring-context-3.0.xsd
+http://www.springframework.org/schema/j2ee
+http://www.springframework.org/schema/context/spring-j2ee-3.0.xsd
+http://www.springframework.org/schema/tx 
+http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+	
+	<bean id="dataIndex" class="org.springweb.lucene.DataIndex">
+		<property name="indexDir"  value="${lucene.index.dir}"></property>
+	</bean>
+	<bean id="docSearch" class="org.springweb.lucene.DocSearch" init-method="init" destroy-method="destroy">
+		<property name="indexDir" value="${lucene.index.dir}"></property>
+	</bean>
+   <bean id="tjobtrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+      <property name="jobDetail">
+         <bean  class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+            <property name="targetObject" ref="dataIndex">
+            </property>
+            <property name="targetMethod">
+               <value>index</value>
+            </property>
+         </bean>
+      </property>
+      <property name="cronExpression">
+         <value>0  0/2 * * * ?</value>
+      </property>
+   </bean> 
+     <bean id="searchtrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+      <property name="jobDetail">
+         <bean  class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+            <property name="targetObject" ref="docSearch">
+            </property>
+            <property name="targetMethod">
+               <value>refresh</value>
+            </property>
+         </bean>
+      </property>
+      <property name="cronExpression">
+         <value>0  0/3 * * * ?</value>
+      </property>
+   </bean> 
+   
+   <bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean" autowire="no">
+      <property name="triggers">
+         <list>
+            <ref bean="tjobtrigger" />
+            <ref bean="searchtrigger" />
+         </list>
+      </property>
+   </bean>
+
+</beans>

@@ -1,0 +1,29 @@
+#set($page_title="$!catMap.get($!{id}).name")
+#if($postlist && $postlist.size()>0)
+    	#foreach($item in $postlist)
+        	<div class="post">
+            	<div class="title clearfix">
+        			##if($item.url && $item.url !="")
+        			##	<a href="${item.url}" target="_blank">$!{item.title}</a>
+        			##else
+        				<a href="http://www.javaarch.net/jiagoushi/${item.id}.htm">$!{item.title}</a>
+        			###end
+        		</div>
+        		
+            	<div class="text">
+                		$htmlUtil.splitAndFilterString($!{item.content},500)
+            	</div>
+            	<div class="pagetip clearfix">
+            		<div class="fr">
+            				<span>$!{item.author}</span>
+            				<span>$!{item.gmtCreate}发表</span>
+            				<span>$!{item.view}次浏览</span>
+            				<span>$!{item.comment}评论 #set($title=$!{item.title})#parse("blog/common/weiboshare.vm")</span>
+            		</div>
+            	</div>
+            </div>
+		#end
+    </div>
+#else
+	<div >不好意思，没有找到对应的结果，请更换关键词查询或者根据分类浏览！</div>
+#end

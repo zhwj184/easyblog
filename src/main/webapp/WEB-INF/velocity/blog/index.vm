@@ -5,7 +5,7 @@
 			##if($item.url && $item.url !="")
 			##	<a href="${item.url}" target="_blank">$!{item.title}</a>
 			##else
-				<a href="/jiagoushi/${item.id}.htm">$!{item.title}</a>
+				<a href="http://www.javaarch.net/jiagoushi/${item.id}.htm">$!{item.title}</a>
 			###end
 		</div>
 		
@@ -32,15 +32,15 @@
     	#if($index <= 1)
 			<span class="previous_page disabled">上一页</span>
 		#else
-			<a href="/jiagoushi/index.htm?index=$last&id=$!{id}&parentId=$!{parentId}">上一页</a>
-			<a href="/jiagoushi/index.htm?index=$last&id=$!{id}&parentId=$!{parentId}">$last</a>
+			<a href="http://www.javaarch.net/jiagoushi/index.htm?index=$last&id=$!{id}&parentId=$!{parentId}">上一页</a>
+			<a href="http://www.javaarch.net/jiagoushi/index.htm?index=$last&id=$!{id}&parentId=$!{parentId}">$last</a>
 		#end
 		<em>$index</em>
     	#if($index == $totalPage || $totalPage < 2)
 			<span class="next_page disabled ">下一页</span>
 		#else
-			<a href="/jiagoushi/index.htm?index=$next&id=$!{id}&parentId=$!{parentId}">$next</a>
-			<a href="/jiagoushi/index.htm?index=$next&id=$!{id}&parentId=$!{parentId}">下一页</a>
+			<a href="http://www.javaarch.net/jiagoushi/index.htm?index=$next&id=$!{id}&parentId=$!{parentId}">$next</a>
+			<a href="http://www.javaarch.net/jiagoushi/index.htm?index=$next&id=$!{id}&parentId=$!{parentId}">下一页</a>
 		#end
 		共$!{totalPage}页 (共$!{count}篇文章）
 	</div>

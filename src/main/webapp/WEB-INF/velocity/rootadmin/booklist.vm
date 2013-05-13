@@ -1,6 +1,6 @@
 #set($layout="rootadmin/common/layout.vm")
 #set($page_title="添加电子书")
-	<form action="/jiagoushi/rootadmin/addbooklist.htm" method="post" enctype="multipart/form-data">
+	<form action="http://www.javaarch.net/jiagoushi/rootadmin/addbooklist.htm" method="post" enctype="multipart/form-data">
     <table>
 		<tr >
 			<td>是否添加</td>
@@ -20,5 +20,5 @@
     <input type="hidden" name="id" value="$id"/></br>
 	<div style="text-align:center;"><input type="submit" value="submit" value="确定" /></div>
    </form>
-    <div class="indexlink"><a href="/jiagoushi/rootadmin/booklist.htm?id=${id}&categoryId=$category.id">电子书下一页</a></div>
- <div class="indexlink"><a href="/jiagoushi/rootadmin/shipinlist.htm?id=${id}&categoryId=$category.id">视频下一页</a></div>
+    <div class="indexlink"><a href="http://www.javaarch.net/jiagoushi/rootadmin/booklist.htm?id=${id}&categoryId=$category.id">电子书下一页</a></div>
+ <div class="indexlink"><a href="http://www.javaarch.net/jiagoushi/rootadmin/shipinlist.htm?id=${id}&categoryId=$category.id">视频下一页</a></div>

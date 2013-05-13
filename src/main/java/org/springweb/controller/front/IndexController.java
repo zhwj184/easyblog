@@ -1,7 +1,10 @@
 package org.springweb.controller.front;
 
+import java.io.IOException;
 import java.util.List;
+import java.util.Map;
 
+import org.apache.lucene.queryParser.ParseException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -16,6 +19,10 @@ import org.springweb.dao.CategoryDao;
 import org.springweb.dao.CommentDao;
 import org.springweb.dao.PostDao;
 import org.springweb.helper.CatTreeSortHelp;
+import org.springweb.lucene.DataIndex;
+import org.springweb.lucene.DocSearch;
+import org.springweb.util.XssUtil;
+import org.springweb.util.XssUtil.XssFilterTypeEnum;
 
 @Controller
 @RequestMapping("/")
@@ -75,6 +82,32 @@ public class IndexController {
 			return "redirect:" + post.getUrl();
 		}
 		return "blog/detail";
+	}
+	
+	@Autowired
+	private DocSearch docSearch;
+	
+	@Autowired
+	private DataIndex dataIndex;
+	
+	@RequestMapping(value="/search")
+	public String search(@RequestParam String k,ModelMap model){
+		if(k == null || k.isEmpty()){
+			return "redirect:index.htm";
+		}
+		k = XssUtil.xssFilter(k, XssFilterTypeEnum.DELETE.getValue());
+		getLeftCat(null, null, model);
+		try {
+//			dataIndex.index();
+			List<Map<String,String>> res = docSearch.search(k);
+			model.addAttribute("postlist", res);
+		} catch (IOException e) {
+			e.printStackTrace();
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		model.addAttribute("k", k);
+		return "blog/search";
 	}
 	
 }

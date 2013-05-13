@@ -3,7 +3,7 @@
 
 <div class="addcategory">
 	#if($isSuccess && $isSuccess>=1) <h5>Ìí¼Ó³É¹¦¡£</h5>#end
-   <form action="/jiagoushi/rootadmin/addCategory.htm" method="post">
+   <form action="http://www.javaarch.net/jiagoushi/rootadmin/addCategory.htm" method="post">
      <span>name:</span><input type="text" name="name"/></br>
      <span>parentId:</span>
         <select id="parentId" name="parentId">

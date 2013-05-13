@@ -10,4 +10,9 @@
 		<scope>application</scope>
 		<class>org.springweb.util.StringUtil</class>
 	</tool>
+	<tool>
+		<key>htmlUtil</key>
+		<scope>application</scope>
+		<class>org.springweb.util.HtmlUtil</class>
+	</tool>
 </toolbox>

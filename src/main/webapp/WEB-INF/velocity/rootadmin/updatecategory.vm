@@ -2,7 +2,7 @@
 #set($page_title="更新分类")
 <div class="addcategory">
 	#if($isSuccess && $isSuccess>=1) <h5>修改成功。</h5>#end
-   <form action="/jiagoushi/rootadmin/updateCategoryAction.htm" method="post">
+   <form action="http://www.javaarch.net/jiagoushi/rootadmin/updateCategoryAction.htm" method="post">
 	<input type="hidden" name="id" value="$!category.id"/></br>
      <span>name:</span><input type="text" name="name" value="$!category.name"/></br>
     <span> parentId:</span>

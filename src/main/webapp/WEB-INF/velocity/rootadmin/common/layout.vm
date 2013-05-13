@@ -7,10 +7,10 @@
       <META NAME="Author" CONTENT="">
       <META NAME="Keywords" CONTENT="">
       <META NAME="Description" CONTENT="">
-       <link rel="stylesheet" type="text/css" href="/jiagoushi/css/admin.css">
+       <link rel="stylesheet" type="text/css" href="http://www.javaarch.net/jiagoushi/css/admin.css">
      </HEAD>
      <BODY>
-		<div class="indexlink"><a href="/jiagoushi/rootadmin/categorylist.htm">分类列表</a></div>
+		<div class="indexlink"><a href="http://www.javaarch.net/jiagoushi/rootadmin/categorylist.htm">分类列表</a></div>
         $screen_content
      </BODY>
 </HTML>

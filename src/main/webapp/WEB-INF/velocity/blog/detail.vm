@@ -4,7 +4,7 @@
 			#if($post.url && $post.url !="")
 				<a href="${post.url}" target="_blank">$!{post.title}</a>
 			#else
-				<a href="/jiagoushi/${post.id}.htm">$!{post.title}</a>
+				<a href="http://www.javaarch.net/jiagoushi/${post.id}.htm">$!{post.title}</a>
 			#end
 	</div>
 	<div class="text">
@@ -31,7 +31,7 @@
 </div>
 
 <div class="comment">
-	<form action="/jiagoushi/addComment.htm" method="post">
+	<form action="http://www.javaarch.net/jiagoushi/addComment.htm" method="post">
 		<input type="hidden" name="postId" value="$!{post.id}"/>
         <div><span class="commenttip">用户名：</span><input type="text" name="author"/><span class="inputtip">(最多300个字)</span></div>
 		<div>

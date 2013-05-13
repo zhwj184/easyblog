@@ -4,7 +4,7 @@
         	<div>$!catMap.get($item.key).name</div>
             <ul>
         		#foreach($catItem in $item.value)
-        				<li #if($id==$catItem.id) class="selected" #end><a href="/jiagoushi/index.htm?id=$catItem.id">$!{catItem.name} 
+        				<li #if($id==$catItem.id) class="selected" #end><a href="http://www.javaarch.net/jiagoushi/index.htm?id=$catItem.id">$!{catItem.name} 
         						#if($!catCntMap.containsKey($catItem.id)) ($!catCntMap.get($catItem.id)) #end
         					</a>
         				</li>
@@ -19,7 +19,7 @@
 	<div>热门文章</div>
     <ul>
 		#foreach($item in $hotPostlist)
-			<li><a href="/jiagoushi/${item.id}.htm">$stringUtil.getOutputString(${item.title},15) ($item.view)</a></li>
+			<li><a href="http://www.javaarch.net/jiagoushi/${item.id}.htm">$stringUtil.getOutputString(${item.title},15) ($item.view)</a></li>
 		#end
     </ul>
 </div>
@@ -29,7 +29,7 @@
     	<div>最新评论</div>
         <ul>
     		#foreach($item in $hotCommentList)
-    			<li><a href="/jiagoushi/${item.postId}.htm">$stringUtil.getOutputString($!{item.content},22)</a></li>
+    			<li><a href="http://www.javaarch.net/jiagoushi/${item.postId}.htm">$stringUtil.getOutputString($!{item.content},22)</a></li>
     		#end
         </ul>
     </div>

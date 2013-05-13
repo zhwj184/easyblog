@@ -17,11 +17,11 @@
 				<td>$dateUtil.format($item.gmtCreate,"yyyy-MM-dd HH:mm:ss")</td>
 				<td>$dateUtil.format($item.gmtModified,"yyyy-MM-dd HH:mm:ss")</td>
 				<td>
-					 <a href="/jiagoushi/rootadmin/deleteCategory.htm?id=$item.id">删除</a>
-					 <a href="/jiagoushi/rootadmin/updateCategory.htm?id=$item.id">修改</a>
-					 #if($item.parentId>0)<a href="/jiagoushi/rootadmin/postlist.htm?categoryId=$item.id">查看文章列表</a>#end
+					 <a href="http://www.javaarch.net/jiagoushi/rootadmin/deleteCategory.htm?id=$item.id">删除</a>
+					 <a href="http://www.javaarch.net/jiagoushi/rootadmin/updateCategory.htm?id=$item.id">修改</a>
+					 #if($item.parentId>0)<a href="http://www.javaarch.net/jiagoushi/rootadmin/postlist.htm?categoryId=$item.id">查看文章列表</a>#end
 				</td>
             </tr>
 		#end
 	</table>
-    <div class="indexlink"><a href="/jiagoushi/rootadmin/category.htm">添加分类</a></div>
+    <div class="indexlink"><a href="http://www.javaarch.net/jiagoushi/rootadmin/category.htm">添加分类</a></div>

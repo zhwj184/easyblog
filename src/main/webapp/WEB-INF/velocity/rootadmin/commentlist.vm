@@ -18,15 +18,15 @@
 				<td>$item.gmtCreate</td>
 				<td>$item.gmtModified</td>
 				<td>
-					 <a href="/jiagoushi/rootadmin/deleteComment.htm?id=$item.id&postId=$item.postId">删除</a>
-					 <a href="/jiagoushi/rootadmin/updateComment.htm?id=$item.id&postId=$item.postId">审核通过</a>
+					 <a href="http://www.javaarch.net/jiagoushi/rootadmin/deleteComment.htm?id=$item.id&postId=$item.postId">删除</a>
+					 <a href="http://www.javaarch.net/jiagoushi/rootadmin/updateComment.htm?id=$item.id&postId=$item.postId">审核通过</a>
 				</td>
             </tr>
 		#end
 	</table>
 		#set($last=$index-1)
-    #if($totalPage > 1 && $index >1) < a href="/jiagoushi/rootadmin/deletePost.htm?id=$item.id&categoryId=$item.categoryId&index=$last" >上一页</a> #end
+    #if($totalPage > 1 && $index >1) < a href="http://www.javaarch.net/jiagoushi/rootadmin/deletePost.htm?id=$item.id&categoryId=$item.categoryId&index=$last" >上一页</a> #end
    当前$index 页
    #set($last=$index+1)
-   #if($totalPage > 1 && $totalPage > $index) < a href="/jiagoushi/rootadmin/deletePost.htm?id=$item.id&categoryId=$item.categoryId&index=$next">下一页</a> #end
+   #if($totalPage > 1 && $totalPage > $index) < a href="http://www.javaarch.net/jiagoushi/rootadmin/deletePost.htm?id=$item.id&categoryId=$item.categoryId&index=$next">下一页</a> #end
   总共$totalPage 页

@@ -81,7 +81,19 @@ body{
 	line-height: 53px;
 	color: #262324;
 }
-
+.nav .search{
+	float: right;
+    padding-right: 10px;
+    padding-top: 10px;
+}
+.nav .search .input{
+	width: 120px;
+}
+.nav .search .submit{
+	background-color: #ddd;
+	font-family: arial,\5b8b\4f53,sans-serif;
+	font-size: 14px;
+}
 .content{
 	max-width: 1000px;
 	margin: 0 auto;
