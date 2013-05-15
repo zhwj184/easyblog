@@ -32,13 +32,13 @@ public class CommentController {
 	@RequestMapping(value="/updateComment", method = RequestMethod.GET)
 	public String update(@RequestParam Long id,@RequestParam Long postId,ModelMap model) {
 		commentDao.update(id, 1);
-		return "redirect:commentlist.htm?postId=" + postId;  
+		return "redirect:" + PageConstant.DOMAIN_ADMIN_PATH_NAME + "commentlist.htm?postId=" + postId;  
 	}
 	
 	@RequestMapping(value="/deleteComment", method = RequestMethod.GET)
 	public String delete(@RequestParam Long id,@RequestParam Long postId,ModelMap model) {
 		commentDao.delete(id);
-		return "redirect:commentlist.htm?postId=" + postId;  
+		return "redirect:" + PageConstant.DOMAIN_ADMIN_PATH_NAME + "commentlist.htm?postId=" + postId;  
 	}
  
 }

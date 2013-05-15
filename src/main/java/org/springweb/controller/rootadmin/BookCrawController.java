@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springweb.bean.Post;
+import org.springweb.config.PageConstant;
 import org.springweb.dao.CategoryDao;
 import org.springweb.dao.PostDao;
 import org.springweb.service.impl.BookCrawServeice;
@@ -73,6 +74,6 @@ public class BookCrawController {
 				 postDao.insert(post);
 			 }
 		 }
-		 return "redirect:booklist.htm?id=" + id + "&categoryId="+ categoryId;  
+		 return "redirect:" + PageConstant.DOMAIN_ADMIN_PATH_NAME + "booklist.htm?id=" + id + "&categoryId="+ categoryId;  
 	}
 }

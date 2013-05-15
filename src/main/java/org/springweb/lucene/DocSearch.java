@@ -31,6 +31,9 @@ public class DocSearch {
 	public void init()  {
 		Directory directory;
 		try {
+			if(isearcher != null){
+				isearcher.close();
+			}
 			directory = FSDirectory.open(new File(indexDir));
 			// Now search the index:
 			IndexReader ireader = IndexReader.open(directory); // read-only=true

@@ -107,4 +107,22 @@
 				<li><a href="http://www.slideshare.net/" target="_blank">slideshare</a></li>
 			</ul>
     	</div>
+		<div class="daohangitem clearfix">
+				技术博客
+		</div>
+    	<div class="linkcontent clearfix">
+            <ul>
+				<li><a href="http://timyang.net/" target="_blank">timyang</a></li>
+			</ul>
+    	</div>
+	   <div class="daohangitem clearfix">
+				知名网站
+		</div>
+    	<div class="linkcontent clearfix">
+            <ul>
+				<li><a href="http://www.codeproject.com" target="_blank">codeproject</a></li>
+				<li><a href="https://www.java.net/" target="_blank">java.net</a></li>
+				<li><a href="http://www.javaworld.com/" target="_blank">javaworld</a></li>
+			</ul>
+    	</div>
 </div>

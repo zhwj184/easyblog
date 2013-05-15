@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springweb.bean.Category;
+import org.springweb.config.PageConstant;
 import org.springweb.dao.CategoryDao;
  
 @Controller
@@ -58,7 +59,7 @@ public class CategoryController {
 		categoryDao.delete(id);
 //		model.addAttribute("category",categoryDao.query(null, null));
 //		return "rootadmin/categorylist";
-		 return "redirect:categorylist.htm";  
+		 return "redirect:" + PageConstant.DOMAIN_ADMIN_PATH_NAME + "categorylist.htm";  
 	}
 	
 }

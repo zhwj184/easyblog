@@ -61,7 +61,7 @@ public class PostController {
 	@RequestMapping(value="/deletePost", method = RequestMethod.GET)
 	public String delete(@RequestParam Long id, @RequestParam Long categoryId, ModelMap model) {
 		postDao.delete(id);
-		return "redirect:postlist.htm?categoryId=" + categoryId;  
+		return "redirect:" + PageConstant.DOMAIN_NAME + "postlist.htm?categoryId=" + categoryId;  
 	}
 	
 	@RequestMapping(value="/updatePost", method = RequestMethod.GET)
@@ -73,7 +73,7 @@ public class PostController {
 	@RequestMapping(value="/updatePostAction", method = RequestMethod.POST)
 	public String updatePostAction(@ModelAttribute Post post, ModelMap model) {
 		model.addAttribute("isSuccess",postDao.update(post));
-		return "redirect:postlist.htm?categoryId="+post.getCategoryId();
+		return "redirect:" + PageConstant.DOMAIN_ADMIN_PATH_NAME + "postlist.htm?categoryId="+post.getCategoryId();
 	}
  
 }
