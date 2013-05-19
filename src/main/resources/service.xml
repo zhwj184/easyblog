@@ -11,6 +11,24 @@ http://www.springframework.org/schema/context/spring-j2ee-3.0.xsd
 http://www.springframework.org/schema/tx 
 http://www.springframework.org/schema/tx/spring-tx-2.5.xsd"
 	default-autowire="byType" default-lazy-init="false" default-merge="true">
-
+	
+		<!-- BeanFactoryPostProcessor 
+	<bean id="placeholder"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>classpath:jdbc.properties</value>
+			</list>
+		</property>
+	</bean>-->
+	<bean id="placeholder"
+		class="org.springweb.core.MutilPropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>classpath:jdbc.properties</value>
+				<value>classpath*:*-placeholder.properties</value>
+			</list>
+		</property>
+	</bean>
 	
 </beans>

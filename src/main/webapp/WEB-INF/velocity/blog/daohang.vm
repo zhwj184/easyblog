@@ -1,4 +1,6 @@
 #set($layout="blog/common/daohanglayout.vm")
+#set($description="提供java编程原创文章，分享最有价值文章，提供计算机编程相关电子书和视频下载，IT行业相关吐槽，程序员专用导航， web 数据库，架构，分布式系统，性能优化,知名网站，技术博客网址网址导航")
+#set($page_title="程序员相关优化IT技术网址导航")
 <div class="categorynav">
     	<div class="daohangitem clearfix">
 				编程语言
@@ -19,6 +21,10 @@
 				<li><a href="http://developer.android.com/index.html#" target="_blank">android</a></li>
 				<li><a href="http://nodejs.org/" target="_blank">node.js</a></li>
 				<li><a href="http://www.erlang-cn.org/p/news/" target="_blank">erlang</a></li>
+				<li><a href="http://www.onjava.com/" target="_blank">onjava</a></li>
+				<li><a href="http://www.jguru.com/" target="_blank">jguru</a></li>
+				<li><a href="http://java-source.net/" target="_blank">javasource</a></li>
+				<li><a href="http://www.java-tips.org/" target="_blank">javatips</a></li>
 				<li><a href="" target="_blank"></a></li>
 				<li><a href="" target="_blank"></a></li>
 				<li><a href="" target="_blank"></a></li>
@@ -95,7 +101,7 @@
 				<li><a href="http://runjs.cn/" target="_blank">runjs</a></li>
 				<li><a href="http://open.chrome.360.cn/extension_dev/overview.html" target="_blank">chrome插件</a></li>
 				<li><a href="http://www.dzone.com/links/index.html" target="_blank"></a>dzone</li>
-				<li><a href="" target="_blank"></a></li>
+				<li><a href="http://www.htmlgoodies.com/" target="_blank">htmlgoodies</a></li>
 			</ul>
     	</div>
 		<div class="daohangitem clearfix">
@@ -113,6 +119,8 @@
     	<div class="linkcontent clearfix">
             <ul>
 				<li><a href="http://timyang.net/" target="_blank">timyang</a></li>
+				<li><a href="http://www.mkyong.com" target="_blank">mkyong</a></li>
+				<li><a href="http://ourmysql.com" target="_blank">ourmysql</a></li>
 			</ul>
     	</div>
 	   <div class="daohangitem clearfix">
@@ -120,9 +128,36 @@
 		</div>
     	<div class="linkcontent clearfix">
             <ul>
+				<li><a href="http://www.iteye.com/" target="_blank">iteye</a></li>
+				<li><a href="http://www.csdn.net/" target="_blank">csdn</a></li>
 				<li><a href="http://www.codeproject.com" target="_blank">codeproject</a></li>
 				<li><a href="https://www.java.net/" target="_blank">java.net</a></li>
 				<li><a href="http://www.javaworld.com/" target="_blank">javaworld</a></li>
+				<li><a href="http://www.w3.org/" target="_blank">w3c</a></li>
+				<li><a href="http://www.devx.com" target="_blank">devx</a></li>
+				<li><a href="http://stackoverflow.com/" target="_blank">Stack Overflow</a></li>
+				<li><a href="http://www.theserverside.com/" target="_blank">theserverside</a></li>
+				<li><a href="http://www.roseindia.net/" target="_blank">roseindia</a></li>
+			</ul>
+    	</div>
+		<div class="daohangitem clearfix">
+				velocity
+		</div>
+    	<div class="linkcontent clearfix">
+            <ul>
+				<li><a href="http://velocity.apache.org" target="_blank">velocity</a></li>
+				<li><a href="http://www.createjs.com" target="_blank">createjs</a></li>
 			</ul>
     	</div>
 </div>
+<script type="text/javascript">
+     document.write('<a style="display:none!important" id="tanx-a-mm_12567797_4010936_13114398"></a>');
+     tanx_s = document.createElement("script");
+     tanx_s.type = "text/javascript";
+     tanx_s.charset = "gbk";
+     tanx_s.id = "tanx-s-mm_12567797_4010936_13114398";
+     tanx_s.async = true;
+     tanx_s.src = "http://p.tanx.com/ex?i=mm_12567797_4010936_13114398";
+     tanx_h = document.getElementsByTagName("head")[0];
+     if(tanx_h)tanx_h.insertBefore(tanx_s,tanx_h.firstChild);
+</script>

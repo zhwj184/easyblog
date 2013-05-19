@@ -22,9 +22,9 @@
 				<prop key="directive.foreach.counter.initial.value">1</prop>
 				<prop key="input.encoding">GBK</prop>
 				<prop key="output.encoding">GBK</prop>
-				<prop key="file.resource.loader.cache">false</prop>
-				<prop key="file.resource.loader.modificationCheckInterval">1</prop>
-				<prop key="velocimacro.library.autoreload">true</prop>
+				<prop key="file.resource.loader.cache">${file.resource.loader.cache}</prop>
+				<prop key="file.resource.loader.modificationCheckInterval">${file.resource.loader.modificationCheckInterval}</prop>
+				<prop key="velocimacro.library.autoreload">false</prop>
 				<prop key="velocimacro.library">macro.vm</prop>
 			</props>
 		</property>
@@ -56,5 +56,27 @@
 		<!-- one of the properties available; the maximum file size in bytes -->
 		<property name="maxUploadSize" value="100000" />
 	</bean>
+	
+	   
+     <bean id="exceptionResolver" class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">  
+         <property name="exceptionMappings">  
+             <props>  
+                 <prop key="java.lang.Exception">blog/common/error</prop>  
+                 <prop key="java.lang.Throwable">blog/common/error</prop>  
+             </props>  
+         </property>  
+         <property name="statusCodes">  
+             <props>  
+                 <prop key="blog/common/error">404</prop>  
+             </props>  
+         </property>  
+         <!-- 设置日志输出级别，不定义则默认不输出警告等错误日志信息  
+         <property name="warnLogCategory" value="WARN"></property>   -->
+         <!-- 默认错误页面，当找不到上面mappings中指定的异常对应视图时，使用本默认配置 -->  
+         <property name="defaultErrorView" value="blog/common/error"></property>  
+         <!-- 默认HTTP状态码 -->  
+         <property name="defaultStatusCode" value="500"></property>  
+     </bean>  
+	
 
 </beans>

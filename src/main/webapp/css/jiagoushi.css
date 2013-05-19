@@ -53,11 +53,18 @@ body{
 	color: #FFFFFF;
 	  font-weight: bold;
 }
+.header .siteinfo{
+	float: right;
+	padding-right: 10px;
+}
+.header .siteinfo a{
+	color: #ff6600;
+}
 .nav {
 	background-color: #BEC1D4;
 	height: 53px;
 	max-width: 1000px;
-	margin: 10px auto;
+	margin: 5px auto 0px;
 	border-radius: 5 5 5px 5px;
 	-webkit-border-radius: 5 5 5px 5px;
 	-moz-border-radius: 5 5 5px 5px;
@@ -100,12 +107,12 @@ body{
 }
 .left{
 	float: left;
+	margin-top: 20px;
 }
 .category {
 	width: 200px;
-	margin-top: 20px;
+	margin-top: 10px;
 	padding: 5px;
-	margin-bottom: 20px;
 	border-radius: 5 5 5px 5px;
 	-webkit-border-radius: 5 5 5px 5px;
 	-moz-border-radius: 5 5 5px 5px;
@@ -135,8 +142,14 @@ body{
 .main {
 	width: 770px;
 	float: right;
-	padding-top: 20px;
 }
+.main .sn span{
+	float: right;
+	padding-right: 10px;
+}
+.main .sn span a{
+	color: #108AC6;
+}	
 .main .post,.content .categorynav{
 	 background: none repeat scroll 0 0 #FFFFFF;
     border-radius: 5px 5px 5px 5px;

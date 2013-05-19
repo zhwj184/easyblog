@@ -1,0 +1,17 @@
+#set($layout="blog/common/daohanglayout.vm")
+#set($description="提供java编程原创文章，分享最有价值文章，提供计算机编程相关电子书和视频下载，IT行业相关吐槽，程序员专用导航， web 数据库，架构，分布式系统，性能优化,知名网站，技术博客网址网址导航")
+#set($page_title="程序员相关优化IT技术")
+<div  style="text-align:center;" >不好意思，出错了。<a style="color:#FF6600;" href="http://www.javaarch.net/jiagoushi/index.htm">请点这里返回首页</a></div>
+<div style="clearfix">
+<script type="text/javascript">
+     document.write('<a style="display:none!important" id="tanx-a-mm_12567797_4010936_13114398"></a>');
+     tanx_s = document.createElement("script");
+     tanx_s.type = "text/javascript";
+     tanx_s.charset = "gbk";
+     tanx_s.id = "tanx-s-mm_12567797_4010936_13114398";
+     tanx_s.async = true;
+     tanx_s.src = "http://p.tanx.com/ex?i=mm_12567797_4010936_13114398";
+     tanx_h = document.getElementsByTagName("head")[0];
+     if(tanx_h)tanx_h.insertBefore(tanx_s,tanx_h.firstChild);
+</script>
+</div>

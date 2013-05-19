@@ -1,2 +1,7 @@
 <div class="sitetitle">架构师之路 </div>
-<div class="sitemotto">走自己的路，享受这一路码农的快乐！<div style="display:inline-block;"><wb:follow-button uid="1530428034" type="red_1" width="67" height="24" ></wb:follow-button></div></div>
+<div class="sitemotto">
+	走自己的路，享受这一路码农的快乐！
+	<div style="display:inline-block;"><wb:follow-button uid="1530428034" type="red_1" width="67" height="24" ></wb:follow-button>
+	</div>
+	<div class="siteinfo"><a href="http://www.javaarch.net/jiagoushi/rss.htm" target="_blank">RSS订阅</a></div>
+</div>

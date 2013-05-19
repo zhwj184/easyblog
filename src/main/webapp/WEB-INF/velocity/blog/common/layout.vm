@@ -4,9 +4,9 @@
       <TITLE>架构师之路-$!page_title</TITLE>
       <meta http-equiv="Content-Type" content="text/html; charset=GBK"/>
       <meta http-equiv="Content-Language" content="zh-CN"/>
-      <META NAME="Author" CONTENT="">
-      <META NAME="Keywords" CONTENT="">
-      <META NAME="Description" CONTENT="">
+      <META NAME="Author" CONTENT="zhongweijian钟伟坚">
+      <META NAME="Keywords" CONTENT="提供java编程原创文章，分享最有价值文章，提供计算机编程相关电子书和视频下载，IT行业相关吐槽，程序员专用导航， web 数据库，架构，分布式系统，性能优化">
+      <META NAME="Description" CONTENT="$!description">
       <link rel="stylesheet" type="text/css" href="http://www.javaarch.net/jiagoushi/css/jiagoushi.css">
 	 <link rel="stylesheet" type="text/css" href="http://www.javaarch.net/jiagoushi/css/github.css">
 	<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="GBK"></script>

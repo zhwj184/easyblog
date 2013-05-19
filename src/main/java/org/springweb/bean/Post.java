@@ -40,6 +40,9 @@ public class Post implements Serializable{
 		}
 		return HtmlUtil.splitAndFilterString(this.getContent(), 500);
 	}
+	public String getFilter(){
+		return HtmlUtil.splitAndFilterString(this.getContent(), 50);
+	}
 
 	public long getId() {
 		return id;

@@ -1,4 +1,16 @@
-#set($page_title="$!catMap.get($!{id}).name")
+#if($postlist && $postlist.size()>0)
+    #set($page_title="$!{catMap.get($!{id}).name}-$!{postlist.get(0).title}")
+    #set($description="$!{postlist.get(0).getFilter()}")
+#else
+	  #set($page_title="$!{catMap.get($!{id}).name}")
+    #set($description="提供java编程原创文章，分享最有价值文章，提供计算机编程相关电子书和视频下载，IT行业相关吐槽，程序员专用导航")
+#end
+<div class="sn clearfix">
+	<span> 
+		<a href="http://www.javaarch.net/jiagoushi/index.htm?id=$!{id}&parentId=$!{parentId}&type=1">最新</a>
+		<a href="http://www.javaarch.net/jiagoushi/index.htm?id=$!{id}&parentId=$!{parentId}&type=2">最热</a>
+	</span>
+</div>
 #foreach($item in $postlist)
 	<div class="post">
     	<div class="title clearfix">
@@ -32,15 +44,15 @@
     	#if($index <= 1)
 			<span class="previous_page disabled">上一页</span>
 		#else
-			<a href="http://www.javaarch.net/jiagoushi/index.htm?index=$last&id=$!{id}&parentId=$!{parentId}">上一页</a>
-			<a href="http://www.javaarch.net/jiagoushi/index.htm?index=$last&id=$!{id}&parentId=$!{parentId}">$last</a>
+			<a href="http://www.javaarch.net/jiagoushi/index.htm?index=$last&id=$!{id}&parentId=$!{parentId}&type=$!{type}">上一页</a>
+			<a href="http://www.javaarch.net/jiagoushi/index.htm?index=$last&id=$!{id}&parentId=$!{parentId}&type=$!{type}">$last</a>
 		#end
 		<em>$index</em>
     	#if($index == $totalPage || $totalPage < 2)
 			<span class="next_page disabled ">下一页</span>
 		#else
-			<a href="http://www.javaarch.net/jiagoushi/index.htm?index=$next&id=$!{id}&parentId=$!{parentId}">$next</a>
-			<a href="http://www.javaarch.net/jiagoushi/index.htm?index=$next&id=$!{id}&parentId=$!{parentId}">下一页</a>
+			<a href="http://www.javaarch.net/jiagoushi/index.htm?index=$next&id=$!{id}&parentId=$!{parentId}&type=$!{type}">$next</a>
+			<a href="http://www.javaarch.net/jiagoushi/index.htm?index=$next&id=$!{id}&parentId=$!{parentId}&type=$!{type}">下一页</a>
 		#end
 		共$!{totalPage}页 (共$!{count}篇文章）
 	</div>

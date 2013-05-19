@@ -38,7 +38,7 @@ public class IndexController {
 	private CommentDao commentDao;
 
 	@RequestMapping(value="/index", method = RequestMethod.GET)
-	public String index(@RequestParam(required=false) Long id, @RequestParam(required=false) Long parentId, @RequestParam(defaultValue="1") long index,ModelMap model){
+	public String index(@RequestParam(required=false) Long id, @RequestParam(required=false) Long parentId, @RequestParam(defaultValue="1") Integer type, @RequestParam(defaultValue="1") long index,ModelMap model){
 		getLeftCat(id, parentId, model);
 		
 		long count = postDao.queryCount(parentId,id);
@@ -49,7 +49,8 @@ public class IndexController {
 		}
 		model.addAttribute("totalPage", totalPage);
 		model.addAttribute("index", index);
-		model.addAttribute("postlist",postDao.query(parentId, id, 1, PageConstant.PAGE_SIZE, (index-1) * PageConstant.PAGE_SIZE));
+		model.addAttribute("type", type);
+		model.addAttribute("postlist",postDao.query(parentId, id, type, PageConstant.PAGE_SIZE, (index-1) * PageConstant.PAGE_SIZE));
 		
 		return "blog/index";
 	}

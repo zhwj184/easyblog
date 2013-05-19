@@ -15,16 +15,6 @@ http://www.springframework.org/schema/tx/spring-tx-2.5.xsd"
 	<!-- -->
 	<context:annotation-config />
 
-	<!-- BeanFactoryPostProcessor -->
-	<bean id="placeholder"
-		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-		<property name="locations">
-			<list>
-				<value>classpath:jdbc.properties</value>
-			</list>
-		</property>
-	</bean>
-
 	<bean id="dbcpDataSource" class="org.apache.commons.dbcp.BasicDataSource"
 		destroy-method="close">
 		<property name="driverClassName" value="${database.driverClassName}" />
