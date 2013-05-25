@@ -4,6 +4,7 @@
 		<li><a href="http://www.javaarch.net/jiagoushi/index.htm?parentId=${item.id}">$item.name</a></li>
 	#end
 	<li><a href="http://www.javaarch.net/jiagoushi/daohang.htm">µ¼º½</a></li>
+	<li><a href="http://www.javaarch.net/jiagoushi/geek.htm">¼«¿Í</a></li>
 	<!--<li><a href="/jiagoushi/liuyan.htm">ÁôÑÔ</a></li>-->
 </ul>
 <div class="search">

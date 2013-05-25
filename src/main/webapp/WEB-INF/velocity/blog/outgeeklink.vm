@@ -1,0 +1,17 @@
+	#set($layout="blog/common/outlayout.vm")
+		<form id="myform" action="http://www.javaarch.net/jiagoushi/outaddgeeklink.htm" method="post">
+			url:<input type="text" name="url" id="url">
+			title:<input type="text" name="title" id="title">
+			<input type="hidden" value="myzhongweijian" name="myauth">
+			<input type="hidden" value="admin" name="author">
+			<input type="submit" value="Ìá½»">
+		</form>
+			
+<script language="javascript">
+    function saveUserInfo()
+    {
+			alert(parent.document.getElementById('url').value);
+			document.getElementById('url').value=parent.document.getElementById('url').value;
+			document.getElementById('title').value=parent.document.getElementById('title').value;
+	}
+</script>

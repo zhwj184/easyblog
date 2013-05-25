@@ -79,9 +79,25 @@ public class IndexController {
 		model.addAttribute("post", post);
 		postDao.update(id);
 		model.addAttribute("commentList", commentDao.query(id, 100, 0));
-		if(post.getUrl() != null && !post.getUrl().isEmpty()){
-			return "redirect:" + post.getUrl();
+//		if(post.getUrl() != null && !post.getUrl().isEmpty()){
+//			return "redirect:" + post.getUrl();
+//		}
+		
+		//Ïà¹ØÍÆ¼ö
+		if(post != null && post.getTitle() != null){
+			List<Map<String, String>> res = null;
+			try {
+				res = docSearch.search(post.getTitle(), 7);
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (ParseException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			model.addAttribute("recomPostlist", res);	
 		}
+		
 		return "blog/detail";
 	}
 	
@@ -100,7 +116,7 @@ public class IndexController {
 		getLeftCat(null, null, model);
 		try {
 //			dataIndex.index();
-			List<Map<String,String>> res = docSearch.search(k);
+			List<Map<String,String>> res = docSearch.search(k, 50);
 			model.addAttribute("postlist", res);
 		} catch (IOException e) {
 			e.printStackTrace();

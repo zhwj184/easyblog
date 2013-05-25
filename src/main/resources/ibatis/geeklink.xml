@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd" >
+<sqlMap namespace="jiagoushi">
+    <!-- typeAlias -->
+    <typeAlias alias="geekLink" type="org.springweb.bean.GeekLink" />
+    <!-- resultMap -->
+    <resultMap id="TA-geekLink" class="geekLink">
+        <result column="id"             property="id"           jdbcType="INT"      javaType="long"/>
+        <result column="gmt_create"     property="gmtCreate"    jdbcType="DATETIME"    javaType="date"/>
+        <result column="gmt_modified"   property="gmtModified"  jdbcType="DATETIME"    javaType="date"/>
+        <result column="title"      property="title"     jdbcType="VARCHAR"     javaType="string"/>
+        <result column="url"      property="url"     jdbcType="VARCHAR"     javaType="string"/>
+        <result column="author"      property="author"     jdbcType="VARCHAR"     javaType="string"/>
+    </resultMap>
+    
+    <sql id="SELECTALL-GEEKLINK">
+		<![CDATA[
+			select id, gmt_create, gmt_modified, title,url,author
+		]]>
+	</sql>
+
+    <insert id="GEEKLINK-INSERT" parameterClass="geekLink">
+        <![CDATA[
+            insert into geeklink (gmt_create, gmt_modified, title,url,author)
+            values (now(), now(), #title#,#url#,#author#)
+        ]]>
+        <selectKey resultClass="java.lang.Long" keyProperty="id">
+	       SELECT LAST_INSERT_ID() AS ID
+	    </selectKey>
+    </insert>
+
+    <select id="SELECT-GEEKLINK-COUNT"  resultClass="long" >
+        select count(*)  from geeklink
+    </select>
+
+	  <select id="SELECT-GEEKLINK-BYID" resultMap="TA-geekLink" parameterClass="long">
+        <include refid="SELECTALL-GEEKLINK" />
+       	 from geeklink where id=#id#
+      </select>
+
+    <select id="SELECT-GEEKLINK" resultMap="TA-geekLink" parameterClass="java.util.Map">
+        <include refid="SELECTALL-GEEKLINK" />
+        from geeklink order by gmt_modified desc
+         limit #pagesize#  offset #offset# 
+    </select>
+    
+    <delete id="DELETE-GEEKLINK" parameterClass="long">
+    		delete from geeklink  where id=#value#
+    </delete>
+    
+</sqlMap>

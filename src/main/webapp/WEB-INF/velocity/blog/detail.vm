@@ -1,6 +1,6 @@
 #set($page_title="$!{post.title}")
 #set($description="$!{post.getFilter()}")
-<div class="post">
+<div class="post detail">
 	<div class="title clearfix">
 			#if($post.url && $post.url !="")
 				<a href="${post.url}" target="_blank">$!{post.title}</a>
@@ -28,10 +28,9 @@
     			</div>
 			#end
 	</div>
-	
 </div>
 
-<div class="comment">
+<div class="comment clearfix">
 	<form action="http://www.javaarch.net/jiagoushi/addComment.htm" method="post">
 		<input type="hidden" name="postId" value="$!{post.id}"/>
         <div><span class="commenttip">用户名：</span><input type="text" name="author"/><span class="inputtip">(最多300个字)</span></div>
@@ -41,8 +40,22 @@
 		<div ><input class="subbutton" type="submit" value="发表评论"/></div>
 	</form>
 </div>
-
-
-   
+#if($recomPostlist&&$recomPostlist.size()>0)
+    <div class="recom clearfix">
+    	<div>相关文章</div>
+    	<ul>
+			#set($cnt=0)
+    		#foreach($item in $recomPostlist)
+				#if(${post.id}!=$item.id&&$cnt<6)
+					<li><a href="http://www.javaarch.net/jiagoushi/${item.id}.htm">$!{item.title}</a></li>
+					#set($cnt=$cnt+1)
+				#end
+    		#end
+    	</ul>
+    </div>
+#end
+<div class="clearfix" style="margin-top: 20px;">
+	<iframe id="f" width="760px" height="100px" src= "http://union.yihaodian.com/link_make/viewPicInfo.do?imgSize=760x100&truckerU=107643800" frameborder="no" border="0" marginwidth="0" marginheight="0" allowtransparency="yes" scrolling="NO" > </iframe>
+</div>
   
 

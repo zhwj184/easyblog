@@ -1,0 +1,36 @@
+#set($layout="blog/common/daohanglayout.vm")
+#set($description="提供java编程原创文章，分享最有价值文章，提供计算机编程相关电子书和视频下载，IT行业相关吐槽，程序员专用导航， web 数据库，架构，分布式系统，性能优化,知名网站，技术博客网址网址导航")
+#set($page_title="程序员相关优化IT技术网址导航")
+<div class="geekshare clearfix">
+	<ul>
+		#foreach($item in $geeklinklist)
+			<li>
+				<div class="title"><a href="$!{item.url}" target="_blank">${velocityCount}.$!{item.title}</a></div>
+				<div class="info">$!{item.author}创建于$dateUtil.format($item.gmtCreate,"yyyy-MM-dd HH:mm:ss")</div>
+			</li>
+		#end
+	</ul>
+</div>
+<div>
+	#if($count>0)
+	<div class="pagination">
+		#set($last = $index - 1 )
+		#set($next = $index + 1 )
+    	#if($index <= 1)
+			<span class="previous_page disabled">上一页</span>
+		#else
+			<a href="http://www.javaarch.net/jiagoushi/geek.htm?index=$last">上一页</a>
+			<a href="http://www.javaarch.net/jiagoushi/geek.htm?index=$last">$last</a>
+		#end
+		<em>$index</em>
+    	#if($index == $totalPage || $totalPage < 2)
+			<span class="next_page disabled ">下一页</span>
+		#else
+			<a href="http://www.javaarch.net/jiagoushi/geek.htm?index=$next">$next</a>
+			<a href="http://www.javaarch.net/jiagoushi/geek.htm?index=$next">下一页</a>
+		#end
+		共$!{totalPage}页 (共$!{count}篇文章）
+	</div>
+	#else
+	#end
+</div>

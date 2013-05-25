@@ -15,7 +15,6 @@ import org.springframework.beans.factory.config.PropertyPlaceholderConfigurer;
 /**
  * 可以按照不同的运行模式启用相应的配置
  * 
- * @author guotao.zhaogt 2011-4-2 下午04:27:12
  */
 public class MutilPropertyPlaceholderConfigurer extends PropertyPlaceholderConfigurer implements InitializingBean {
 	

@@ -1,0 +1,13 @@
+#set($layout="rootadmin/common/layout.vm")
+#set($page_title="添加极客链接")
+
+<div class="addpost">
+	#if($isSuccess && $isSuccess>=1) <h5>添加成功。</h5>#end
+   <form action="http://www.javaarch.net/jiagoushi/rootadmin/addgeek.htm" method="post" enctype="multipart/form-data">
+     <span>title:</span><input type="text" name="title" class="common"/></br>
+	 <span>url :</span><input type="text" name="url" class="common"/></br>
+	 <span>author:</span><input type="text" name="author" class="common" value="admin"/></br>
+     </br>
+     <input type="submit" value="submit"/>
+   </form>
+</div>

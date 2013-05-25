@@ -34,6 +34,7 @@
         </ul>
     </div>
 #end
+<div class="leftadv">
 <script type="text/javascript">
      document.write('<a style="display:none!important" id="tanx-a-mm_12567797_4010936_13112101"></a>');
      tanx_s = document.createElement("script");
@@ -45,3 +46,7 @@
      tanx_h = document.getElementsByTagName("head")[0];
      if(tanx_h)tanx_h.insertBefore(tanx_s,tanx_h.firstChild);
 </script>
+</div>
+<div class="leftadv">
+<a href="http://r.union.meituan.com/url/visit/?a=1&key=bJwUDVNS12MFgxCKRrZQqyWOAamko3fz&url=http%3A%2F%2Fwww.meituan.com" target="_blank"><img alt="mt_200*200"  src="http://union.meituan.com/static/ad/MT_1322115682.jpg"  border="0" /></a>
+</div>

@@ -57,6 +57,7 @@
 				<li><a href="https://fosdem.org/2013/schedule/track/mysql_and_friends/" target="_blank">mysql讨论区</a></li>
 				<li><a href="http://www.mysqlperformanceblog.com/" target="_blank">mysql优化</a></li>
 				<li><a href="http://www.h2database.com/html/mvstore.html" target="_blank">MVStore</a></li>
+				<li><a href="http://sqlzoo.net/" target="_blank">sqlzoo</a></li>
 			</ul>
     	</div>
 		<div class="daohangitem clearfix">
@@ -121,6 +122,8 @@
 				<li><a href="http://timyang.net/" target="_blank">timyang</a></li>
 				<li><a href="http://www.mkyong.com" target="_blank">mkyong</a></li>
 				<li><a href="http://ourmysql.com" target="_blank">ourmysql</a></li>
+				<li><a href="http://blog.donghao.org/" target="_blank">董昊</a></li>
+				<li><a href="http://coolshell.cn" target="_blank">酷壳 </a></li>
 			</ul>
     	</div>
 	   <div class="daohangitem clearfix">
@@ -130,6 +133,7 @@
             <ul>
 				<li><a href="http://www.iteye.com/" target="_blank">iteye</a></li>
 				<li><a href="http://www.csdn.net/" target="_blank">csdn</a></li>
+				<li><a href="http://highscalability.com" target="_blank">High Scalability</a></li>
 				<li><a href="http://www.codeproject.com" target="_blank">codeproject</a></li>
 				<li><a href="https://www.java.net/" target="_blank">java.net</a></li>
 				<li><a href="http://www.javaworld.com/" target="_blank">javaworld</a></li>

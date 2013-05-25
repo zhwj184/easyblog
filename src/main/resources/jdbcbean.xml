@@ -68,5 +68,9 @@ http://www.springframework.org/schema/tx/spring-tx-2.5.xsd"
 		<property name="dataSource" ref="dbcpDataSource" />
 		<property name="sqlMapClient" ref="sqlMapClient" />
 	</bean>
+	<bean id="geekLinkDao" class="org.springweb.dao.GeekLinkDao">
+		<property name="dataSource" ref="dbcpDataSource" />
+		<property name="sqlMapClient" ref="sqlMapClient" />
+	</bean>
 
 </beans>

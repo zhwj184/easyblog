@@ -55,7 +55,7 @@ public class DocSearch {
 		}
 	}
 
-	public List<Map<String,String>> search(String key) throws IOException, ParseException {
+	public List<Map<String,String>> search(String key, int size) throws IOException, ParseException {
 		Analyzer analyzer = new StandardAnalyzer(Version.LUCENE_36);
 //		QueryParser parser = new QueryParser(Version.LUCENE_36, "context",
 //				analyzer);
@@ -75,7 +75,7 @@ public class DocSearch {
 		Query contentQuery = parser1.parse(key);
 		booleanQuery.add(contentQuery ,BooleanClause.Occur.MUST); 
 
-		ScoreDoc[] hits = isearcher.search(booleanQuery, null, 50).scoreDocs;
+		ScoreDoc[] hits = isearcher.search(booleanQuery, null, size).scoreDocs;
 		List<Map<String,String>> postlist = new ArrayList<Map<String,String>>();
 		for (int i = 0; i < hits.length; i++) {
 			Document hitDoc = isearcher.doc(hits[i].doc);

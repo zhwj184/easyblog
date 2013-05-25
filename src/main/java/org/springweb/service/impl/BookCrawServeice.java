@@ -29,7 +29,7 @@ public class BookCrawServeice {
 		Document doc = Jsoup.parse(new URL(url), 2000);
 		Elements links = doc
 				.select("html body div#content div#main ul li div.list_info h4 a[href]");
-		System.out.println(links.text());
+//		System.out.println(links.text());
 		Iterator<Element> iter = links.iterator();
 		Map<String, String> map = new HashMap<String, String>();
 		while (iter.hasNext()) {

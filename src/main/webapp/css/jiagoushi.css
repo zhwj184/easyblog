@@ -134,10 +134,13 @@ body{
 	font-weight: bold;
 	color: #E41422;
 }
-.hotpost li a,.hotcategory li a{
+.hotpost li a,.hotcategory li a,.recom li a{
 	font-family: Helvetica, Tahoma, Arial, sans-serif;
 	font-size: 12px;
 	color: #108AC6;
+}
+.leftadv{
+	margin-top: 10px;
 }
 .main {
 	width: 770px;
@@ -150,8 +153,8 @@ body{
 .main .sn span a{
 	color: #108AC6;
 }	
-.main .post,.content .categorynav{
-	 background: none repeat scroll 0 0 #FFFFFF;
+.main .post,.content .categorynav,.content .recom{
+	background: none repeat scroll 0 0 #FFFFFF;
     border-radius: 5px 5px 5px 5px;
     box-shadow: 0 1px 2px #999999;
     margin-bottom: 10px;	
@@ -174,7 +177,9 @@ body{
 .main .post .pagetip span{
 	padding-left: 5px;
 }
-
+.main .detail{
+	margin-top: 30px;
+}
 .main .commentlist  .commentitem{
 	border-bottom: 1px #eee solid;
 }
@@ -205,14 +210,29 @@ body{
 	font-family: Helvetica, Tahoma, Arial, sans-serif;
 	line-height: 24px;
 }
+.recom div{
+	margin-left: 10px;
+}
+.main .recom{
+	font-weight: bold;
+	margin-top: 20px;
+}
+.main .recom  li{
+	float: left;
+	width: 220px;
+	height:  33px;
+	line-height: 33px;
+	overflow: hidden;
+	padding-left: 20px;
+}
 
-.main .pagination {
+ .pagination {
     margin-bottom: 30px;
     margin-top: 5px;
     text-align: center;
 }
 
-.main .pagination .previous_page, .pagination a, .pagination em, .pagination .next_page {
+ .pagination .previous_page, .pagination a, .pagination em, .pagination .next_page {
     background: none repeat scroll 0 0 #FFFFFF;
     border-radius: 2px 2px 2px 2px;
     box-shadow: 0 1px 2px #999999;
@@ -220,10 +240,10 @@ body{
     margin: 0 2px;
     padding: 0 8px;
 }
-.main .pagination em {
+ .pagination em {
     color: #FF6600;
 }
-.main .pagination .disabled {
+ .pagination .disabled {
     background: none repeat scroll 0 0 #DDDDDD;
 }
 
@@ -268,8 +288,35 @@ body{
 	overflow: hidden;
 }
 
-
 .nav li a:active, .nav li a:hover, .category li a:active,.category li a:hover{
     color: #FF6600;
     text-decoration: underline;
+}
+
+/*geek*/
+.geekshare{
+	margin-top: 10px;
+	font-weight: normal;
+	font-family: Helvetica,Arial,sans-serif;
+	background-color: #f6f6ef;
+}
+.geekshare li{
+	width:  480px;
+	overflow: hidden;
+	padding-left: 20px;
+	float: left;
+}
+.geekshare li .title{
+	line-height: 24px;
+	height: 24px;
+	padding-left: 20px;
+	font-size: 14px;
+	overflow: hidden;
+}
+.geekshare li .info{
+	line-height: 24px;
+	height: 24px;
+	padding-left: 40px;
+	font-size: 12px;
+	color: #828282;
 }

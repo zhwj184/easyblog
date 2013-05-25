@@ -9,3 +9,7 @@ create table comments(id int primary key not null auto_increment, author varchar
           
 ##用户表
 create table user(id int primary key not null auto_increment, username varchar(64), password varchar(128));
+
+
+##分享链接
+create table geeklink(id int primary key not null auto_increment, url varchar(128), title varchar(128),author varchar(32), gmt_create DATETIME not null, gmt_modified DATETIME not null);
