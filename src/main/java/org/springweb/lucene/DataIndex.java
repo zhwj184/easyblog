@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
+import org.apache.log4j.Logger;
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.document.Document;
@@ -24,6 +25,8 @@ public class DataIndex {
 	
 	@Autowired
 	private PostDao postDao;
+	
+	private static final Logger logger = Logger.getLogger(DataIndex.class);
 
 	public  void index() throws CorruptIndexException, IOException {
 		IndexWriter indexwrite = null;
@@ -32,8 +35,9 @@ public class DataIndex {
 			Directory directory = FSDirectory.open(new File(indexDir));
 			indexwrite = new IndexWriter(directory, analyzer, true,
 					new IndexWriter.MaxFieldLength(25000));
-			indexwrite.deleteAll();
+//			indexwrite.deleteAll();
 		} catch (Exception e) {
+			logger.error("DataIndex index got error " + e.getMessage(), e);
 		}
 
 		Long count = postDao.queryCount(null,null);

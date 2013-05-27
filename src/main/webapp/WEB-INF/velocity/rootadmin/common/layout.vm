@@ -8,6 +8,8 @@
       <META NAME="Keywords" CONTENT="">
       <META NAME="Description" CONTENT="">
        <link rel="stylesheet" type="text/css" href="http://www.javaarch.net/jiagoushi/css/admin.css">
+		   <script src="http://www.javaarch.net/jiagoushi/js/markdown.js" type="text/javascript" charset="GBK"></script>
+   <link rel="stylesheet" type="text/css" href="http://www.javaarch.net/jiagoushi/css/github.css">
      </HEAD>
      <BODY>
 		<div class="indexlink"><a href="http://www.javaarch.net/jiagoushi/rootadmin/categorylist.htm">分类列表</a></div>

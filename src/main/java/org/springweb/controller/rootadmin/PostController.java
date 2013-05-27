@@ -55,7 +55,7 @@ public class PostController {
 		}
 		model.addAttribute("isSuccess",postDao.insert(post));
 		model.addAttribute("categoryId", post.getCategoryId());
-		return "rootadmin/addpost";
+		return "redirect:" + PageConstant.DOMAIN_ADMIN_PATH_NAME + "/postlist.htm?id="+ post.getCategoryId();
 	}
 	
 	@RequestMapping(value="/deletePost", method = RequestMethod.GET)

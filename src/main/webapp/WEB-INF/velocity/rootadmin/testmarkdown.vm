@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <textarea id="text-input" oninput="this.editor.update()"
+              rows="6" cols="60">Type **Markdown** here.</textarea>
+    <div id="preview"> </div>
+     <textarea id="text-output"  rows="6" cols="60"></textarea>
+   <script src="http://www.javaarch.net/jiagoushi/js/markdown.js" type="text/javascript" charset="GBK"></script>
+   <link rel="stylesheet" type="text/css" href="http://www.javaarch.net/jiagoushi/css/github.css">
+    <script>
+      function Editor(input, preview) {
+        this.update = function () {
+          preview.innerHTML = markdown.toHTML(input.value);
+        };
+        input.editor = this;
+        this.update();
+      }
+      var $ = function (id) { return document.getElementById(id); };
+      new Editor($("text-input"), $("text-output"));
+    </script>
+  </body>
+</html>

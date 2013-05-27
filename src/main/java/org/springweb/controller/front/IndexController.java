@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.log4j.Logger;
 import org.apache.lucene.queryParser.ParseException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -36,6 +37,8 @@ public class IndexController {
 	
 	@Autowired
 	private CommentDao commentDao;
+	
+	private static final Logger logger = Logger.getLogger(IndexController.class);
 
 	@RequestMapping(value="/index", method = RequestMethod.GET)
 	public String index(@RequestParam(required=false) Long id, @RequestParam(required=false) Long parentId, @RequestParam(defaultValue="1") Integer type, @RequestParam(defaultValue="1") long index,ModelMap model){
@@ -89,11 +92,9 @@ public class IndexController {
 			try {
 				res = docSearch.search(post.getTitle(), 7);
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+				logger.error(e);
 			} catch (ParseException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+				logger.error(e);
 			}
 			model.addAttribute("recomPostlist", res);	
 		}
@@ -119,9 +120,9 @@ public class IndexController {
 			List<Map<String,String>> res = docSearch.search(k, 50);
 			model.addAttribute("postlist", res);
 		} catch (IOException e) {
-			e.printStackTrace();
+			logger.error(e);
 		} catch (ParseException e) {
-			e.printStackTrace();
+			logger.error(e);
 		}
 		model.addAttribute("k", k);
 		return "blog/search";

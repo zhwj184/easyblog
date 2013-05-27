@@ -205,4 +205,45 @@
       <attribute value="jar:file:/C:/repository/org/quartz-scheduler/quartz/1.8.4/quartz-1.8.4-javadoc.jar!/" name="javadoc_location"/>
     </attributes>
   </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/log4j/log4j/1.2.14/log4j-1.2.14.jar" sourcepath="M2_REPO/log4j/log4j/1.2.14/log4j-1.2.14-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/slf4j/slf4j-log4j12/1.6.1/slf4j-log4j12-1.6.1.jar" sourcepath="M2_REPO/org/slf4j/slf4j-log4j12/1.6.1/slf4j-log4j12-1.6.1-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/C:/repository/org/slf4j/slf4j-log4j12/1.6.1/slf4j-log4j12-1.6.1-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/slf4j/slf4j-nop/1.6.1/slf4j-nop-1.6.1.jar" sourcepath="M2_REPO/org/slf4j/slf4j-nop/1.6.1/slf4j-nop-1.6.1-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/C:/repository/org/slf4j/slf4j-nop/1.6.1/slf4j-nop-1.6.1-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/net/sf/jacob-project/jacob/1.14.3/jacob-1.14.3.jar" sourcepath="M2_REPO/net/sf/jacob-project/jacob/1.14.3/jacob-1.14.3-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/C:/repository/net/sf/jacob-project/jacob/1.14.3/jacob-1.14.3-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/com/artofsolving/jodconverter/2.2.0/jodconverter-2.2.0.jar" sourcepath="M2_REPO/com/artofsolving/jodconverter/2.2.0/jodconverter-2.2.0-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/openoffice/juh/2.2.0/juh-2.2.0.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/openoffice/jurt/2.2.0/jurt-2.2.0.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/openoffice/ridl/2.2.0/ridl-2.2.0.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/openoffice/unoil/2.2.0/unoil-2.2.0.jar"/>
+  <classpathentry kind="var" path="M2_REPO/com/itextpdf/itextpdf/5.0.6/itextpdf-5.0.6.jar" sourcepath="M2_REPO/com/itextpdf/itextpdf/5.0.6/itextpdf-5.0.6-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/C:/repository/com/itextpdf/itextpdf/5.0.6/itextpdf-5.0.6-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/bouncycastle/bcmail-jdk14/1.38/bcmail-jdk14-1.38.jar" sourcepath="M2_REPO/org/bouncycastle/bcmail-jdk14/1.38/bcmail-jdk14-1.38-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/C:/repository/org/bouncycastle/bcmail-jdk14/1.38/bcmail-jdk14-1.38-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/bouncycastle/bcprov-jdk14/1.38/bcprov-jdk14-1.38.jar" sourcepath="M2_REPO/org/bouncycastle/bcprov-jdk14/1.38/bcprov-jdk14-1.38-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/C:/repository/org/bouncycastle/bcprov-jdk14/1.38/bcprov-jdk14-1.38-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/bouncycastle/bctsp-jdk14/1.38/bctsp-jdk14-1.38.jar" sourcepath="M2_REPO/org/bouncycastle/bctsp-jdk14/1.38/bctsp-jdk14-1.38-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/C:/repository/org/bouncycastle/bctsp-jdk14/1.38/bctsp-jdk14-1.38-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
 </classpath>

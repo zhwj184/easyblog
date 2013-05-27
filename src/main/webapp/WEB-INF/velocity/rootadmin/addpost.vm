@@ -10,9 +10,20 @@
 	 <span>url :</span><input type="text" name="url" class="common"/></br>
 	 <span>author:</span><input type="text" name="author" class="common" value="admin"/></br>
 	 <span>content:</span>
-	 <textarea name="content" class="content" cols="30" rows="5">
-     </textarea>
+	  <textarea id="text-input" oninput="this.editor.update()" class="content"></textarea>
+	 <textarea id="content"  class="content" name="content"></textarea>
      </br>
      <input type="file" name="file"/>  <input type="submit" value="submit"/>
    </form>
 </div>
+<script>
+      function Editor(input, preview) {
+        this.update = function () {
+          preview.innerHTML = markdown.toHTML(input.value);
+        };
+        input.editor = this;
+        this.update();
+      }
+      var $ = function (id) { return document.getElementById(id); };
+      new Editor($("text-input"), $("content"));
+    </script>

@@ -1,0 +1,6 @@
+#set($page_title="$!{catMap.get($!{id}).name}")
+#set($description="提供java编程原创文章，分享最有价值文章，提供计算机编程相关电子书和视频下载，IT行业相关吐槽，程序员专用导航")
+<center>
+	<embed type="application/x-shockwave-flash" src="http://www.javaarch.net/jiagoushi/swf/bb.swf" height="500" width="600" >
+	</embed>
+</center>

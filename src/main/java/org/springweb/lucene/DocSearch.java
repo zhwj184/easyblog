@@ -7,6 +7,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.log4j.Logger;
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.document.Document;
@@ -27,6 +28,8 @@ public class DocSearch {
 	private static IndexSearcher isearcher = null;
 
 	private String indexDir;
+	
+	private static final Logger logger = Logger.getLogger(DocSearch.class);
 
 	public void init()  {
 		Directory directory;
@@ -39,7 +42,7 @@ public class DocSearch {
 			IndexReader ireader = IndexReader.open(directory); // read-only=true
 			isearcher = new IndexSearcher(ireader);
 		} catch (IOException e) {
-			e.printStackTrace();
+			logger.error(e);
 		}
 	}
 	
@@ -51,7 +54,7 @@ public class DocSearch {
 			IndexReader ireader = IndexReader.open(directory); // read-only=true
 			isearcher = new IndexSearcher(ireader);
 		} catch (IOException e) {
-			e.printStackTrace();
+			logger.error(e);
 		}
 	}
 
