@@ -1,0 +1,10 @@
+#set($layout="blog/common/daohanglayout.vm")
+#set($description="各种编程工具相关集锦")
+#set($page_title="架构师之路-在线工具集-QRCode二维码生成工具")
+<div>
+    <form action="http://www.javaarch.net/jiagoushi/createqrcode.htm" method="get">
+    	    <p>请输入文本：</p>
+            <input type="text" name="qrtext" />
+            <input type="submit" value="生成QR码" />
+     </form>
+</div>

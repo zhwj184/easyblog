@@ -65,6 +65,7 @@ public class DataIndex {
 			indexwrite.addDocument(doc);
 		}
 		indexwrite.commit();
+//		indexwrite.getDirectory().close();
 		indexwrite.close();
 	}
 

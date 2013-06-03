@@ -16,7 +16,7 @@ import org.springweb.pdfview.PDFContent;
 
 @Controller
 @RequestMapping("/rootadmin")
-public class BuildPost {
+public class BuildPostController {
 
 	@Autowired
 	private PostDao postDao;

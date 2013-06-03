@@ -25,7 +25,7 @@
 				<li><a href="http://www.jguru.com/" target="_blank">jguru</a></li>
 				<li><a href="http://java-source.net/" target="_blank">javasource</a></li>
 				<li><a href="http://www.java-tips.org/" target="_blank">javatips</a></li>
-				<li><a href="" target="_blank"></a></li>
+				<li><a href="http://groovy.codehaus.org/" target="_blank">groovy</a></li>
 				<li><a href="" target="_blank"></a></li>
 				<li><a href="" target="_blank"></a></li>
 			</ul>
@@ -101,8 +101,9 @@
 				<li><a href="http://jslint.com/" target="_blank">JSlint</a></li>
 				<li><a href="http://runjs.cn/" target="_blank">runjs</a></li>
 				<li><a href="http://open.chrome.360.cn/extension_dev/overview.html" target="_blank">chrome插件</a></li>
-				<li><a href="http://www.dzone.com/links/index.html" target="_blank"></a>dzone</li>
+				<li><a href="http://www.dzone.com/links/index.html" target="_blank">dzone</a></li>
 				<li><a href="http://www.htmlgoodies.com/" target="_blank">htmlgoodies</a></li>
+				<li><a href="http://www.webdesignerdepot.com/" target="_blank">webdesignerdepot</a></li>
 			</ul>
     	</div>
 		<div class="daohangitem clearfix">
@@ -127,7 +128,7 @@
 			</ul>
     	</div>
 	   <div class="daohangitem clearfix">
-				知名网站
+				综合技术
 		</div>
     	<div class="linkcontent clearfix">
             <ul>
@@ -142,15 +143,18 @@
 				<li><a href="http://stackoverflow.com/" target="_blank">Stack Overflow</a></li>
 				<li><a href="http://www.theserverside.com/" target="_blank">theserverside</a></li>
 				<li><a href="http://www.roseindia.net/" target="_blank">roseindia</a></li>
+				<li><a href="https://news.ycombinator.com/" target="_blank">Hacker News</a></li>
+				<li><a href="https://www.quora.com/" target="_blank">quora</a></li>
 			</ul>
     	</div>
 		<div class="daohangitem clearfix">
-				velocity
+				开源框架
 		</div>
     	<div class="linkcontent clearfix">
             <ul>
 				<li><a href="http://velocity.apache.org" target="_blank">velocity</a></li>
 				<li><a href="http://www.createjs.com" target="_blank">createjs</a></li>
+				<li><a href="http://www.koolchart.com/" target="_blank">koolchart</a></li>
 			</ul>
     	</div>
 </div>

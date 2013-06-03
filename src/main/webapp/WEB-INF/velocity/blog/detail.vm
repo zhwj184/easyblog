@@ -23,7 +23,7 @@
 	<div class="commentlist">
 			#foreach($item in $commentList)
     			<div class="commentitem">
-    				<div class="commentinfo"><span class="author">$!{item.author}</span><span class="time"> $dateUtil.format($post.gmtCreate,"yyyy-MM-dd")</span></div>
+    				<div class="commentinfo"><span class="author">$!{item.author}</span><span class="time"> $dateUtil.format($item.gmtCreate,"yyyy-MM-dd")</span></div>
     				<div class="commentcontent">$!{item.content}</div>
     			</div>
 			#end
@@ -35,7 +35,7 @@
 <div class="comment clearfix">
 	<form action="http://www.javaarch.net/jiagoushi/addComment.htm" method="post">
 		<input type="hidden" name="postId" value="$!{post.id}"/>
-        <div><span class="commenttip">用户名：</span><input type="text" name="author"/><span class="inputtip">(最多300个字)</span></div>
+        <div><span class="commenttip">用户名：</span><input type="text" name="author"/><span class="inputtip">(最多300个字,每天最多5次评论)</span></div>
 		<div>
 			<textarea name="content" cols="102" rows="3" onKeyUp="if(this.value.length > 300) this.value=this.value.substr(0,300)" ></textarea>
 		</div>
@@ -52,12 +52,26 @@
 					<li><a href="http://www.javaarch.net/jiagoushi/${item.id}.htm">$!{item.title}</a></li>
 					#set($cnt=$cnt+1)
 				#end
-    		#end
+			#end
     	</ul>
     </div>
 #end
+<div class="recom clearfix">
+	<ul>
+		<li style="width:100px"><a target="_blank" href="http://s.click.taobao.com/t?e=zGU34CA7K%2BPkqB05%2Bm7rfGKas1PIKp0U37pZuBotzOg7OjeU9mIWS5%2B5UROBz6sq4fiHePnGhf6UrWuOtfD2G6QGcAHIXpjhEtESpuqsRo0a&pid=mm_12567797_0_0">去聚划算看看</a></li>
+		<li style="width:100px"><a  target="_blank" href="http://s.click.taobao.com/t?e=zGU34CA7K%2BPkqB05%2Bm7rfGGjlY60oHcc7bkKOQiRddrNEyGLx31dnc6%2Fz%2BaQS2UNDUWpebTcEEjBuk1W5odmLS8%3D&pid=mm_12567797_0_0">天猫商城</a></li>
+		<li style="width:100px"><a  target="_blank" href="http://s.click.taobao.com/t?e=zGU34CA7K%2BPkqB05%2Bm7rfGGjlY60oHcc7bkKOQiRddrMMBoKCgikXgv87lu10eDLLdz7FGhhd6bJkYZ7xRs327aNumiLgg%3D%3D&pid=mm_12567797_0_0">天猫品牌特卖</a></li>
+		<li style="width:100px"><a target="_blank" href="http://s.click.taobao.com/t?e=s%3Dd8xpAX9RIZEcQipKwQzePCperVdZeJvioEMjVa6CPbsYX8TY%2BNEwd%2B4V0mYSMhEll7mLtMf1mMzDX0%2BHH2IEVVEDlbVN1QGJtY4Qt2cZ1lViM%2Be7nMptKRbgoXpUZ8S9%26m%3D2&p=mm_12567797_0_0">淘宝游戏</a></li>
+		<li style="width:100px"><a target="_blank" href="http://s.click.taobao.com/t?e=zGU34CA7K%2BPkqB05%2Bm7rfGKas1PIKp0U37pZuBotzOg7OjY%2F2R0Ke3HHzv2kJZUH%2FehqodvBvxouiCPW7UkqmIn4pk08catp7aU2wpqfONSeQJM%3D&pid=mm_12567797_0_0">淘宝旅行</a></li>
+		<li style="width:100px"><a target="_blank" href="http://s.click.taobao.com/t?e=s%3Dd8xpAX9RIZEcQipKwQzePCperVdZeJvioEMjVa6CPbsYX8TY%2BNEwd%2B4V0mYSMhEll7mLtMf1mMzDX0%2BHH2IEVVEDlbVN1QGJtY4Qt2cZ1lViM%2Be7nMptKRbgoXpUZ8S9%26m%3D2&p=mm_12567797_0_0">淘宝游戏</a></li>
+	</ul>
+</div>
+<div class="clearfix" style="margin-top: 20px;">
+<iframe src="http://rcm-cn.amazon.cn/e/cm?t=zhongweijian-23&o=28&p=48&l=bn1&mode=books-cn&browse=658414051&fc1=000000&lt1=_blank&lc1=3366FF&bg1=FFFFFF&f=ifr" marginwidth="0" marginheight="0" width="728" height="90" border="0" frameborder="0" style="border:none;" scrolling="no"></iframe>
+</div>
+<!--
 <div class="clearfix" style="margin-top: 20px;">
 	<iframe id="f" width="760px" height="100px" src= "http://union.yihaodian.com/link_make/viewPicInfo.do?imgSize=760x100&truckerU=107643800" frameborder="no" border="0" marginwidth="0" marginheight="0" allowtransparency="yes" scrolling="NO" > </iframe>
-</div>
+</div>-->
   
 

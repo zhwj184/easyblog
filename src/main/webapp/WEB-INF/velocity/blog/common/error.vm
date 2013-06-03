@@ -1,7 +1,7 @@
 #set($layout="blog/common/daohanglayout.vm")
 #set($description="提供java编程原创文章，分享最有价值文章，提供计算机编程相关电子书和视频下载，IT行业相关吐槽，程序员专用导航， web 数据库，架构，分布式系统，性能优化,知名网站，技术博客网址网址导航")
 #set($page_title="程序员相关优化IT技术")
-<div  style="text-align:center;" >不好意思，出错了。<a style="color:#FF6600;" href="http://www.javaarch.net/jiagoushi/index.htm">请点这里返回首页</a></div>
+<div  style="text-align:center; height: 40px;"  >不好意思，出错了。<a style="color:#FF6600;" href="http://www.javaarch.net/jiagoushi/index.htm">请点这里返回首页</a></div>
 <div style="clearfix">
 <script type="text/javascript">
      document.write('<a style="display:none!important" id="tanx-a-mm_12567797_4010936_13114398"></a>');
@@ -14,6 +14,9 @@
      tanx_h = document.getElementsByTagName("head")[0];
      if(tanx_h)tanx_h.insertBefore(tanx_s,tanx_h.firstChild);
 </script>
+</div>
+<div style="clearfix">
+<iframe src="http://rcm-cn.amazon.cn/e/cm?t=zhongweijian-23&o=28&p=48&l=bn1&mode=books-cn&browse=658414051&fc1=000000&lt1=_blank&lc1=3366FF&bg1=FFFFFF&f=ifr" marginwidth="0" marginheight="0" width="728" height="90" border="0" frameborder="0" style="border:none;" scrolling="no"></iframe>
 </div>
 <div style="clearfix">
 <a href="http://r.union.meituan.com/url/visit/?a=1&key=GWpsFjRYMd3mOIhiBPV9HfncrADZv5QU&url=http%3A%2F%2Fwww.meituan.com" target="_blank"><img alt="mt_760*120"  src="http://union.meituan.com/static/ad/MT_1338366688.jpg"  border="0" /></a>

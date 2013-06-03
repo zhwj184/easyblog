@@ -28,9 +28,9 @@ public class DetailController {
 	public String addComment(@ModelAttribute Comment comment,ModelMap model){
 		if(comment.getAuthor() == null || comment.getAuthor().isEmpty() 
 				|| comment.getContent() == null || comment.getContent().isEmpty()){
-			return "redirect:" + PageConstant.DOMAIN_NAME + comment.getPostId() + ".htm";
+			return "redirect:" + PageConstant.DOMAIN_APP_NAME + comment.getPostId() + ".htm";
 		}
-		comment.setStatus(1);
+		comment.setStatus(1);//0Îª´ýÉóºË
 		comment.setAuthor(XssUtil.xssFilter(comment.getAuthor(), XssFilterTypeEnum.ESCAPSE.getValue()));
 		comment.setContent(XssUtil.xssFilter(comment.getContent(), XssFilterTypeEnum.ESCAPSE.getValue()));
 		commentDao.insert(comment);

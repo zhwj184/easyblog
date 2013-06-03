@@ -22,6 +22,7 @@ public class LoginController {
 	public String login(HttpServletRequest request, @RequestParam(defaultValue="") String username, @RequestParam(defaultValue="") String password, ModelMap model) {
 		if(userDao.auth(username, password) > 0){
 			request.getSession().setAttribute("login", 1);
+			request.getSession().setAttribute("username", username);
 			 return "redirect:" + PageConstant.DOMAIN_ADMIN_PATH_NAME + "categorylist.htm";  
 		}
 		return "rootadmin/mustlogin";

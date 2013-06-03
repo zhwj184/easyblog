@@ -35,6 +35,7 @@ public class DocSearch {
 		Directory directory;
 		try {
 			if(isearcher != null){
+				isearcher.getIndexReader().close();
 				isearcher.close();
 			}
 			directory = FSDirectory.open(new File(indexDir));
@@ -49,6 +50,7 @@ public class DocSearch {
 	public synchronized void refresh() {
 		Directory directory;
 		try {
+//			isearcher.getIndexReader().close();
 			isearcher.close();
 			directory = FSDirectory.open(new File(indexDir));
 			IndexReader ireader = IndexReader.open(directory); // read-only=true

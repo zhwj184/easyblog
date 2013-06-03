@@ -16,7 +16,15 @@
      <input type="file" name="file"/>  <input type="submit" value="submit"/>
    </form>
 </div>
-<script>
+
+<form id='myupload' action='/jiagoushi/rootadmin/uploadfile'  method='post' enctype='multipart/form-data' style='display: inline;'>
+    <div class="clearfix">图片或视频上传：<input id="fileupload" type="file" name="mypic" style="display:inline;"> 
+    		图片或视频url:<input type="text" id="picurl" style="display:inline; width:400px;"/><a href="#" id="picurllink" target="_blank">查看内容</a>
+    </div>
+    <input type="hidden" name="categoryId" value="$category.id"/></br>
+</form>
+<div class="clearfix" style="padding-top: 20px;">
+	<script>
       function Editor(input, preview) {
         this.update = function () {
           preview.innerHTML = markdown.toHTML(input.value);
@@ -24,6 +32,8 @@
         input.editor = this;
         this.update();
       }
-      var $ = function (id) { return document.getElementById(id); };
-      new Editor($("text-input"), $("content"));
+      var myedit = function (id) { return document.getElementById(id); };
+      new Editor(myedit("text-input"), myedit("content"));
     </script>
+</div>
+<script src="http://www.javaarch.net/jiagoushi/js/uploadpic.js" type="text/javascript" charset="GBK"></script>

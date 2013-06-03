@@ -111,7 +111,7 @@ public class IndexController {
 	@RequestMapping(value="/search")
 	public String search(@RequestParam String k,ModelMap model){
 		if(k == null || k.isEmpty()){
-			return "redirect:" + PageConstant.DOMAIN_NAME + "index.htm";
+			return "redirect:" + PageConstant.DOMAIN_APP_NAME + "index.htm";
 		}
 		k = XssUtil.xssFilter(k, XssFilterTypeEnum.DELETE.getValue());
 		getLeftCat(null, null, model);

@@ -246,4 +246,19 @@
       <attribute value="jar:file:/C:/repository/org/bouncycastle/bctsp-jdk14/1.38/bctsp-jdk14-1.38-javadoc.jar!/" name="javadoc_location"/>
     </attributes>
   </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/net/glxn/qrgen/1.2/qrgen-1.2.jar" sourcepath="M2_REPO/net/glxn/qrgen/1.2/qrgen-1.2-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/C:/repository/net/glxn/qrgen/1.2/qrgen-1.2-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/com/google/zxing/javase/2.0/javase-2.0.jar" sourcepath="M2_REPO/com/google/zxing/javase/2.0/javase-2.0-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/C:/repository/com/google/zxing/javase/2.0/javase-2.0-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/com/google/zxing/core/2.0/core-2.0.jar" sourcepath="M2_REPO/com/google/zxing/core/2.0/core-2.0-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/C:/repository/com/google/zxing/core/2.0/core-2.0-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
 </classpath>

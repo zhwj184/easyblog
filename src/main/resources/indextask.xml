@@ -14,27 +14,15 @@ http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
 	<bean id="dataIndex" class="org.springweb.lucene.DataIndex">
 		<property name="indexDir"  value="${lucene.index.dir}"></property>
 	</bean>
-	<bean id="docSearch" class="org.springweb.lucene.DocSearch" init-method="init" destroy-method="destroy">
+	<bean id="docSearch" class="org.springweb.lucene.DocSearch" >
 		<property name="indexDir" value="${lucene.index.dir}"></property>
+	</bean>
+	<bean id="dataRefreshTask" class="org.springweb.lucene.DataRefreshTask" init-method="init" destroy-method="destroy">
 	</bean>
    <bean id="tjobtrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
       <property name="jobDetail">
          <bean  class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
-            <property name="targetObject" ref="dataIndex">
-            </property>
-            <property name="targetMethod">
-               <value>index</value>
-            </property>
-         </bean>
-      </property>
-      <property name="cronExpression">
-         <value>0  0/2 * * * ?</value>
-      </property>
-   </bean> 
-     <bean id="searchtrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
-      <property name="jobDetail">
-         <bean  class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
-            <property name="targetObject" ref="docSearch">
+            <property name="targetObject" ref="dataRefreshTask">
             </property>
             <property name="targetMethod">
                <value>refresh</value>
@@ -42,7 +30,7 @@ http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
          </bean>
       </property>
       <property name="cronExpression">
-         <value>0  0/3 * * * ?</value>
+         <value>0  0/5 * * * ?</value>
       </property>
    </bean> 
    
@@ -50,7 +38,6 @@ http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
       <property name="triggers">
          <list>
             <ref bean="tjobtrigger" />
-            <ref bean="searchtrigger" />
          </list>
       </property>
    </bean>

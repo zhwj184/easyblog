@@ -27,7 +27,7 @@
 				<td>$dateUtil.format($item.gmtCreate,"yyyy-MM-dd HH:mm:ss")</td>
 				<td>$dateUtil.format($item.gmtModified,"yyyy-MM-dd HH:mm:ss")</td>
 				<td>
-					 <a href="http://www.javaarch.net/jiagoushi/rootadmin/deletePost.htm?id=$item.id&categoryId=$item.categoryId">删除</a>
+					 <!--<a href="http://www.javaarch.net/jiagoushi/rootadmin/deletePost.htm?id=$item.id&categoryId=$item.categoryId">删除</a>-->
 					 <a href="http://www.javaarch.net/jiagoushi/rootadmin/updatePost.htm?id=$item.id">修改</a>
 					 <a href="http://www.javaarch.net/jiagoushi/rootadmin/postdetail.htm?id=$item.id">查看详情</a>
 					 <a href="http://www.javaarch.net/jiagoushi/rootadmin/commentlist.htm?postId=$item.id">查看评论</a>
