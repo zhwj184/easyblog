@@ -16,7 +16,7 @@
 				<span>$!{post.author}</span>
 				<span>$dateUtil.format($post.gmtCreate,"yyyy-MM-dd HH:mm:ss")发表</span>
 				<span>$!{post.view}次浏览</span>
-				<span>$!{post.comment}次评论 #set($title=$!post.title)#parse("blog/common/weiboshare.vm")</span>	
+				<span><!--$!{post.comment}次评论--> #set($title=$!post.title)#parse("blog/common/weiboshare.vm")</span>
 		</div>
 	</div>
 	
@@ -33,6 +33,23 @@
 </div>
 
 <div class="comment clearfix">
+<!-- Duoshuo Comment BEGIN -->
+<div class="ds-thread"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"zhwj184"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = 'http://static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		|| document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- Duoshuo Comment END -->
+</div>
+<!--
+<div class="comment clearfix">
 	<form action="http://www.javaarch.net/jiagoushi/addComment.htm" method="post">
 		<input type="hidden" name="postId" value="$!{post.id}"/>
         <div><span class="commenttip">用户名：</span><input type="text" name="author"/><span class="inputtip">(最多300个字,每天最多5次评论)</span></div>
@@ -42,6 +59,7 @@
 		<div ><input class="subbutton" type="submit" value="发表评论"/></div>
 	</form>
 </div>
+-->
 #if($recomPostlist&&$recomPostlist.size()>0)
     <div class="recom clearfix">
     	<div>相关文章</div>
@@ -73,5 +91,9 @@
 <div class="clearfix" style="margin-top: 20px;">
 	<iframe id="f" width="760px" height="100px" src= "http://union.yihaodian.com/link_make/viewPicInfo.do?imgSize=760x100&truckerU=107643800" frameborder="no" border="0" marginwidth="0" marginheight="0" allowtransparency="yes" scrolling="NO" > </iframe>
 </div>-->
-  
-
+  <!--
+<script type="text/javascript">
+$(document).ready(function() {
+  $('pre code').each(function(i, e) {hljs.highlightBlock(e)});
+});
+</script>-->

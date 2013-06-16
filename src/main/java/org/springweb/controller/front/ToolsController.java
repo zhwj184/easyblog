@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 import net.glxn.qrgen.QRCode;
 import net.glxn.qrgen.image.ImageType;
 
+import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -17,6 +18,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 @RequestMapping("/")
 public class ToolsController {
+	
+	private static final Logger logger = Logger.getLogger(ToolsController.class);
 
 	@RequestMapping(value = "/qrcode", method = RequestMethod.GET)
 	public String qrcodeindex(){
@@ -40,8 +43,7 @@ public class ToolsController {
 			outStream.flush();
 			outStream.close();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			logger.error(e);
 		}
 	}
 

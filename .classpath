@@ -53,6 +53,11 @@
       <attribute value="jar:file:/C:/repository/org/springframework/spring-webmvc/3.2.2.RELEASE/spring-webmvc-3.2.2.RELEASE-javadoc.jar!/" name="javadoc_location"/>
     </attributes>
   </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/springframework/spring-context-support/3.2.2.RELEASE/spring-context-support-3.2.2.RELEASE.jar" sourcepath="M2_REPO/org/springframework/spring-context-support/3.2.2.RELEASE/spring-context-support-3.2.2.RELEASE-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/C:/repository/org/springframework/spring-context-support/3.2.2.RELEASE/spring-context-support-3.2.2.RELEASE-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
   <classpathentry kind="var" path="M2_REPO/org/springframework/spring-dao/2.0.8/spring-dao-2.0.8.jar"/>
   <classpathentry kind="var" path="M2_REPO/cglib/cglib/2.2.2/cglib-2.2.2.jar" sourcepath="M2_REPO/cglib/cglib/2.2.2/cglib-2.2.2-sources.jar">
     <attributes>
@@ -259,6 +264,11 @@
   <classpathentry kind="var" path="M2_REPO/com/google/zxing/core/2.0/core-2.0.jar" sourcepath="M2_REPO/com/google/zxing/core/2.0/core-2.0-sources.jar">
     <attributes>
       <attribute value="jar:file:/C:/repository/com/google/zxing/core/2.0/core-2.0-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/net/sf/ehcache/ehcache/2.7.0/ehcache-2.7.0.jar" sourcepath="M2_REPO/net/sf/ehcache/ehcache/2.7.0/ehcache-2.7.0-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/C:/repository/net/sf/ehcache/ehcache/2.7.0/ehcache-2.7.0-javadoc.jar!/" name="javadoc_location"/>
     </attributes>
   </classpathentry>
 </classpath>

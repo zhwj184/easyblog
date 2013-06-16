@@ -31,7 +31,7 @@
     				<span>$!{item.author}</span>
     				<span>$dateUtil.format($!{item.gmtCreate},"yyyy-MM-dd HH:mm:ss")发表</span>
     				<span>$!{item.view}次浏览</span>
-    				<span>$!{item.comment}评论 #set($title=$!{item.title})#parse("blog/common/weiboshare.vm")</span>
+    				<span><!--$!{item.comment}评论--> #set($title=$!{item.title})#parse("blog/common/weiboshare.vm")</span>
     		</div>
     	</div>
     </div>
@@ -59,7 +59,11 @@
 	#else
 	#end
 </div>
-    
-   
-  
+<!--
+<script type="text/javascript">
+$(document).ready(function() {
+  $('pre code').each(function(i, e) {hljs.highlightBlock(e)});
+});
+</script>   --> 
+
 

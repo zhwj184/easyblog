@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springweb.bean.Category;
 import org.springweb.bean.Post;
 import org.springweb.config.PageConstant;
+import org.springweb.config.SpiderCheck;
 import org.springweb.dao.CategoryDao;
 import org.springweb.dao.CommentDao;
 import org.springweb.dao.PostDao;
@@ -42,6 +43,7 @@ public class IndexController {
 
 	@RequestMapping(value="/index", method = RequestMethod.GET)
 	public String index(@RequestParam(required=false) Long id, @RequestParam(required=false) Long parentId, @RequestParam(defaultValue="1") Integer type, @RequestParam(defaultValue="1") long index,ModelMap model){
+		
 		getLeftCat(id, parentId, model);
 		
 		long count = postDao.queryCount(parentId,id);
@@ -54,7 +56,6 @@ public class IndexController {
 		model.addAttribute("index", index);
 		model.addAttribute("type", type);
 		model.addAttribute("postlist",postDao.query(parentId, id, type, PageConstant.PAGE_SIZE, (index-1) * PageConstant.PAGE_SIZE));
-		
 		return "blog/index";
 	}
 
@@ -70,7 +71,7 @@ public class IndexController {
 		
 		model.put("catCntMap", postDao.queryGroupByCatId());
 		
-		model.addAttribute("hotPostlist", postDao.query(null, null, 2, 5, 0));
+		model.addAttribute("hotPostlist", postDao.query(null, null, 2, 10, 0));
 		
 		model.addAttribute("hotCommentList", commentDao.query(null, 5, 0));
 	}
@@ -80,7 +81,9 @@ public class IndexController {
 		getLeftCat(null, null, model);
 		Post post = postDao.queryById(id);
 		model.addAttribute("post", post);
-		postDao.update(id);
+		if(!SpiderCheck.get()){//²»Í³¼Æspider
+			postDao.update(id);
+		}
 		model.addAttribute("commentList", commentDao.query(id, 100, 0));
 //		if(post.getUrl() != null && !post.getUrl().isEmpty()){
 //			return "redirect:" + post.getUrl();

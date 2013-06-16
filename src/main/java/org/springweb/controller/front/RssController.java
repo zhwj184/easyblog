@@ -6,6 +6,7 @@ import java.io.OutputStream;
 
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -20,6 +21,8 @@ public class RssController {
 
 	@Autowired
 	private PostDao postDao;
+	
+	private static final Logger logger = Logger.getLogger(RssController.class);
 
 	@RequestMapping(value = "/rss", method = RequestMethod.GET)
 	public void rss(HttpServletResponse response, ModelMap model) {
@@ -31,9 +34,9 @@ public class RssController {
 			WriteRss.general(postDao, os);
 			os.close();
 		} catch (FileNotFoundException e) {
-			e.printStackTrace();
+			logger.error(e);
 		} catch (IOException e) {
-			e.printStackTrace();
+			logger.error(e);
 		}
 	}
 

@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:context="http://www.springframework.org/schema/context"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="
-        http://www.springframework.org/schema/beans     
-        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
-        http://www.springframework.org/schema/context 
-        http://www.springframework.org/schema/context/spring-context-3.0.xsd">
-
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd 
+http://www.springframework.org/schema/context 
+http://www.springframework.org/schema/context/spring-context-3.0.xsd
+http://www.springframework.org/schema/tx 
+http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">     
+	  
 	<context:component-scan base-package="org.springweb.controller" />
 
 	<!-- velocity -->
@@ -24,6 +26,8 @@
 				<prop key="output.encoding">GBK</prop>
 				<prop key="file.resource.loader.cache">${file.resource.loader.cache}</prop>
 				<prop key="file.resource.loader.modificationCheckInterval">${file.resource.loader.modificationCheckInterval}</prop>
+			<!-- 	<prop key="eventhandler.referenceinsertion.class">org.apache.velocity.app.event.implement.EscapeHtmlReference</prop>
+				<prop key="eventhandler.escape.html.match">/.*/</prop> -->
 				<prop key="velocimacro.library.autoreload">false</prop>
 				<prop key="velocimacro.library">macro.vm</prop>
 			</props>

@@ -95,6 +95,24 @@
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
 	
+	<filter>
+		<filter-name>spiderCheckFilter</filter-name>
+		<filter-class>org.springweb.filter.SpiderCheckFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>spiderCheckFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<!-- 
+	<filter>
+		<filter-name>responseHeaderFilter</filter-name>
+		<filter-class>org.springweb.filter.ResponseHeaderFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>responseHeaderFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	 
 	 <filter>
 		<filter-name>commentCountLimitFilter</filter-name>
 		<filter-class>org.springweb.filter.CommentCountLimitFilter</filter-class>
@@ -103,7 +121,7 @@
 		<filter-name>commentCountLimitFilter</filter-name>
 		<url-pattern>/addComment.htm</url-pattern>
 	</filter-mapping>
-	
+	-->
 	 
 	<servlet>
 		<servlet-name>mvc-dispatcher</servlet-name>

@@ -13,27 +13,80 @@
         </div>     
     #end
 #end 
-
+<div class="leftadv">
+<iframe width="210" height="350" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=210&height=350&fansRow=1&ptype=0&speed=0&skin=3&isTitle=1&noborder=1&isWeibo=1&isFans=1&uid=1530428034&verifier=148917a8&dpc=1"></iframe>
+</div>
 
 <div class="category hotpost">
-	<div>热门文章</div>
+	<div>阅读排行</div>
     <ul>
 		#foreach($item in $hotPostlist)
-			<li><a href="http://www.javaarch.net/jiagoushi/${item.id}.htm">$stringUtil.getOutputString(${item.title},15) ($item.view)</a></li>
+			<li><a href="http://www.javaarch.net/jiagoushi/${item.id}.htm" title="${item.title}">$stringUtil.getOutputString(${item.title},12) ($item.view)</a></li>
 		#end
     </ul>
 </div>
 
-#if($hotCommentList && $hotCommentList.size()>0)
+
+#if($hotCommentList && $hotCommentList.size()>0 && 0==1)
     <div class="category hotcategory">
     	<div>最新评论</div>
         <ul>
     		#foreach($item in $hotCommentList)
-    			<li><a href="http://www.javaarch.net/jiagoushi/${item.postId}.htm">$stringUtil.getOutputString($!{item.content},22)</a></li>
+    			<li><a href="http://www.javaarch.net/jiagoushi/${item.postId}.htm" title="$!{item.content}">$stringUtil.getOutputString($!{item.content},12)</a></li>
     		#end
         </ul>
     </div>
 #end
+
+<div class="category hotcategory">
+	<div>热评文章</div>
+<ul  class="ds-top-threads" data-range="weekly" data-num-items="5"></ul>
+<!--多说js加载开始，一个页面只需要加载一次 -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"zhwj184"};
+(function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+<!--多说js加载结束，一个页面只需要加载一次 -->
+</div>
+<div class="category hotcategory">
+	    	<div>最新评论</div>
+                 <ul class="ds-recent-comments" data-num-items="10" data-show-avatars="0"></ul>
+                <!--多说js加载开始，一个页面只需要加载一次 -->
+                <script type="text/javascript">
+                var duoshuoQuery = {short_name:"zhwj184"};
+                (function() {
+                    var ds = document.createElement('script');
+                    ds.type = 'text/javascript';ds.async = true;
+                    ds.src = 'http://static.duoshuo.com/embed.js';
+                    ds.charset = 'UTF-8';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+                })();
+                </script>
+                <!--多说js加载结束，一个页面只需要加载一次 -->
+</div>
+<div class="category hotcategory">
+	    	<div>最新访客</div>
+			<ul class="ds-recent-visitors"></ul>
+            <!--多说js加载开始，一个页面只需要加载一次 -->
+            <script type="text/javascript">
+            var duoshuoQuery = {short_name:"zhwj184"};
+            (function() {
+                var ds = document.createElement('script');
+                ds.type = 'text/javascript';ds.async = true;
+                ds.src = 'http://static.duoshuo.com/embed.js';
+                ds.charset = 'UTF-8';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+            })();
+            </script>
+            <!--多说js加载结束，一个页面只需要加载一次 -->
+</div>
+
 <div class="leftadv">
 <script type="text/javascript">
      document.write('<a style="display:none!important" id="tanx-a-mm_12567797_4010936_13112101"></a>');
@@ -47,6 +100,7 @@
      if(tanx_h)tanx_h.insertBefore(tanx_s,tanx_h.firstChild);
 </script>
 </div>
+<!--
 <div class="leftadv">
 <a href="http://r.union.meituan.com/url/visit/?a=1&key=bJwUDVNS12MFgxCKRrZQqyWOAamko3fz&url=http%3A%2F%2Fwww.meituan.com" target="_blank"><img alt="mt_200*200"  src="http://union.meituan.com/static/ad/MT_1322115682.jpg"  border="0" /></a>
-</div>
+</div>-->

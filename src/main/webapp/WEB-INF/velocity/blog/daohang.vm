@@ -26,8 +26,10 @@
 				<li><a href="http://java-source.net/" target="_blank">javasource</a></li>
 				<li><a href="http://www.java-tips.org/" target="_blank">javatips</a></li>
 				<li><a href="http://groovy.codehaus.org/" target="_blank">groovy</a></li>
-				<li><a href="" target="_blank"></a></li>
-				<li><a href="" target="_blank"></a></li>
+				<li><a href="http://www.jcp.org/en/home/index" target="_blank">jcp</a></li>
+				<li><a href="http://www.javacodegeeks.com/" target="_blank">javacodegeeks</a></li>
+				<li><a href="http://shichuan.github.io/javascript-patterns/" target="_blank">jspattern</a></li>
+				<li><a href="http://www.tutorialspoint.com/index.htm" target="_blank">tutorialspoint</a></li>
 			</ul>
     	</div>
 		<div class="daohangitem clearfix">
@@ -70,8 +72,8 @@
 				<li><a href="http://memcached.org/" target="_blank">memcache</a></li>
 				<li><a href="http://www.mongodb.org/" target="_blank">mongodb</a></li>
 				<li><a href="http://www.redisbook.com/en/latest/" target="_blank">redis设计实现</a></li>
-				<li><a href="" target="_blank"></a></li>
-				<li><a href="" target="_blank"></a></li>
+				<li><a href="http://blog.nosqlfan.com/" target="_blank">nosqlfan</a></li>
+				<li><a href="http://hadoop.apache.org/" target="_blank">hadoop</a></li>
 			</ul>
     	</div>
 		<div class="daohangitem clearfix">
@@ -104,6 +106,8 @@
 				<li><a href="http://www.dzone.com/links/index.html" target="_blank">dzone</a></li>
 				<li><a href="http://www.htmlgoodies.com/" target="_blank">htmlgoodies</a></li>
 				<li><a href="http://www.webdesignerdepot.com/" target="_blank">webdesignerdepot</a></li>
+				<li><a href="http://www.html5rocks.com/zh/tutorials/" target="_blank">html5rocks</a></li>
+				<li><a href="http://www.w3.org/TR/CSS/" target="_blank">css3</a></li>
 			</ul>
     	</div>
 		<div class="daohangitem clearfix">
@@ -120,11 +124,16 @@
 		</div>
     	<div class="linkcontent clearfix">
             <ul>
+				<li><a href="http://vanillajava.blogspot.com/" target="_blank">vanillajava</a></li>
 				<li><a href="http://timyang.net/" target="_blank">timyang</a></li>
 				<li><a href="http://www.mkyong.com" target="_blank">mkyong</a></li>
 				<li><a href="http://ourmysql.com" target="_blank">ourmysql</a></li>
 				<li><a href="http://blog.donghao.org/" target="_blank">董昊</a></li>
 				<li><a href="http://coolshell.cn" target="_blank">酷壳 </a></li>
+				<li><a href="http://hedengcheng.com/" target="_blank">何登成 </a></li>
+				<li><a href="http://blog.yufeng.info/" target="_blank">淘宝褚霸</a></li>
+				<li><a href="http://javapapers.com/" target="_blank">javapapers</a></li>
+				<li><a href="http://www.williamlong.info/" target="_blank">月光博客</a></li>
 			</ul>
     	</div>
 	   <div class="daohangitem clearfix">
@@ -134,6 +143,9 @@
             <ul>
 				<li><a href="http://www.iteye.com/" target="_blank">iteye</a></li>
 				<li><a href="http://www.csdn.net/" target="_blank">csdn</a></li>
+				<li><a href="http://www.oschina.net/" target="_blank">oschina</a></li>
+				<li><a href="http://www.infoq.com/cn" target="_blank">infoq</a></li>
+				<li><a href="http://www.51cto.com/" target="_blank">51cto</a></li>
 				<li><a href="http://highscalability.com" target="_blank">High Scalability</a></li>
 				<li><a href="http://www.codeproject.com" target="_blank">codeproject</a></li>
 				<li><a href="https://www.java.net/" target="_blank">java.net</a></li>
@@ -145,6 +157,14 @@
 				<li><a href="http://www.roseindia.net/" target="_blank">roseindia</a></li>
 				<li><a href="https://news.ycombinator.com/" target="_blank">Hacker News</a></li>
 				<li><a href="https://www.quora.com/" target="_blank">quora</a></li>
+				<li><a href="http://www.ibm.com/developerworks/" target="_blank">developerworks</a></li>
+				<li><a href="http://www.wooyun.org/" target="_blank">wooyun</a></li>
+				<li><a href="http://www.chinaitlab.com/" target="_blank">chinaitlab</a></li>
+				<li><a href="http://www.linuxeden.com/" target="_blank">linuxeden</a></li>
+				<li><a href="http://www.uml.org.cn/" target="_blank">uml</a></li>
+				<li><a href="http://lwn.net/" target="_blank">lwn</a></li>
+				<li><a href="http://www.aosabook.org/en/index.html" target="_blank">aosabook</a></li>
+				<li><a href="http://www.commandlinefu.com" target="_blank">commandlinefu</a></li>
 			</ul>
     	</div>
 		<div class="daohangitem clearfix">
@@ -155,6 +175,9 @@
 				<li><a href="http://velocity.apache.org" target="_blank">velocity</a></li>
 				<li><a href="http://www.createjs.com" target="_blank">createjs</a></li>
 				<li><a href="http://www.koolchart.com/" target="_blank">koolchart</a></li>
+				<li><a href="http://www.springsource.org/" target="_blank">springsource</a></li>
+				<li><a href="http://jekyllrb.com/docs/home/" target="_blank">jekyllrb</a></li>
+				<li><a href="http://knockoutjs.com/index.html" target="_blank">knockoutjs</a></li>
 			</ul>
     	</div>
 </div>

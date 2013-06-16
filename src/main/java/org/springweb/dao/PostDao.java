@@ -4,13 +4,14 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.orm.ibatis.support.SqlMapClientDaoSupport;
 import org.springweb.bean.Post;
 
+public class PostDao extends SqlMapClientDaoSupport {
 
-public class PostDao extends SqlMapClientDaoSupport{
-
-	
+	@Cacheable(value="postcacheentry", key="#id")
 	public Post queryById(long id){
 		return (Post) this.getSqlMapClientTemplate().queryForObject("jiagoushi.SELECT-POST-BYID", id);
 	}
@@ -66,6 +67,7 @@ public class PostDao extends SqlMapClientDaoSupport{
 		return cnt;
 	}
 	
+	@CacheEvict(value="postcacheentry", key="#id")
 	public int delete(long id){
 		int cnt = this.getSqlMapClientTemplate().delete("jiagoushi.DELETE-POST", id);
 		return cnt;

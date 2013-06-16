@@ -23,9 +23,10 @@ public class XssUtil {
 			}
 		}
 		if(filterType.equals(XssFilterTypeEnum.DELETE.getValue())){
-			return input.replaceAll(xssType, "");
+			return input.replaceAll(xssType, "").replace("<", "&lt").replace(">", "&gt");
 		}
-		return input;
+		
+		return input.replace("<", "&lt").replace(">", "&gt");
 	}
 	
 	public static enum XssFilterTypeEnum{

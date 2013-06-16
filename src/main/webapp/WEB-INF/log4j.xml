@@ -15,7 +15,7 @@
 	</appender>
 	
 	<appender name="file" class="org.apache.log4j.DailyRollingFileAppender">
-		<param name="File" value="${output}/logs/run.log" />
+		<param name="File" value="/root/output/logs/run.log" />
 		<param name="Threshold" value="DEBUG" />
 		<param name="Append" value="true" />
 		<param name="DatePattern" value="'.'yyyy-MM-dd'.log'" />

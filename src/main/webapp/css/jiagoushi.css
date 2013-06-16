@@ -14,7 +14,7 @@ input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit}
 input,textarea,select{font-size:100%}
 legend{color:#000}
 html{ font-size:100%;}
-body, input, select, button, textarea { font-family: Helvetica, Tahoma, Arial, sans-serif; line-height:2em;}*/
+body, input, select, button, textarea { font: normal medium Trebuchet MS, Tahoma, sans-serif;line-height:2em;}*/
 body, input, select, button, textarea { font-size:12px; font-family: Helvetica, Tahoma, Arial, sans-serif; line-height:24px;}
 button { cursor: pointer; }
 input{outline: none;}
@@ -36,11 +36,11 @@ body{
 		margin: 0 auto;
 }
 .header{
-	height: 80px;
+	height: 70px;
 	max-width: 1000px;
 	margin: 0px auto;
-	padding-top: 30px;
-	background-color: #313CAB;
+	padding-top: 10px;
+	background-color: #3790ce;
 }
 .header .sitetitle{
 	font-size: 35px;
@@ -61,10 +61,10 @@ body{
 	color: #ff6600;
 }
 .nav {
-	background-color: #BEC1D4;
-	height: 53px;
+	background-color: #dbedc8;
+	height: 48px;
 	max-width: 1000px;
-	margin: 5px auto 0px;
+	margin: 0px auto;
 	border-radius: 5 5 5px 5px;
 	-webkit-border-radius: 5 5 5px 5px;
 	-moz-border-radius: 5 5 5px 5px;
@@ -98,8 +98,8 @@ body{
 }
 .nav .search .submit{
 	background-color: #ddd;
-	font-family: arial,\5b8b\4f53,sans-serif;
-	font-size: 14px;
+	font-family: normal medium Trebuchet MS, Tahoma, sans-serif;
+	width: 48px;
 }
 .content{
 	max-width: 1000px;
@@ -126,6 +126,8 @@ body{
 .category li{
 	padding: 0px 15px;
 	font-size: 14px;
+	height: 24px;
+	overflow:hidden;
 }
 .category li a{
 	color: #000;
@@ -319,4 +321,28 @@ body{
 	padding-left: 40px;
 	font-size: 12px;
 	color: #828282;
+}
+
+/*µ×²¿*/
+.declearinfo{
+	font-size:12px;
+	height: 14px;
+}
+.webmaster{
+	padding-top: 10px;
+	color:#999;
+}
+
+
+/**/
+#ds-recent-comments li.ds-comment .ds-thread-title{
+	height:27px;
+	overflow: hidden;
+}
+#ds-recent-comments li{
+	overflow:hidden;
+	height: 80px;
+}
+#ds-recent-comments li.ds-comment .ds-excerpt{
+	overflow: hidden;
 }
