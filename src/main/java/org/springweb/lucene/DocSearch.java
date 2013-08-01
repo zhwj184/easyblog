@@ -12,6 +12,7 @@ import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.index.IndexReader;
+import org.apache.lucene.index.IndexWriter;
 import org.apache.lucene.queryParser.ParseException;
 import org.apache.lucene.queryParser.QueryParser;
 import org.apache.lucene.search.BooleanClause;
@@ -28,17 +29,20 @@ public class DocSearch {
 	private static IndexSearcher isearcher = null;
 
 	private String indexDir;
-	
+
 	private static final Logger logger = Logger.getLogger(DocSearch.class);
 
-	public void init()  {
+	public void init() {
 		Directory directory;
 		try {
-			if(isearcher != null){
+			if (isearcher != null) {
 				isearcher.getIndexReader().close();
 				isearcher.close();
 			}
 			directory = FSDirectory.open(new File(indexDir));
+			if (IndexWriter.isLocked(directory)) {
+				IndexWriter.unlock(directory);
+			}
 			// Now search the index:
 			IndexReader ireader = IndexReader.open(directory); // read-only=true
 			isearcher = new IndexSearcher(ireader);
@@ -46,11 +50,11 @@ public class DocSearch {
 			logger.error(e);
 		}
 	}
-	
+
 	public synchronized void refresh() {
 		Directory directory;
 		try {
-//			isearcher.getIndexReader().close();
+			// isearcher.getIndexReader().close();
 			isearcher.close();
 			directory = FSDirectory.open(new File(indexDir));
 			IndexReader ireader = IndexReader.open(directory); // read-only=true
@@ -60,33 +64,36 @@ public class DocSearch {
 		}
 	}
 
-	public List<Map<String,String>> search(String key, int size) throws IOException, ParseException {
+	public List<Map<String, String>> search(String key, int size)
+			throws IOException, ParseException {
 		Analyzer analyzer = new StandardAnalyzer(Version.LUCENE_36);
-//		QueryParser parser = new QueryParser(Version.LUCENE_36, "context",
-//				analyzer);
-//		Query query = parser.parse(key);
-//		PhraseQuery query = new PhraseQuery();
-//		query.setSlop(2);
-//		query.add(new Term("title", key));
-//		query.add(new Term("content", key));
-		
-		BooleanQuery booleanQuery = new BooleanQuery(); 
+		// QueryParser parser = new QueryParser(Version.LUCENE_36, "context",
+		// analyzer);
+		// Query query = parser.parse(key);
+		// PhraseQuery query = new PhraseQuery();
+		// query.setSlop(2);
+		// query.add(new Term("title", key));
+		// query.add(new Term("content", key));
 
-//		QueryParser parser = new QueryParser(Version.LUCENE_36,"title",analyzer); 
-//		Query titleQuery = parser.parse(key);
-//		booleanQuery.add(titleQuery,BooleanClause.Occur.SHOULD);
+		BooleanQuery booleanQuery = new BooleanQuery();
 
-		QueryParser parser1 = new QueryParser(Version.LUCENE_36,"content",analyzer); 
+		// QueryParser parser = new
+		// QueryParser(Version.LUCENE_36,"title",analyzer);
+		// Query titleQuery = parser.parse(key);
+		// booleanQuery.add(titleQuery,BooleanClause.Occur.SHOULD);
+
+		QueryParser parser1 = new QueryParser(Version.LUCENE_36, "content",
+				analyzer);
 		Query contentQuery = parser1.parse(key);
-		booleanQuery.add(contentQuery ,BooleanClause.Occur.MUST); 
+		booleanQuery.add(contentQuery, BooleanClause.Occur.MUST);
 
 		ScoreDoc[] hits = isearcher.search(booleanQuery, null, size).scoreDocs;
-		List<Map<String,String>> postlist = new ArrayList<Map<String,String>>();
+		List<Map<String, String>> postlist = new ArrayList<Map<String, String>>();
 		for (int i = 0; i < hits.length; i++) {
 			Document hitDoc = isearcher.doc(hits[i].doc);
-//			System.out.println(hitDoc.getValues("id")[0] + "\t"
-//					+ hitDoc.getValues("content")[0] + "\t" + hits[i].score);
-			Map<String,String> map = new HashMap<String,String>();
+			// System.out.println(hitDoc.getValues("id")[0] + "\t"
+			// + hitDoc.getValues("content")[0] + "\t" + hits[i].score);
+			Map<String, String> map = new HashMap<String, String>();
 			map.put("id", hitDoc.getValues("id")[0]);
 			map.put("title", hitDoc.getValues("title")[0]);
 			map.put("url", hitDoc.getValues("url")[0]);

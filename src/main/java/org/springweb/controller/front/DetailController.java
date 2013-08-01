@@ -30,11 +30,11 @@ public class DetailController {
 				|| comment.getContent() == null || comment.getContent().isEmpty()){
 			return "redirect:" + PageConstant.DOMAIN_APP_NAME + comment.getPostId() + ".htm";
 		}
-		comment.setStatus(1);//0Îª´ýÉóºË
-		comment.setAuthor(XssUtil.xssFilter(comment.getAuthor(), XssFilterTypeEnum.ESCAPSE.getValue()));
-		comment.setContent(XssUtil.xssFilter(comment.getContent(), XssFilterTypeEnum.ESCAPSE.getValue()));
-		commentDao.insert(comment);
-		postDao.updateComment(comment.getPostId());
+//		comment.setStatus(1);//0Îª´ýÉóºË
+//		comment.setAuthor(XssUtil.xssFilter(comment.getAuthor(), XssFilterTypeEnum.ESCAPSE.getValue()));
+//		comment.setContent(XssUtil.xssFilter(comment.getContent(), XssFilterTypeEnum.ESCAPSE.getValue()));
+//		commentDao.insert(comment);
+//		postDao.updateComment(comment.getPostId());
 		return "redirect:" + comment.getPostId() + ".htm";
 	}	
 }

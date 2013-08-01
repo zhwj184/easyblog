@@ -20,53 +20,68 @@ import org.springweb.dao.PostDao;
 import org.springweb.util.DateUtil;
 
 public class DataIndex {
-	
+
 	private String indexDir;
-	
+
 	@Autowired
 	private PostDao postDao;
-	
+
 	private static final Logger logger = Logger.getLogger(DataIndex.class);
 
-	public  void index() throws CorruptIndexException, IOException {
+	public void index() throws CorruptIndexException, IOException {
 		IndexWriter indexwrite = null;
 		Analyzer analyzer = new StandardAnalyzer(Version.LUCENE_36);
+		Directory directory = null;
 		try {
-			Directory directory = FSDirectory.open(new File(indexDir));
+			directory = FSDirectory.open(new File(indexDir));
+			// indexwrite.getDirectory().close();
+			if (IndexWriter.isLocked(directory)) {
+				IndexWriter.unlock(directory);
+			}
 			indexwrite = new IndexWriter(directory, analyzer, true,
 					new IndexWriter.MaxFieldLength(25000));
-//			indexwrite.deleteAll();
+			// indexwrite.deleteAll();
 		} catch (Exception e) {
 			logger.error("DataIndex index got error " + e.getMessage(), e);
 		}
 
-		Long count = postDao.queryCount(null,null);
-		List<Post> postList = postDao.query(null, null, 1, count.intValue(), 0L);
-		
-		
+		Long count = postDao.queryCount(null, null);
+		List<Post> postList = postDao
+				.query(null, null, 1, count.intValue(), 0L);
+
 		for (Post post : postList) {
-			Document doc = new Document();
-			doc.add(new Field("title", post.getTitle(), Field.Store.YES,
-					Field.Index.ANALYZED));
-			doc.add(new Field("content", post.getContent() == null ? "" :post.getContent(), Field.Store.YES,
-					Field.Index.ANALYZED));
-			doc.add(new Field("url", post.getUrl() == null ? "" : post.getUrl(), Field.Store.YES,
-					Field.Index.NOT_ANALYZED));
-			doc.add(new Field("author", post.getAuthor(), Field.Store.YES,
-					Field.Index.NOT_ANALYZED));
-			doc.add(new Field("gmtCreate", DateUtil.format(post.getGmtCreate(), "yyyy-MM-dd HH:mm:ss"), Field.Store.YES,
-					Field.Index.NOT_ANALYZED));
-			doc.add(new Field("id", String.valueOf(post.getId()), Field.Store.YES,
-					Field.Index.NOT_ANALYZED));
-			doc.add(new Field("view", String.valueOf(post.getView()), Field.Store.YES,
-					Field.Index.NOT_ANALYZED));
-			doc.add(new Field("comment", String.valueOf(post.getComment()), Field.Store.YES,
-					Field.Index.NOT_ANALYZED));
-			indexwrite.addDocument(doc);
+			try{
+				Document doc = new Document();
+				doc.add(new Field("title", post.getTitle(), Field.Store.YES,
+						Field.Index.ANALYZED));
+				doc.add(new Field("content", post.getContent() == null ? "" : post
+						.getContent(), Field.Store.YES, Field.Index.ANALYZED));
+				doc.add(new Field("url",
+						post.getUrl() == null ? "" : post.getUrl(),
+						Field.Store.YES, Field.Index.NOT_ANALYZED));
+				doc.add(new Field("author", post.getAuthor(), Field.Store.YES,
+						Field.Index.NOT_ANALYZED));
+				doc.add(new Field("gmtCreate", DateUtil.format(post.getGmtCreate(),
+						"yyyy-MM-dd HH:mm:ss"), Field.Store.YES,
+						Field.Index.NOT_ANALYZED));
+				doc.add(new Field("id", String.valueOf(post.getId()),
+						Field.Store.YES, Field.Index.NOT_ANALYZED));
+				doc.add(new Field("view", String.valueOf(post.getView()),
+						Field.Store.YES, Field.Index.NOT_ANALYZED));
+				doc.add(new Field("comment", String.valueOf(post.getComment()),
+						Field.Store.YES, Field.Index.NOT_ANALYZED));
+				indexwrite.addDocument(doc);	
+			}catch(Exception e){
+				logger.error("DataIndex index got error " + e.getMessage(), e);
+			}
 		}
 		indexwrite.commit();
-//		indexwrite.getDirectory().close();
-		indexwrite.close();
+		// indexwrite.getDirectory().close();
+		if (IndexWriter.isLocked(directory)) {
+			indexwrite.close();
+			IndexWriter.unlock(directory);
+		}
+
 	}
 
 	public String getIndexDir() {

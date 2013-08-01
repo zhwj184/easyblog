@@ -12,13 +12,15 @@
     		$!post.content
 	</div>
 	<div class="pagetip clearfix">
+		<div style="float: left;padding-left: 10px;padding-top: 5px;"><div class="bshare-custom"><a title="分享到QQ空间" class="bshare-qzone"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到人人网" class="bshare-renren"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="分享到网易微博" class="bshare-neteasemb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a><span class="BSHARE_COUNT bshare-share-count">0</span></div><script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#style=-1&amp;uuid=72ec0ddf-e929-4a4d-aa35-321f8513c06f&amp;pophcol=2&amp;lang=zh"></script><script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script></div>
 		<div class="fr">
 				<span>$!{post.author}</span>
 				<span>$dateUtil.format($post.gmtCreate,"yyyy-MM-dd HH:mm:ss")发表</span>
 				<span>$!{post.view}次浏览</span>
-				<span><!--$!{post.comment}次评论--> #set($title=$!post.title)#parse("blog/common/weiboshare.vm")</span>
+				<!--<span>$!{post.comment}次评论 #set($title=$!post.title)#parse("blog/common/weiboshare.vm")</span>-->
 		</div>
 	</div>
+	
 	
 	<div class="commentlist">
 			#foreach($item in $commentList)
@@ -74,19 +76,6 @@ var duoshuoQuery = {short_name:"zhwj184"};
     	</ul>
     </div>
 #end
-<div class="recom clearfix">
-	<ul>
-		<li style="width:100px"><a target="_blank" href="http://s.click.taobao.com/t?e=zGU34CA7K%2BPkqB05%2Bm7rfGKas1PIKp0U37pZuBotzOg7OjeU9mIWS5%2B5UROBz6sq4fiHePnGhf6UrWuOtfD2G6QGcAHIXpjhEtESpuqsRo0a&pid=mm_12567797_0_0">去聚划算看看</a></li>
-		<li style="width:100px"><a  target="_blank" href="http://s.click.taobao.com/t?e=zGU34CA7K%2BPkqB05%2Bm7rfGGjlY60oHcc7bkKOQiRddrNEyGLx31dnc6%2Fz%2BaQS2UNDUWpebTcEEjBuk1W5odmLS8%3D&pid=mm_12567797_0_0">天猫商城</a></li>
-		<li style="width:100px"><a  target="_blank" href="http://s.click.taobao.com/t?e=zGU34CA7K%2BPkqB05%2Bm7rfGGjlY60oHcc7bkKOQiRddrMMBoKCgikXgv87lu10eDLLdz7FGhhd6bJkYZ7xRs327aNumiLgg%3D%3D&pid=mm_12567797_0_0">天猫品牌特卖</a></li>
-		<li style="width:100px"><a target="_blank" href="http://s.click.taobao.com/t?e=s%3Dd8xpAX9RIZEcQipKwQzePCperVdZeJvioEMjVa6CPbsYX8TY%2BNEwd%2B4V0mYSMhEll7mLtMf1mMzDX0%2BHH2IEVVEDlbVN1QGJtY4Qt2cZ1lViM%2Be7nMptKRbgoXpUZ8S9%26m%3D2&p=mm_12567797_0_0">淘宝游戏</a></li>
-		<li style="width:100px"><a target="_blank" href="http://s.click.taobao.com/t?e=zGU34CA7K%2BPkqB05%2Bm7rfGKas1PIKp0U37pZuBotzOg7OjY%2F2R0Ke3HHzv2kJZUH%2FehqodvBvxouiCPW7UkqmIn4pk08catp7aU2wpqfONSeQJM%3D&pid=mm_12567797_0_0">淘宝旅行</a></li>
-		<li style="width:100px"><a target="_blank" href="http://s.click.taobao.com/t?e=s%3Dd8xpAX9RIZEcQipKwQzePCperVdZeJvioEMjVa6CPbsYX8TY%2BNEwd%2B4V0mYSMhEll7mLtMf1mMzDX0%2BHH2IEVVEDlbVN1QGJtY4Qt2cZ1lViM%2Be7nMptKRbgoXpUZ8S9%26m%3D2&p=mm_12567797_0_0">淘宝游戏</a></li>
-	</ul>
-</div>
-<div class="clearfix" style="margin-top: 20px;">
-<iframe src="http://rcm-cn.amazon.cn/e/cm?t=zhongweijian-23&o=28&p=48&l=bn1&mode=books-cn&browse=658414051&fc1=000000&lt1=_blank&lc1=3366FF&bg1=FFFFFF&f=ifr" marginwidth="0" marginheight="0" width="728" height="90" border="0" frameborder="0" style="border:none;" scrolling="no"></iframe>
-</div>
 <!--
 <div class="clearfix" style="margin-top: 20px;">
 	<iframe id="f" width="760px" height="100px" src= "http://union.yihaodian.com/link_make/viewPicInfo.do?imgSize=760x100&truckerU=107643800" frameborder="no" border="0" marginwidth="0" marginheight="0" allowtransparency="yes" scrolling="NO" > </iframe>

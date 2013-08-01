@@ -60,6 +60,7 @@
 				<li><a href="http://www.mysqlperformanceblog.com/" target="_blank">mysql优化</a></li>
 				<li><a href="http://www.h2database.com/html/mvstore.html" target="_blank">MVStore</a></li>
 				<li><a href="http://sqlzoo.net/" target="_blank">sqlzoo</a></li>
+				<li><a href="http://www.artfulsoftware.com/" target="_blank">artfulsoftware</a></li>
 			</ul>
     	</div>
 		<div class="daohangitem clearfix">
@@ -74,6 +75,8 @@
 				<li><a href="http://www.redisbook.com/en/latest/" target="_blank">redis设计实现</a></li>
 				<li><a href="http://blog.nosqlfan.com/" target="_blank">nosqlfan</a></li>
 				<li><a href="http://hadoop.apache.org/" target="_blank">hadoop</a></li>
+				<li><a href="http://nosql-database.org/index.html" target="_blank">nosql-database</a></li>
+				<li><a href="http://blog.cloudera.com/blog/" target="_blank">clouderablog</a></li>
 			</ul>
     	</div>
 		<div class="daohangitem clearfix">
@@ -86,9 +89,10 @@
 				<li><a href="http://tengine.taobao.org/book/" target="_blank">nginx中文文档</a></li>
 				<li><a href="http://home.arcor.de/pangj/squid/chap01.html" target="_blank">squid</a></li>
 				<li><a href="https://www.varnish-software.com/static/book/" target="_blank">varnish</a></li>
-				<li><a href="http://www.eclipse.org/jetty/" target="_blank">jetty</a></li>
+				<li><a href="http://www.eclipse.org/jetty/documentation/current/" target="_blank">jetty</a></li>
 				<li><a href="http://tomcat.apache.org/" target="_blank">tomcat</a></li>
 				<li><a href="http://gomix.fedora-ve.org/projects/ruby/wiki/Unicorn" target="_blank">ruby unicorn</a></li>
+				<li><a href="http://www.serverschool.com/" target="_blank">serverschool</a></li>
 			</ul>
     	</div>
 		<div class="daohangitem clearfix">
@@ -108,6 +112,8 @@
 				<li><a href="http://www.webdesignerdepot.com/" target="_blank">webdesignerdepot</a></li>
 				<li><a href="http://www.html5rocks.com/zh/tutorials/" target="_blank">html5rocks</a></li>
 				<li><a href="http://www.w3.org/TR/CSS/" target="_blank">css3</a></li>
+				<li><a href="http://www.javascriptoo.com/" target="_blank">javascriptoo</a></li>
+				<li><a href="http://browserhacks.com/" target="_blank">browserhacks</a></li>
 			</ul>
     	</div>
 		<div class="daohangitem clearfix">
@@ -134,6 +140,13 @@
 				<li><a href="http://blog.yufeng.info/" target="_blank">淘宝褚霸</a></li>
 				<li><a href="http://javapapers.com/" target="_blank">javapapers</a></li>
 				<li><a href="http://www.williamlong.info/" target="_blank">月光博客</a></li>
+				<li><a href="http://www.inbreak.net/" target="_blank">空虚浪子心</a></li>
+				<li><a href="http://noops.me/" target="_blank">NoOps</a></li>
+				<li><a href="http://cos.name/" target="_blank">统计之都</a></li>
+				<li><a href="http://ejohn.org/" target="_blank">John Resig</a></li>
+				<li><a href="http://developer.yahoo.com/blogs/ydn/" target="_blank">ydn</a></li>
+				<li><a href="http://blog.spiderlabs.com" target="_blank">spiderlabs</a></li>
+				<li><a href="http://blog.codingnow.com/" target="_blank">云风的 BLOG</a>
 			</ul>
     	</div>
 	   <div class="daohangitem clearfix">
@@ -165,6 +178,13 @@
 				<li><a href="http://lwn.net/" target="_blank">lwn</a></li>
 				<li><a href="http://www.aosabook.org/en/index.html" target="_blank">aosabook</a></li>
 				<li><a href="http://www.commandlinefu.com" target="_blank">commandlinefu</a></li>
+				<li><a href="http://blog.monitorscout.com/" target="_blank">monitorscout</a></li>
+				<li><a href="http://www.artima.com/buzz/index.jsp" target="_blank">artima</a></li>
+				<li><a href="http://www.softwaretestingclass.com/" target="_blank">softwaretestingclass</a></li>
+				<li><a href="http://www.reddit.com/" target="_blank">reddit</a></li>
+				<li><a href="http://digg.com/" target="_blank">digg</a></li>
+				<li><a href="http://www.securiteam.com/" target="_blank">securiteam</a></li>
+				<li><a href="https://www.owasp.org/index.php/Main_Page" target="_blank">owasp</a></li>
 			</ul>
     	</div>
 		<div class="daohangitem clearfix">
@@ -178,6 +198,14 @@
 				<li><a href="http://www.springsource.org/" target="_blank">springsource</a></li>
 				<li><a href="http://jekyllrb.com/docs/home/" target="_blank">jekyllrb</a></li>
 				<li><a href="http://knockoutjs.com/index.html" target="_blank">knockoutjs</a></li>
+			</ul>
+    	</div>
+		<div class="daohangitem clearfix">
+				常用工具集
+		</div>
+    	<div class="linkcontent clearfix">
+            <ul>
+				<li><a href="http://www.webalizer.org/" target="_blank">webalizer</a></li>
 			</ul>
     	</div>
 </div>
