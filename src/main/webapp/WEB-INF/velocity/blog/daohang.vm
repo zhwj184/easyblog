@@ -114,6 +114,8 @@
 				<li><a href="http://www.w3.org/TR/CSS/" target="_blank">css3</a></li>
 				<li><a href="http://www.javascriptoo.com/" target="_blank">javascriptoo</a></li>
 				<li><a href="http://browserhacks.com/" target="_blank">browserhacks</a></li>
+				<li><a href="https://developer.mozilla.org/en-US/" target="_blank">mozilla</a></li>
+				<li><a href="https://code.google.com/p/browsersec/wiki/Main" target="_blank">browsersec</a></li>
 			</ul>
     	</div>
 		<div class="daohangitem clearfix">
@@ -198,6 +200,7 @@
 				<li><a href="http://www.springsource.org/" target="_blank">springsource</a></li>
 				<li><a href="http://jekyllrb.com/docs/home/" target="_blank">jekyllrb</a></li>
 				<li><a href="http://knockoutjs.com/index.html" target="_blank">knockoutjs</a></li>
+				<li><a href="http://netty.io/wiki/" target="_blank">netty</a></li>
 			</ul>
     	</div>
 		<div class="daohangitem clearfix">

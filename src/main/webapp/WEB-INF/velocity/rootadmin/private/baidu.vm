@@ -1,0 +1,58 @@
+#set($layout="rootadmin/private/layout.vm")
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=GBK" />
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<style type="text/css">
+body, html,#allmap {width: 100%;height: 100%;overflow: hidden;margin:0;}
+</style>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=1.5&ak=0Fec1606f6712a2c820c31e1dd80bef3"></script>
+<title>折线</title>
+</head>
+<body>
+<div id="allmap"></div>
+</body>
+</html>
+<script type="text/javascript">
+var map = new BMap.Map("allmap");
+map.enableScrollWheelZoom();
+map.enableInertialDragging();
+map.enableContinuousZoom();
+map.enableKeyboard();
+
+#if($pointList && $pointList.size()>0)
+   #set($index=${pointList.size()}/2)
+	var point =   new BMap.Point($pointList.get($index).lng, $pointList.get($index).lat);
+#end
+
+map.centerAndZoom(point, 100);
+var polyline = new BMap.Polyline([
+#foreach($item in $pointList)
+   new BMap.Point($item.lng, $item.lat)#if($loopCounter != $pointList.size() - 1),#end
+#end
+], {strokeColor:"blue", strokeWeight:2, strokeOpacity:0.5});
+map.addOverlay(polyline);
+
+#foreach($item in $pointList)
+    var point = new BMap.Point($item.lng, $item.lat);
+    var circle = new BMap.Circle(point,1);
+	map.addOverlay(circle);
+    circle.addEventListener("click", function(){info("$item.phone","$item.lat","$item.lng","$item.date")});
+	var type="$item.type";
+#end
+
+function info(phone,lat,lng,date){
+    // 创建地理编码实例  
+    var myGeo = new BMap.Geocoder();  
+    // 根据坐标得到地址描述
+    myGeo.getLocation(new BMap.Point(lng, lat), function(result){  
+         if (result){  
+         	 alert("手机:"+phone + "data:" + date + "位置：" + result.address);
+         }else{
+		 	alert("手机:"+phone + "data:" + date + "位置：");
+		 }
+    });
+}
+
+</script>

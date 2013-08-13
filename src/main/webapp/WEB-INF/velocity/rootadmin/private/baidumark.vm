@@ -1,0 +1,46 @@
+#set($layout="rootadmin/private/layout.vm")
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=GBK" />
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<style type="text/css">
+body, html,#allmap {width: 100%;height: 100%;overflow: hidden;margin:0;}
+#l-map{height:100%;width:78%;float:left;border-right:2px solid #bcbcbc;}
+#r-result{height:100%;width:20%;float:left;}
+</style>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=1.5&ak=0Fec1606f6712a2c820c31e1dd80bef3"></script>
+<title>添加多个标注点</title>
+</head>
+<body>
+<div id="allmap"></div>
+</body>
+</html>
+<script type="text/javascript">
+
+// 百度地图API功能
+var map = new BMap.Map("allmap");
+map.enableScrollWheelZoom();
+map.enableInertialDragging();
+map.enableContinuousZoom();
+map.enableKeyboard();
+#if($pointList && $pointList.size()>0)
+   #set($index=${pointList.size()}/2)
+	var point =   new BMap.Point($pointList.get($index).lng, $pointList.get($index).lat);
+#end
+map.centerAndZoom(point, 15);
+// 编写自定义函数,创建标注
+function addMarker(point,info,type){
+  var marker = new BMap.Marker(point);
+  //创建信息窗口
+    var infoWindow1 = new BMap.InfoWindow("手机号:" + info + "type:" + type + "时间:" + "<a href='/jiagoushi/welcome/route' target='_blank'>查看路线</a>");
+    marker.addEventListener("click", function(){this.openInfoWindow(infoWindow1);});
+  map.addOverlay(marker);
+}
+
+#foreach($item in $pointList)
+  var point = new BMap.Point($item.lng, $item.lat);
+  addMarker(point, "$item.phone", "$item.type");
+#end
+
+</script>
