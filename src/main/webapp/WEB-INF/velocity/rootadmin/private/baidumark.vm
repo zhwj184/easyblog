@@ -33,14 +33,14 @@ map.centerAndZoom(point, 15);
 function addMarker(point,info,type){
   var marker = new BMap.Marker(point);
   //创建信息窗口
-    var infoWindow1 = new BMap.InfoWindow("手机号:" + info + "type:" + type + "时间:" + "<a href='/jiagoushi/welcome/route' target='_blank'>查看路线</a>");
+    var infoWindow1 = new BMap.InfoWindow("手机号:" + info + "type:" + type + "时间:" + "<a href='/jiagoushi/welcome/route?username="+ info +  "'  target='_blank'>查看路线</a>");
     marker.addEventListener("click", function(){this.openInfoWindow(infoWindow1);});
   map.addOverlay(marker);
 }
 
 #foreach($item in $pointList)
   var point = new BMap.Point($item.lng, $item.lat);
-  addMarker(point, "$item.phone", "$item.type");
+  addMarker(point, "$item.username", "$item.lbstype");
 #end
 
 </script>

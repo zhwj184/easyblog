@@ -38,8 +38,8 @@ map.addOverlay(polyline);
     var point = new BMap.Point($item.lng, $item.lat);
     var circle = new BMap.Circle(point,1);
 	map.addOverlay(circle);
-    circle.addEventListener("click", function(){info("$item.phone","$item.lat","$item.lng","$item.date")});
-	var type="$item.type";
+    circle.addEventListener("click", function(){info("$item.username","$item.lat","$item.lng","$item.lbs_time")});
+	var type="$item.lbstype";
 #end
 
 function info(phone,lat,lng,date){

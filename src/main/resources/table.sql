@@ -13,3 +13,7 @@ create table user(id int primary key not null auto_increment, username varchar(6
 
 ##分享链接
 create table geeklink(id int primary key not null auto_increment, url varchar(128), title varchar(128),author varchar(32), gmt_create DATETIME not null, gmt_modified DATETIME not null);
+
+
+##个人定位记录表
+create table lbsinfo(id int primary key not null auto_increment,gmt_create DATETIME not null, gmt_modified DATETIME not null, username varchar(64) not null,lat varchar(64)  not null, lng varchar(64)  not null,lbs_time DATETIME not null, lbstype varchar(32) not null);

@@ -7,4 +7,5 @@
     <sqlMap resource="ibatis/comment.xml" />
     <sqlMap resource="ibatis/user.xml" />
      <sqlMap resource="ibatis/geeklink.xml" />
+     <sqlMap resource="ibatis/lbsInfo.xml" />
 </sqlMapConfig>
