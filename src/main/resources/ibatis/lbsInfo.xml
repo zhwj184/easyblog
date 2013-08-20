@@ -18,6 +18,9 @@
 	    </selectKey>
     </insert>
 
+    <select id="SELECT-LBSINFO-ALLUSER"  resultClass="java.util.HashMap">
+        select distinct username from lbsinfo
+    </select>
 
     <select id="SELECT-LBSINFO" resultClass="java.util.HashMap" parameterClass="java.util.Map">
         <include refid="SELECTALL-LBSINFO" />
@@ -28,6 +31,10 @@
         <include refid="SELECTALL-LBSINFO" />
         from lbsinfo	 where username=#username# and gmt_modified > CURRENT_DATE order by lbs_time desc 
     </select>
-    
+     <select id="SELECT-LBSINFO-BY-USERNAME-WITH-ONE" resultClass="java.util.HashMap" parameterClass="java.util.Map">
+        <include refid="SELECTALL-LBSINFO" />
+        from lbsinfo	 where username=#username# order by lbs_time desc limit 1
+    </select>
+ 
     
 </sqlMap>

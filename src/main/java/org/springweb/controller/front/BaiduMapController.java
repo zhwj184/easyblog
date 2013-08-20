@@ -17,6 +17,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springweb.config.PageConstant;
 import org.springweb.dao.LbsInfoDao;
  
 @Controller
@@ -52,13 +53,40 @@ public class BaiduMapController {
 		return "blog/index";
  
 	}
+	
+	@RequestMapping(value="/welcome/login") // url: /aaa/welcome
+	public String lbslogin(@RequestParam(required=false) String username,@RequestParam(required=false) String password,HttpServletRequest request, ModelMap model) throws ParseException {
+		
+		if(username != null && username.equals("admin") && password != null && password.equals("admin")){
+			request.getSession().setAttribute("lbslogin", 1);
+			return "redirect:http://www.javaarch.net/jiagoushi/welcome/marker.htm"; 
+		}
+		return "rootadmin/private/mustlogin";
+ 
+	}
  
 	@RequestMapping(value="/welcome/route", method = RequestMethod.GET)//welcome/john
-	public String welcomeName(@RequestParam String username,HttpServletResponse response, ModelMap model) {
+	public String welcomeName(@RequestParam(required=false) String username,HttpServletRequest request, ModelMap model) {
+		
+		if(((Integer)request.getSession().getAttribute("lbslogin")) == null || ((Integer)request.getSession().getAttribute("lbslogin"))!=1){
+			return "rootadmin/private/mustlogin";
+		}
+		
+		if(username == null || username.isEmpty()){
+			return "redirect:http://www.javaarch.net/jiagoushi/welcome/marker.htm"; 
+		}
  
 //		response.setContentType("text/html;charset=UTF-8");
 		
-		model.addAttribute("pointList", lbsInfoDao.query(username));
+		model.addAttribute("mainpointList", lbsInfoDao.queryAllUserName());
+		
+		List<Map<String,Object>> list = lbsInfoDao.query(username);
+		
+		model.addAttribute("pointList", list);
+		
+		if(list == null ||list.isEmpty()){
+			model.addAttribute("pointList", lbsInfoDao.queryLast(username));
+		}
 		
 		 
 		//Spring uses InternalResourceViewResolver and return back index.jsp
@@ -67,11 +95,21 @@ public class BaiduMapController {
 	}
 	
 	@RequestMapping(value="/welcome/marker", method = RequestMethod.GET)//welcome/john
-	public String marker(HttpServletResponse response, ModelMap model) {
+	public String marker(@RequestParam(required=false) String username,HttpServletRequest request, ModelMap model) {
+		
+		if(((Integer)request.getSession().getAttribute("lbslogin")) == null || ((Integer)request.getSession().getAttribute("lbslogin"))!=1){
+			return "rootadmin/private/mustlogin";
+		}
 		
 //		response.setContentType("text/html;charset=UTF-8");
  
-		model.addAttribute("pointList", lbsInfoDao.queryAllUser());
+		model.addAttribute("mainpointList", lbsInfoDao.queryAllUserName());
+		
+		if(username !=null && !username.isEmpty()){
+			model.addAttribute("pointList", lbsInfoDao.queryLast(username));
+		}else{
+			model.addAttribute("pointList", lbsInfoDao.queryAllUser());
+		}
 		 
 		//Spring uses InternalResourceViewResolver and return back index.jsp
 		return "rootadmin/private/baidumark";

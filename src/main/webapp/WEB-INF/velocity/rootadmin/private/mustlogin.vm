@@ -1,0 +1,11 @@
+#set($layout="rootadmin/private/layout.vm")
+#set($page_title="¹ÜÀíÔ±µÇÂ¼")
+
+<div class="indexlink">
+   <form action="http://www.javaarch.net/jiagoushi/welcome/login.htm" method="post">
+     username:<input type="text" name="username"/></br>
+	 password:<input type="password" name="password"/></br>
+     </br>
+     <input type="submit" value="µÇÂ¼"/>
+   </form>
+</div>

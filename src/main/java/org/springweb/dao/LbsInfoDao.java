@@ -17,6 +17,18 @@ public class LbsInfoDao extends SqlMapClientDaoSupport{
 		return list;
 	}
 	
+	public List<Map<String,Object>> queryLast(String username){
+		Map<String,Object> param = new HashMap<String,Object>();
+		param.put("username", username);
+		List<Map<String,Object>> list = this.getSqlMapClientTemplate().queryForList("jiagoushi.SELECT-LBSINFO-BY-USERNAME-WITH-ONE", param);
+		return list;
+	}
+	
+	public List<Map<String,Object>> queryAllUserName(){
+		List<Map<String,Object>> list = this.getSqlMapClientTemplate().queryForList("jiagoushi.SELECT-LBSINFO-ALLUSER", null);
+		return list;
+	}
+	
 	public long insert(String username,String lat, String lng, Date lbsTime, String lbsType){
 		if(username==null || lat == null || lng==null || lbsTime==null){
 			return 0;
