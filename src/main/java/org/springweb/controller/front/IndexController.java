@@ -80,6 +80,7 @@ public class IndexController {
 	public String detail(@PathVariable  long id, ModelMap model){
 		getLeftCat(null, null, model);
 		Post post = postDao.queryById(id);
+		post.setContent(post.getContent().replace("<pre>", "<pre class=\"brush: java\">").replace("<code>", "").replace("</code>", ""));//兼容旧代码
 		model.addAttribute("post", post);
 		if(!SpiderCheck.get()){//不统计spider
 			postDao.update(id);

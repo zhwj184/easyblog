@@ -1,18 +1,27 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"  xmlns:wb="http://open.weibo.com/wb">
      <head>
-      <TITLE>架构师之路-$!page_title</TITLE>
+      <TITLE>$!{page_title}-码农日记</TITLE>
       <meta http-equiv="Content-Type" content="text/html; charset=GBK"/>
       <meta http-equiv="Content-Language" content="zh-CN"/>
       <META NAME="Author" CONTENT="zhongweijian钟伟坚">
       <META NAME="Keywords" CONTENT="提供java编程原创文章，分享最有价值文章，提供计算机编程相关电子书和视频下载，IT行业相关吐槽，程序员专用导航， web 数据库，架构，分布式系统，性能优化">
       <META NAME="Description" CONTENT="$!description">
       <link rel="stylesheet" type="text/css" href="http://www.javaarch.net/jiagoushi/css/jiagoushi.css">
-	 <!--<link rel="stylesheet" type="text/css" href="http://www.javaarch.net/jiagoushi/css/github.css">-->
-	<link rel="stylesheet" href="http://www.javaarch.net/jiagoushi/css/default.min.css">
+	 <!--<link rel="stylesheet" type="text/css" href="http://www.javaarch.net/jiagoushi/css/github.css">
+	<link rel="stylesheet" href="http://www.javaarch.net/jiagoushi/css/default.min.css">-->
 	<!--<script src="http://www.javaarch.net/jiagoushi/js/jquery-1.10.0.js" type="text/javascript" ></script>
 	<script src="http://www.javaarch.net/jiagoushi/js/highlight.min.js" type="text/javascript" ></script>-->
 	<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="GBK"></script>
+	
+	<!-- syntaxhighlighter -->
+	<script src="http://www.javaarch.net/jiagoushi/js/jquery-1.10.0.js" type="text/javascript" ></script>
+	    <link type="text/css" rel="stylesheet" href="http://www.javaarch.net/jiagoushi/css/syntaxhighlighter/shCore.css"/>
+      <link type="text/css" rel="stylesheet" href="http://www.javaarch.net/jiagoushi/css/syntaxhighlighter/shThemeDefault.css"/>
+	   <!-- <script type="text/javascript" src="http://www.javaarch.net/jiagoushi/js/syntaxhighlighter/brush.js"></script>-->
+	  <script type="text/javascript" src="http://www.javaarch.net/jiagoushi/js/syntaxhighlighter/shCore.js"></script>
+		 <script type="text/javascript" src="http://www.javaarch.net/jiagoushi/js/syntaxhighlighter/shBrushJava.js"></script> 
+	
     </head>
      <body>
 			<div class="header">#parse("blog/common/header.vm")</div>

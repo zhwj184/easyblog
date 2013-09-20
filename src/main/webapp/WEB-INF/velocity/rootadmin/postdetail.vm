@@ -13,3 +13,10 @@
 				<li>修改时间：$dateUtil.format($post.gmtModified,"yyyy-MM-dd HH:mm:ss")</li>
 				<li>正文：$post.content</li>
     </ul>
+		
+  <!---->
+<script type="text/javascript">
+    $(document).ready(function(){
+    	SyntaxHighlighter.all();
+    });
+</script>

@@ -9,7 +9,9 @@
 			#end
 	</div>
 	<div class="text">
+		
     		$!post.content
+		
 	</div>
 	<div class="pagetip clearfix">
 		<div style="float: left;padding-left: 10px;padding-top: 5px;"><div class="bshare-custom"><a title="分享到QQ空间" class="bshare-qzone"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到人人网" class="bshare-renren"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="分享到网易微博" class="bshare-neteasemb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a><span class="BSHARE_COUNT bshare-share-count">0</span></div><script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#style=-1&amp;uuid=72ec0ddf-e929-4a4d-aa35-321f8513c06f&amp;pophcol=2&amp;lang=zh"></script><script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script></div>
@@ -80,9 +82,9 @@ var duoshuoQuery = {short_name:"zhwj184"};
 <div class="clearfix" style="margin-top: 20px;">
 	<iframe id="f" width="760px" height="100px" src= "http://union.yihaodian.com/link_make/viewPicInfo.do?imgSize=760x100&truckerU=107643800" frameborder="no" border="0" marginwidth="0" marginheight="0" allowtransparency="yes" scrolling="NO" > </iframe>
 </div>-->
-  <!--
+  <!---->
 <script type="text/javascript">
-$(document).ready(function() {
-  $('pre code').each(function(i, e) {hljs.highlightBlock(e)});
-});
-</script>-->
+    $(document).ready(function(){
+    	SyntaxHighlighter.all();
+    });
+</script>

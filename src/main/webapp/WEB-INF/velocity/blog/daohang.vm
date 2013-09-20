@@ -30,6 +30,8 @@
 				<li><a href="http://www.javacodegeeks.com/" target="_blank">javacodegeeks</a></li>
 				<li><a href="http://shichuan.github.io/javascript-patterns/" target="_blank">jspattern</a></li>
 				<li><a href="http://www.tutorialspoint.com/index.htm" target="_blank">tutorialspoint</a></li>
+				<li><a href="http://twitter.github.io/effectivescala/index-cn.html" target="_blank">Effective Scala</a></li>
+				<li><a href="http://www.r-project.org/" target="_blank">Effective Scala</a></li>
 			</ul>
     	</div>
 		<div class="daohangitem clearfix">
@@ -61,6 +63,7 @@
 				<li><a href="http://www.h2database.com/html/mvstore.html" target="_blank">MVStore</a></li>
 				<li><a href="http://sqlzoo.net/" target="_blank">sqlzoo</a></li>
 				<li><a href="http://www.artfulsoftware.com/" target="_blank">artfulsoftware</a></li>
+				<li><a href="http://effectivemysql.com/" target="_blank">effectivemysql</a></li>
 			</ul>
     	</div>
 		<div class="daohangitem clearfix">
@@ -148,7 +151,9 @@
 				<li><a href="http://ejohn.org/" target="_blank">John Resig</a></li>
 				<li><a href="http://developer.yahoo.com/blogs/ydn/" target="_blank">ydn</a></li>
 				<li><a href="http://blog.spiderlabs.com" target="_blank">spiderlabs</a></li>
-				<li><a href="http://blog.codingnow.com/" target="_blank">云风的 BLOG</a>
+				<li><a href="http://blog.codingnow.com/" target="_blank">云风的 BLOG</a></li>
+					<li><a href="http://ronaldbradford.com/blog/" target="_blank">ronaldbradford</a></li>
+					<li><a href="http://www.igvita.com/" target="_blank">igvita</a></li>
 			</ul>
     	</div>
 	   <div class="daohangitem clearfix">
@@ -187,6 +192,10 @@
 				<li><a href="http://digg.com/" target="_blank">digg</a></li>
 				<li><a href="http://www.securiteam.com/" target="_blank">securiteam</a></li>
 				<li><a href="https://www.owasp.org/index.php/Main_Page" target="_blank">owasp</a></li>
+				<li><a href="http://java-performance.info/" target="_blank">java-performance</a></li>
+				<li><a href="http://mkweb.bcgsc.ca/" target="_blank">Data Visualization</a></li>
+				<li><a href="https://www.securecoding.cert.org" target="_blank">securecoding</a></li>
+				<li><a href="http://queue.acm.org/index.cfm" target="_blank">acmqueue</a></li>
 			</ul>
     	</div>
 		<div class="daohangitem clearfix">

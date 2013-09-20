@@ -26,6 +26,19 @@
     </ul>
 </div>
 
+<div class="leftadv">
+<script type="text/javascript">
+     document.write('<a style="display:none!important" id="tanx-a-mm_12567797_4010936_13112101"></a>');
+     tanx_s = document.createElement("script");
+     tanx_s.type = "text/javascript";
+     tanx_s.charset = "gbk";
+     tanx_s.id = "tanx-s-mm_12567797_4010936_13112101";
+     tanx_s.async = true;
+     tanx_s.src = "http://p.tanx.com/ex?i=mm_12567797_4010936_13112101";
+     tanx_h = document.getElementsByTagName("head")[0];
+     if(tanx_h)tanx_h.insertBefore(tanx_s,tanx_h.firstChild);
+</script>
+</div>
 
 #if($hotCommentList && $hotCommentList.size()>0 && 0==1)
     <div class="category hotcategory">
@@ -87,19 +100,8 @@ var duoshuoQuery = {short_name:"zhwj184"};
             <!--多说js加载结束，一个页面只需要加载一次 -->
 </div>
 
-<div class="leftadv">
-<script type="text/javascript">
-     document.write('<a style="display:none!important" id="tanx-a-mm_12567797_4010936_13112101"></a>');
-     tanx_s = document.createElement("script");
-     tanx_s.type = "text/javascript";
-     tanx_s.charset = "gbk";
-     tanx_s.id = "tanx-s-mm_12567797_4010936_13112101";
-     tanx_s.async = true;
-     tanx_s.src = "http://p.tanx.com/ex?i=mm_12567797_4010936_13112101";
-     tanx_h = document.getElementsByTagName("head")[0];
-     if(tanx_h)tanx_h.insertBefore(tanx_s,tanx_h.firstChild);
-</script>
-</div>
+
+<iframe style="margin: 5px 0;" name="alimamaifrm" frameborder="0" marginheight="0" marginwidth="0" border="0" scrolling="no" width="210" height="200" src="http://www.taobao.com/go/app/tbk_app/chongzhi_210_200.php?pid=mm_12567797_4010936_14152779&page=chongzhi_210_200.php&size_w=210&size_h=200&stru_phone=1&stru_game=1&stru_travel=1" ></iframe>
 <!--
 <div class="leftadv">
 <a href="http://r.union.meituan.com/url/visit/?a=1&key=bJwUDVNS12MFgxCKRrZQqyWOAamko3fz&url=http%3A%2F%2Fwww.meituan.com" target="_blank"><img alt="mt_200*200"  src="http://union.meituan.com/static/ad/MT_1322115682.jpg"  border="0" /></a>

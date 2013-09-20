@@ -108,7 +108,7 @@ public class BaiduMapController {
 		if(username !=null && !username.isEmpty()){
 			model.addAttribute("pointList", lbsInfoDao.queryLast(username));
 		}else{
-			model.addAttribute("pointList", lbsInfoDao.queryAllUser());
+//			model.addAttribute("pointList", lbsInfoDao.queryAllUser());
 		}
 		 
 		//Spring uses InternalResourceViewResolver and return back index.jsp

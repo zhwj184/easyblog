@@ -44,7 +44,9 @@ public class PostController {
 	
 	@RequestMapping(value="/postdetail", method = RequestMethod.GET)
 	public String postdetail(@RequestParam long id,  ModelMap model) {
-		model.addAttribute("post", postDao.queryById(id));
+		Post post = postDao.queryById(id);
+		post.setContent(post.getContent().replace("<pre>", "<pre class=\"brush: java\">").replace("<code>", "").replace("</code>", ""));//¼æÈÝ¾É´úÂë
+		model.addAttribute("post", post);
 		return "rootadmin/postdetail";
 	}
 	

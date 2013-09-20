@@ -50,6 +50,8 @@ map.enableKeyboard();
 #if($pointList && $pointList.size()>0)
    #set($index=${pointList.size()}/2)
 	var point =   new BMap.Point($pointList.get($index).lng, $pointList.get($index).lat);
+#else
+	var point =   new BMap.Point( 120.193228,30.198965);
 #end
 
 map.centerAndZoom(point, 100);

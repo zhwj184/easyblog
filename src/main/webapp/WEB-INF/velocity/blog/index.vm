@@ -44,7 +44,8 @@
     	#if($index <= 1)
 			<span class="previous_page disabled">上一页</span>
 		#else
-			<a href="http://www.javaarch.net/jiagoushi/index.htm?index=$last&id=$!{id}&parentId=$!{parentId}&type=$!{type}">上一页</a>
+			<a ref="http://www.javaarch.net/jiagoushi/index.htm?index=$last&id=$!{id}&parentId=$!{parentId}&type=$!{type}">上一页</a>
+			#if($index>2)<a href="http://www.javaarch.net/jiagoushi/index.htm?index=1&id=$!{id}&parentId=$!{parentId}&type=$!{type}">1</a>...#end
 			<a href="http://www.javaarch.net/jiagoushi/index.htm?index=$last&id=$!{id}&parentId=$!{parentId}&type=$!{type}">$last</a>
 		#end
 		<em>$index</em>
@@ -52,6 +53,8 @@
 			<span class="next_page disabled ">下一页</span>
 		#else
 			<a href="http://www.javaarch.net/jiagoushi/index.htm?index=$next&id=$!{id}&parentId=$!{parentId}&type=$!{type}">$next</a>
+			#set($cnt=$totalPage - $index )
+			#if($cnt>1) ...<a href="http://www.javaarch.net/jiagoushi/index.htm?index=$!{totalPage}&id=$!{id}&parentId=$!{parentId}&type=$!{type}">$!{totalPage}</a>#end
 			<a href="http://www.javaarch.net/jiagoushi/index.htm?index=$next&id=$!{id}&parentId=$!{parentId}&type=$!{type}">下一页</a>
 		#end
 		共$!{totalPage}页 (共$!{count}篇文章）

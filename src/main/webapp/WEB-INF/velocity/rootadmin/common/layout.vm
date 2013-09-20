@@ -11,7 +11,16 @@
 	   <script src="http://www.javaarch.net/jiagoushi/js/markdown.js" type="text/javascript" charset="GBK"></script>
        <link rel="stylesheet" type="text/css" href="http://www.javaarch.net/jiagoushi/css/github.css">
 	  <script src="http://www.javaarch.net/jiagoushi/js/jquery-1.10.0.js" type="text/javascript" ></script>
-		<script src="http://www.javaarch.net/jiagoushi/js/jquery.form.js" type="text/javascript" ></script>     
+		<script src="http://www.javaarch.net/jiagoushi/js/jquery.form.js" type="text/javascript" ></script>    
+		
+			<!-- syntaxhighlighter -->
+	<script src="http://www.javaarch.net/jiagoushi/js/jquery-1.10.0.js" type="text/javascript" ></script>
+	    <link type="text/css" rel="stylesheet" href="http://www.javaarch.net/jiagoushi/css/syntaxhighlighter/shCore.css"/>
+      <link type="text/css" rel="stylesheet" href="http://www.javaarch.net/jiagoushi/css/syntaxhighlighter/shThemeDefault.css"/>
+	   <!-- <script type="text/javascript" src="http://www.javaarch.net/jiagoushi/js/syntaxhighlighter/brush.js"></script>-->
+	  <script type="text/javascript" src="http://www.javaarch.net/jiagoushi/js/syntaxhighlighter/shCore.js"></script>
+		 <script type="text/javascript" src="http://www.javaarch.net/jiagoushi/js/syntaxhighlighter/shBrushJava.js"></script> 
+		
 </head>
      <body>
 		<div class="indexlink"><a href="http://www.javaarch.net/jiagoushi/rootadmin/categorylist.htm">分类列表</a></div>
