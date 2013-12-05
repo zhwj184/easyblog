@@ -1,6 +1,7 @@
 package org.work;
 
 import java.io.IOException;
+import java.math.BigDecimal;
 import java.text.Normalizer;
 import java.text.Normalizer.Form;
 import java.util.regex.Matcher;
@@ -75,7 +76,25 @@ public class ProcessData {
 //			}
 //		}
 		
-		test();
+		//System.out.println(new Date(1385535806000L));
+		//test();
+		BigDecimal first=new BigDecimal("-313.19").setScale(2, BigDecimal.ROUND_UP).stripTrailingZeros();
+        
+        System.out.println(first.toEngineeringString());
+        System.out.println(first.toPlainString());
+        System.out.println(first.toString());
+        
+		BigDecimal first1=new BigDecimal("-1226869950").setScale(2, BigDecimal.ROUND_UP).stripTrailingZeros();
+        
+        System.out.println(first1.toEngineeringString());
+        System.out.println(first1.toPlainString());
+        System.out.println(first1.toString());
+        
+		BigDecimal first2=new BigDecimal("-1226869844").setScale(2, BigDecimal.ROUND_UP).stripTrailingZeros();
+        
+        System.out.println(first2.toEngineeringString());
+        System.out.println(first2.toPlainString());
+        System.out.println(first2.toString());
 	}
 
 	private static void test() {

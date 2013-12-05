@@ -1,5 +1,6 @@
 <ul class="">
 	<li><a href="http://www.javaarch.net/jiagoushi/index.htm">Ê×Ò³</a></li>
+	##for adsense
 	#foreach($item in $rootCatList)
 			<li><a href="http://www.javaarch.net/jiagoushi/index.htm?parentId=${item.id}">$item.name</a></li>
 	#end

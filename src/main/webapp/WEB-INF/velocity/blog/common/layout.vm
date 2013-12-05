@@ -32,4 +32,5 @@
 			</div>
 			<div class="footer">#parse("blog/common/footer.vm")</div>
      </body>
+	 <script type="text/javascript" src="http://www.javaarch.net/jiagoushi/js/jiagoushi.js"></script> 
 </html>

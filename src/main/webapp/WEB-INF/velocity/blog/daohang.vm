@@ -32,6 +32,7 @@
 				<li><a href="http://www.tutorialspoint.com/index.htm" target="_blank">tutorialspoint</a></li>
 				<li><a href="http://twitter.github.io/effectivescala/index-cn.html" target="_blank">Effective Scala</a></li>
 				<li><a href="http://www.r-project.org/" target="_blank">Effective Scala</a></li>
+				
 			</ul>
     	</div>
 		<div class="daohangitem clearfix">
@@ -122,12 +123,15 @@
 			</ul>
     	</div>
 		<div class="daohangitem clearfix">
-				资源下载
+				资源文档
 		</div>
     	<div class="linkcontent clearfix">
             <ul>
 				<li><a href="https://speakerdeck.com/" target="_blank">speakerdeck</a></li>
 				<li><a href="http://www.slideshare.net/" target="_blank">slideshare</a></li>
+				<li><a href="http://man7.org/" target="_blank">man7</a></li>
+				<li><a href="http://snipplr.com/" target="_blank">snipplr</a></li>
+				<li><a href="http://linux-commands-examples.com/" target="_blank">linux-commands-examples</a></li>
 			</ul>
     	</div>
 		<div class="daohangitem clearfix">
@@ -152,8 +156,13 @@
 				<li><a href="http://developer.yahoo.com/blogs/ydn/" target="_blank">ydn</a></li>
 				<li><a href="http://blog.spiderlabs.com" target="_blank">spiderlabs</a></li>
 				<li><a href="http://blog.codingnow.com/" target="_blank">云风的 BLOG</a></li>
-					<li><a href="http://ronaldbradford.com/blog/" target="_blank">ronaldbradford</a></li>
-					<li><a href="http://www.igvita.com/" target="_blank">igvita</a></li>
+				<li><a href="http://ronaldbradford.com/blog/" target="_blank">ronaldbradford</a></li>
+				<li><a href="http://dtrace.org/blogs/brendan/" target="_blank">Brendan’s blog</a></li>
+				<li><a href="http://www.allthingsdistributed.com/" target="_blank">All Things Distributed</a></li>
+				<li><a href="http://dimitrik.free.fr/blog/index.html" target="_blank">DimitriK’s (dim) Weblog</a></li>
+				<li><a href="http://www.drdobbs.com/" target="_blank">Dr. Dobb’s</a></li>
+				<li><a href="http://paulmck.livejournal.com/" target="_blank">Paul E. McKenney’s Journal</a></li>
+				<li><a href="http://preshing.com/" target="_blank">Jeff Preshing</a></li>
 			</ul>
     	</div>
 	   <div class="daohangitem clearfix">
@@ -196,6 +205,7 @@
 				<li><a href="http://mkweb.bcgsc.ca/" target="_blank">Data Visualization</a></li>
 				<li><a href="https://www.securecoding.cert.org" target="_blank">securecoding</a></li>
 				<li><a href="http://queue.acm.org/index.cfm" target="_blank">acmqueue</a></li>
+				<li><a href="http://www.programcreek.com/" target="_blank">programcreek</a></li>
 			</ul>
     	</div>
 		<div class="daohangitem clearfix">
@@ -218,6 +228,9 @@
     	<div class="linkcontent clearfix">
             <ul>
 				<li><a href="http://www.webalizer.org/" target="_blank">webalizer</a></li>
+				<li><a href="http://codebeautify.org/" target="_blank">codebeautify</a></li>
+				<li><a href="http://spritegen.website-performance.org/" target="_blank">CSS Sprite Generator</a></li>
+				<li><a href="http://spriteme.org/" target="_blank">CSS sprite</a></li>
 			</ul>
     	</div>
 </div>

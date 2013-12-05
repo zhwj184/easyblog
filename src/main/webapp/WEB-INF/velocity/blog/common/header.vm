@@ -1,7 +1,17 @@
-<div class="sitetitle">码农日记</div>
+<div class="sitetitle">码农日记
+</div>
 <div class="sitemotto">
 	走自己的路，享受这一路码农的快乐！
 	<div class="siteinfo">
+			<div class="scroll"> 
+                <ul class="list"> 
+                    <li>阿里巴巴招聘高级java开发和前端开发，有兴趣的请将简历发到zhwj184@gmail.com</li> 
+                    <li><a href="http://www.javaarch.net/jiagoushi/1129.htm" target="_blank">阿里巴巴1688开放平台 openAPI C# sdk版</a></li> 
+                    <li><a href="https://github.com/zhwj184/springInvokemonitor" target="_blank">telnet服务调用spring容器中任意bean的任意方法</a></li> 
+                    <li><a href="https://github.com/zhwj184/shell-work" target="_blank">shell常用分析命令和脚本</a></li> 
+                    <li><a href="https://me.alipay.com/zhwj184" target="_blank">支持我，让我能交租用主机费用</a></li> 
+                </ul> 
+			</div> 
 		<a href="http://www.javaarch.net/jiagoushi/rss.htm" target="_blank">RSS订阅</a>
 	</div>
 </div>

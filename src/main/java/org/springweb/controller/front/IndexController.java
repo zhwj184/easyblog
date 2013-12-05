@@ -44,6 +44,9 @@ public class IndexController {
 	@RequestMapping(value="/index", method = RequestMethod.GET)
 	public String index(@RequestParam(required=false) Long id, @RequestParam(required=false) Long parentId, @RequestParam(defaultValue="1") Integer type, @RequestParam(defaultValue="1") long index,ModelMap model){
 		
+		//for adsense
+		//parentId = 2L;
+		
 		getLeftCat(id, parentId, model);
 		
 		long count = postDao.queryCount(parentId,id);

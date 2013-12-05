@@ -13,9 +13,12 @@
         </div>     
     #end
 #end 
+
+
 <div class="leftadv">
 <iframe width="210" height="350" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=210&height=350&fansRow=1&ptype=0&speed=0&skin=3&isTitle=1&noborder=1&isWeibo=1&isFans=1&uid=1530428034&verifier=148917a8&dpc=1"></iframe>
 </div>
+
 
 <div class="category hotpost">
 	<div>阅读排行</div>
@@ -25,6 +28,7 @@
 		#end
     </ul>
 </div>
+
 
 <div class="leftadv">
 <script type="text/javascript">
@@ -40,6 +44,7 @@
 </script>
 </div>
 
+
 #if($hotCommentList && $hotCommentList.size()>0 && 0==1)
     <div class="category hotcategory">
     	<div>最新评论</div>
@@ -51,10 +56,10 @@
     </div>
 #end
 
+<!--
 <div class="category hotcategory">
 	<div>热评文章</div>
 <ul  class="ds-top-threads" data-range="weekly" data-num-items="5"></ul>
-<!--多说js加载开始，一个页面只需要加载一次 -->
 <script type="text/javascript">
 var duoshuoQuery = {short_name:"zhwj184"};
 (function() {
@@ -65,12 +70,13 @@ var duoshuoQuery = {short_name:"zhwj184"};
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
 })();
 </script>
-<!--多说js加载结束，一个页面只需要加载一次 -->
 </div>
+-->
+
+
 <div class="category hotcategory">
 	    	<div>最新评论</div>
                  <ul class="ds-recent-comments" data-num-items="10" data-show-avatars="0"></ul>
-                <!--多说js加载开始，一个页面只需要加载一次 -->
                 <script type="text/javascript">
                 var duoshuoQuery = {short_name:"zhwj184"};
                 (function() {
@@ -81,12 +87,13 @@ var duoshuoQuery = {short_name:"zhwj184"};
                     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
                 })();
                 </script>
-                <!--多说js加载结束，一个页面只需要加载一次 -->
 </div>
+
+
+
 <div class="category hotcategory">
 	    	<div>最新访客</div>
 			<ul class="ds-recent-visitors"></ul>
-            <!--多说js加载开始，一个页面只需要加载一次 -->
             <script type="text/javascript">
             var duoshuoQuery = {short_name:"zhwj184"};
             (function() {
@@ -97,11 +104,13 @@ var duoshuoQuery = {short_name:"zhwj184"};
                 (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
             })();
             </script>
-            <!--多说js加载结束，一个页面只需要加载一次 -->
 </div>
 
 
+
 <iframe style="margin: 5px 0;" name="alimamaifrm" frameborder="0" marginheight="0" marginwidth="0" border="0" scrolling="no" width="210" height="200" src="http://www.taobao.com/go/app/tbk_app/chongzhi_210_200.php?pid=mm_12567797_4010936_14152779&page=chongzhi_210_200.php&size_w=210&size_h=200&stru_phone=1&stru_game=1&stru_travel=1" ></iframe>
+
+
 <!--
 <div class="leftadv">
 <a href="http://r.union.meituan.com/url/visit/?a=1&key=bJwUDVNS12MFgxCKRrZQqyWOAamko3fz&url=http%3A%2F%2Fwww.meituan.com" target="_blank"><img alt="mt_200*200"  src="http://union.meituan.com/static/ad/MT_1322115682.jpg"  border="0" /></a>
